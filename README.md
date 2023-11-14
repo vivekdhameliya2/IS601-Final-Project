@@ -10,8 +10,8 @@ Each student should put an 'X' under their name on the days they have meetings.
 | Date        | Vivek | Brijesh |
 |-------------|------|-------|
 | Nov 7, 2023|  X   | X     |
-| Nov 9, 2023|   x   |  x    |
-| Nov 14, 2023|  x   |  x    |
+| Nov 9, 2023|   X   |  X    |
+| Nov 14, 2023|  X   |  X    |
 | Nov 16, 2023 |       |           |  
 | Nov 21, 2023 |       |           | 
 | Nov 23, 2023 |       |           | 
