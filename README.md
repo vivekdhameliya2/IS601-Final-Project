@@ -1,20 +1,31 @@
-# IS601-Final-Project
-This is final project of IS601 in group 
+        # IS601-Project
+IS601 Final Group Project
+
+# Meeting Sign-In Sheet
+
+Each student should put an 'X' under their name on the days they have meetings.
+
+### November 2023
+
+| Date        | Vivek | Brijesh |
+|-------------|------|-------|
+| Nov 7, 2023|  X   | X     |
+| Nov 9, 2023|   x   |  x    |
+| Nov 14, 2023|  x   |  x    |
+| Nov 16, 2023 |       |           |  
+| Nov 21, 2023 |       |           | 
+| Nov 23, 2023 |       |           | 
+| Nov 28, 2023 |       |           | 
+| Nov 30, 2023 |       |           | 
 
 
+### December 2023
+
+| Date        | Vivek | Brijesh|
+|-------------|-----------|-----------|
+| Dec 5 |           |           |
+| Dec 7 |           |           |
+| Dec 12 |           |           |
 
 
-# is218Fall2023
-| Date        |       attendence Sign-in     |
-|-------------|--- Vivek ---|---- Brijesh ---|
-| Nov 7, 2023 |     X       |        X       | 
-| Nov 9, 2023 |     X       |        X       |  
-| Nov 14, 2023|     X       |        X       | 
-| Nov 16, 2023|             |                |      
-| Nov 21, 2023|             |                |       
-| Nov 23, 2023|             |                |        
-| Nov 28, 2023|             |                |           
-| Nov 30, 2023|             |                |            
-| Dec 5, 2023 |             |                |           
-| Dec 7, 2023 |             |                |           
-| Dec 12, 2023|             |                |          
+*Instructions: Please place an 'X' in the cell under your name corresponding to the dates you attend class.*
