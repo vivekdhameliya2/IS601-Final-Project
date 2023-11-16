@@ -12,7 +12,7 @@ Each student should put an 'X' under their name on the days they have meetings.
 | Nov 7, 2023|  X   | X     |
 | Nov 9, 2023|   X   |  X    |
 | Nov 14, 2023|  X   |  X    |
-| Nov 16, 2023 |       |           |  
+| Nov 16, 2023 |       |     X      |  
 | Nov 21, 2023 |       |           | 
 | Nov 23, 2023 |       |           | 
 | Nov 28, 2023 |       |           | 
