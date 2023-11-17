@@ -138,3 +138,7 @@ Papa John's excels in the Premium archetype, with a focus on quality; opportunit
 
 ### Epic 4: Interactive Social Media Campaigns
 - Engage in interactive social media campaigns for community connection.
+
+ Compatative Analysis [here](./Compatative%20analysis.png)
+
+Sales funnel diagram [here](./sales%20funnel%20diagram.png)
