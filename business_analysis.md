@@ -195,7 +195,6 @@ Meet Alex, our ideal customer:
 - A dedicated space for Alex and friends to rave about their Pizza Haven experience.
 - A system to keep the compliments rolling in.
 
+- Compatative Analysis [here](./Compatative%20analysis.png)
 
- Compatative Analysis [here](./Compatative%20analysis.png)
-
-Sales funnel diagram [here](./sales_funnel_diagram.png)
+- Sales funnel diagram [here](./sales_funnel_diagram.png)
