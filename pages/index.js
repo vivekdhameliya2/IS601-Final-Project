@@ -7,19 +7,21 @@ import Navbar from "../components/navbar";
 
 export default function Home() {
   return (
+    <>
+     <Navbar/>
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+    
       <main>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-        <Button variant="contained">Hello world</Button>
+        {/* <Button variant="contained">Hello world</Button> */}
 
-       <Navbar/>
+       {/* <Navbar/> */}
         <p className={styles.description}>
           Get started by editing <code>pages/index.js</code>
         </p>
@@ -117,5 +119,6 @@ export default function Home() {
         }
       `}</style>
     </div>
+    </>
   );
 }
