@@ -7,6 +7,71 @@
   align-items: center;
 }
 
+.heroContainer {
+  background: url('/public/hero-background.jpg') center/cover;
+  height: 500px;
+  display: flex;
+  align-items: c;
+  justify-content: center;
+  color: #fff;
+}
+
+.herosection{
+  background-color: blue;
+  height: 1000px;
+}
+
+.heroContent{
+  margin-top: 50px;
+
+}
+
+/* components/HeroSection.module.css */
+.herosection {
+  position: relative;
+}
+
+.heroContainer {
+  position: relative;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  margin-left: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the overlay background color and opacity as needed */
+}
+
+.heroContent {
+  color: #fff;
+  text-align: left; 
+  margin-left: 50px;
+  width: 20%;
+}
+
+.heroContent > * {
+  margin-bottom: 20px;
+}
+
+.heroContent Button {
+  margin-left: 0; /* Adjust the margin as needed */
+}
+
+
+
 .title a {
   color: #0070f3;
   text-decoration: none;

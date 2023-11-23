@@ -4,11 +4,13 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import Navbar from "../components/navbar";
+import Herosection from "../components/hero";
 
 export default function Home() {
   return (
     <>
      <Navbar/>
+     <Herosection/>
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
