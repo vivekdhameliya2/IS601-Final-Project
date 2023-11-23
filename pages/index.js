@@ -5,12 +5,16 @@ import Button from "@mui/material/Button";
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import Navbar from "../components/navbar";
 import Herosection from "../components/hero";
+import TitlebarBelowImageList from "../components/offer";
 
 export default function Home() {
   return (
     <>
      <Navbar/>
      <Herosection/>
+     <div className={styles.centerContainer}>
+     <TitlebarBelowImageList/>
+     </div>
     <div className={styles.container}>
       <Head>
         <title>Create Next App</title>
