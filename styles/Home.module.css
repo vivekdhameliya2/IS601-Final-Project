@@ -69,6 +69,14 @@
   margin-left: 0; /* Adjust the margin as needed */
 }
 
+.menucard{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 .title a {
