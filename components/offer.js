@@ -5,7 +5,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 export default function TitlebarBelowImageList() {
   return (
-    <ImageList sx={{backgroundColor:"black", alignItems: "center" ,justifyContent : 'center'}}>
+    <ImageList sx={{height: 350, marginHorizontal: 40, backgroundColor:"black", alignItems: "center" ,justifyContent : 'center'}}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
@@ -27,7 +27,7 @@ export default function TitlebarBelowImageList() {
 
 const itemData = [
   {
-    img: '',
+    img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
     title: 'Breakfast',
     author: '@bkristastucchio',
   },
