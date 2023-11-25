@@ -8,6 +8,7 @@ import Herosection from "../components/hero";
 import TitlebarBelowImageList from "../components/offer";
 import ImgMediaCard from "../components/menu"
 import Tesimonial from "../components/tesimonial";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -27,6 +28,8 @@ export default function Home() {
      </div>
      <h3>Tesimonial</h3>
      <Tesimonial/>  
+
+     <Footer/>
       
     <div className={styles.container}>
       <Head>
