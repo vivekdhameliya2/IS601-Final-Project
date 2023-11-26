@@ -9,6 +9,7 @@ import TitlebarBelowImageList from "../components/offer";
 import ImgMediaCard from "../components/menu"
 import Tesimonial from "../components/tesimonial";
 import Footer from "../components/footer";
+import ColorInversionFooter from "../components/footer";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
      <h3>Tesimonial</h3>
      <Tesimonial/>  
 
-     <Footer/>
+     <ColorInversionFooter/>
       
     <div className={styles.container}>
       <Head>
