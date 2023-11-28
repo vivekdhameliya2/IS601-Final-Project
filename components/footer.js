@@ -70,7 +70,7 @@ export default function ColorInversionFooter() {
           wrap
           sx={{ flexGrow: 0, '--ListItem-radius': '8px', '--ListItem-gap': '0px', alignItems:'center',justifyContent:'space-between', }}
         >
-          <ListItem nested sx={{ width: { xs: '40%', md: 140, paddingTop:60 } }}>
+          <ListItem nested sx={{ width: { xs: '40%', md: 140 } }}>
             <ListSubheader sx={{ fontWeight: 'xl' }}>Sitemap</ListSubheader>
             <List>
               <ListItem>
