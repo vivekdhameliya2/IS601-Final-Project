@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navbar from "../components/navbar";
-
+import AvatarChips from '../components/about_feature';
+import ImgMediaCard from '../components/menu'
 // import AboutInfo from '../components/AboutInfo';
 
 export default function About() {
@@ -15,6 +16,14 @@ export default function About() {
       {/* <AboutInfo /> */}
       <Navbar/>
       <h1>About page</h1>
+      <AvatarChips/>
+      <h3>Menu</h3>
+     <div className={styles.menucard}>
+     <ImgMediaCard/>
+     <ImgMediaCard/>
+     <ImgMediaCard/>
+     <ImgMediaCard/>
+     </div>
     </div>
   )
 }

@@ -42,7 +42,7 @@
 
 .overlay {
   position: absolute;
-  margin-left: 20px;
+  margin-left: 200px;
   top: 0;
   left: 0;
   width: 100%;
@@ -51,7 +51,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background: rgba(0, 0, 0, 0.5); /* Adjust the overlay background color and opacity as needed */
 }
 
 .heroContent {
@@ -75,6 +74,8 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
+  padding-top: 30px;
+  background-color: rgba(255, 228, 166, 0.50);
 }
 
 

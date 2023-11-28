@@ -10,6 +10,7 @@ import ImgMediaCard from "../components/menu"
 import Tesimonial from "../components/tesimonial";
 import Footer from "../components/footer";
 import ColorInversionFooter from "../components/footer";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
@@ -21,6 +22,12 @@ export default function Home() {
      <TitlebarBelowImageList/>
      </div>
      <h3>Menu</h3>
+     <div style={{}}>
+      <Header
+        bigText="special Menu"
+        belowText="From Italy Pizza, With Love"
+      />
+    </div>
      <div className={styles.menucard}>
      <ImgMediaCard/>
      <ImgMediaCard/>

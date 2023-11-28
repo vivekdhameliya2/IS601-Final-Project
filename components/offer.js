@@ -1,27 +1,34 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
+import Box from '@mui/material/Box';
 
 export default function TitlebarBelowImageList() {
   return (
-    <ImageList sx={{height: 350, marginHorizontal: 40, backgroundColor:"black", alignItems: "center" ,justifyContent : 'center'}}>
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-          <img
-            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-            src={`${item.img}?w=248&fit=crop&auto=format`}
-            alt={item.title}
-            loading="lazy"
-          />
-          {/* <ImageListItemBar
-            title={item.title}
-            subtitle={<span>by: {item.author}</span>}
-            position="below"
-          /> */}
-        </ImageListItem>
-      ))}
-    </ImageList>
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <ImageListItem sx={{ marginRight: 10 }}>
+        <img
+          srcSet={`${itemData[0].img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+          src={`${itemData[0].img}?w=248&fit=crop&auto=format`}
+          alt={itemData[0].title}
+          loading="lazy"
+        />
+      </ImageListItem>
+      <ImageListItem sx={{ marginRight: 10 }}>
+        <img
+          srcSet={`${itemData[1].img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+          src={`${itemData[1].img}?w=248&fit=crop&auto=format`}
+          alt={itemData[1].title}
+          loading="lazy"
+        />
+      </ImageListItem>
+    </Box>
   );
 }
 
@@ -36,5 +43,4 @@ const itemData = [
     title: 'Burger',
     author: '@rollelflex_graphy726',
   },
- 
 ];
