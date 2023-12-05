@@ -24,8 +24,7 @@ Each student should put an 'X' under their name on the days they have meetings.
 
 | Date        | Vivek | Brijesh|
 |-------------|-----------|-----------|
-
-| Dec 5 |           |    X       |
+| Dec 5 |   X        |    X       |
 | Dec 7 |           |           |
 | Dec 12 |           |           |
 
