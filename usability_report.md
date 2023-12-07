@@ -91,9 +91,9 @@ This iteration aimed to address user feedback regarding the absence of a testimo
 ## Conclusion
 The addition of a testimonial section significantly enhanced the perceived likability of the home landing page. The iterative process demonstrated responsiveness to user needs, contributing to a more engaging and user-friendly design.
 
-[Version 1](design/version1.png)
+[Version 1](design/usability_report/version_2.png)
 
-[Version 2](design/version1.png)
+[Version 2](design/usability_report/version_2.1.png)
 
 
 
