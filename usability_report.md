@@ -160,7 +160,7 @@ The fourth iteration centered on refining elements in both the top section and t
 - Initial design with a top section containing text, an email input, and a submit button in red.
 - Footer with four columns: "Overview," "About Us," "Social Media," and "Terms," including a brand logo and social media links.
 
-![Version 4 Screenshot Before](design/version1.png)
+![Version 4 Screenshot Before](design/usability_report/version_4.png)
 
 ### Version 4.1:
 - Changes made based on user feedback.
@@ -168,7 +168,7 @@ The fourth iteration centered on refining elements in both the top section and t
   - Top Section: Modified font style for the text "Want More? Sign Up For Pizza Offer" and changed the background color of the submit button to yellow.
   - Footer Section: Reorganized the layout, shifting the brand logo and social media links to the left. "About Us," "Social Media," and "Terms" links moved to the right. Changed font style and color to yellow for improved visibility and aesthetics.
 
-![Version 4.1 Screenshot After](design/version1.png)
+![Version 4.1 Screenshot After](design/usability_report/version_4.1.png)
 ## Testing Protocol
 
 ### A/B Testing:
