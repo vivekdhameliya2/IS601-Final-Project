@@ -197,7 +197,7 @@ The fourth iteration centered on refining elements in both the top section and t
 ## Introduction
 The fifth iteration aims to streamline the footer section of the home landing page based on user feedback, focusing on reducing the number of links to enhance usability and meet specific website requirements.
 
-![Version 4.1 Screenshot Before](design/version1.png) 
+![Version 4.1 Screenshot Before](design/usability_report/version_4.1.png) 
 
 ### Version 4.1:
 - The footer includes four columns with links: "Overview," "About Us," "Social Media," and "Terms."
@@ -208,7 +208,7 @@ The fifth iteration aims to streamline the footer section of the home landing pa
 - Retaining essential links aligned with website requirements.
 - Maintaining a cohesive and visually appealing layout.
 
-![Version 5.0 Screenshot](design/version1.png) 
+![Version 5.0 Screenshot](design/usability_report/version_final.png) 
 
 ## Testing Protocol
 
