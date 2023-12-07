@@ -91,9 +91,9 @@ This iteration aimed to address user feedback regarding the absence of a testimo
 ## Conclusion
 The addition of a testimonial section significantly enhanced the perceived likability of the home landing page. The iterative process demonstrated responsiveness to user needs, contributing to a more engaging and user-friendly design.
 
-[Version 1](design/version1.png)
+[Version 1](design/usability_report/version_2.png)
 
-[Version 2](design/version1.png)
+[Version 2](design/usability_report/version_2.1.png)
 
 
 
@@ -108,7 +108,7 @@ The third iteration focused on refining the color scheme in specific elements of
 - Initial design with a light blue color in the footer.
 - Hero section with "Today's Best Deals" text in red and a red "Order Now" button.
 
-![Version 3 Screenshot](design/version1.png) 
+![Version 3 Screenshot](design/usability_report/version_3.png) 
 
 ### Version 3.1:
 - Changes made to address color concerns.
@@ -116,7 +116,7 @@ The third iteration focused on refining the color scheme in specific elements of
   - Hero Section: Changed the color of "Today's Best Deals" text from red to light grey.
   - Order Now Button: Updated the color from red to light yellow.
 
-![Version 3.1 Screenshot](design/version1.png) 
+![Version 3.1 Screenshot](design/usability_report/version3.1.png) 
 
 ## Testing Protocol
 
@@ -160,7 +160,7 @@ The fourth iteration centered on refining elements in both the top section and t
 - Initial design with a top section containing text, an email input, and a submit button in red.
 - Footer with four columns: "Overview," "About Us," "Social Media," and "Terms," including a brand logo and social media links.
 
-![Version 4 Screenshot Before](design/version1.png)
+![Version 4 Screenshot Before](design/usability_report/version_4.png)
 
 ### Version 4.1:
 - Changes made based on user feedback.
@@ -168,7 +168,7 @@ The fourth iteration centered on refining elements in both the top section and t
   - Top Section: Modified font style for the text "Want More? Sign Up For Pizza Offer" and changed the background color of the submit button to yellow.
   - Footer Section: Reorganized the layout, shifting the brand logo and social media links to the left. "About Us," "Social Media," and "Terms" links moved to the right. Changed font style and color to yellow for improved visibility and aesthetics.
 
-![Version 4.1 Screenshot After](design/version1.png)
+![Version 4.1 Screenshot After](design/usability_report/version_4.1.png)
 ## Testing Protocol
 
 ### A/B Testing:
@@ -197,7 +197,7 @@ The fourth iteration centered on refining elements in both the top section and t
 ## Introduction
 The fifth iteration aims to streamline the footer section of the home landing page based on user feedback, focusing on reducing the number of links to enhance usability and meet specific website requirements.
 
-![Version 4.1 Screenshot Before](design/version1.png) 
+![Version 4.1 Screenshot Before](design/usability_report/version_4.1.png) 
 
 ### Version 4.1:
 - The footer includes four columns with links: "Overview," "About Us," "Social Media," and "Terms."
@@ -208,7 +208,7 @@ The fifth iteration aims to streamline the footer section of the home landing pa
 - Retaining essential links aligned with website requirements.
 - Maintaining a cohesive and visually appealing layout.
 
-![Version 5.0 Screenshot](design/version1.png) 
+![Version 5.0 Screenshot](design/usability_report/version_final.png) 
 
 ## Testing Protocol
 
