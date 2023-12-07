@@ -232,3 +232,14 @@ The fifth iteration aims to streamline the footer section of the home landing pa
 
 ## Conclusion
 The fourth iteration successfully addressed user feedback by refining the font, color scheme, and layout in both the top and footer sections. The transition from Version 4 to Version 4.1, informed by A/B testing, "Think Out Loud," and the "5-second protocol," demonstrated the significance of fine-tuning design elements based on user preferences. The iterative testing process continues to play a crucial role in optimizing the home landing page for improved visual appeal and user satisfaction.
+
+## Version 6
+During a recent review, Professor provided valuable feedback regarding the user interface of our platform. Specifically, he suggested increasing the size of the sign-up button to enhance user experience.
+
+To address this recommendation, we are initiating a design enhancement to amplify the prominence of the sign-up button. The primary objective is to make the registration process more intuitive and accessible for users.
+
+![Version 6 Screenshot Before](design/usability_report/version-6.jpeg) 
+
+![Version 6.1 Screenshot after](design/usability_report/version-6.1.jpeg) 
+
+
