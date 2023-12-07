@@ -108,7 +108,7 @@ The third iteration focused on refining the color scheme in specific elements of
 - Initial design with a light blue color in the footer.
 - Hero section with "Today's Best Deals" text in red and a red "Order Now" button.
 
-![Version 3 Screenshot](design/version1.png) 
+![Version 3 Screenshot](design/usability_report/version_3.png) 
 
 ### Version 3.1:
 - Changes made to address color concerns.
@@ -116,7 +116,7 @@ The third iteration focused on refining the color scheme in specific elements of
   - Hero Section: Changed the color of "Today's Best Deals" text from red to light grey.
   - Order Now Button: Updated the color from red to light yellow.
 
-![Version 3.1 Screenshot](design/version1.png) 
+![Version 3.1 Screenshot](design/usability_report/version3.1.png) 
 
 ## Testing Protocol
 
