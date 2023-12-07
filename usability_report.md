@@ -17,16 +17,36 @@ This document presents the findings and outcomes of the iterative design testing
 - Pizza-related black background in the hero section.
 
 **Screenshot:**
-![Version 1](insert_screenshot_url_here)
+![Version 1](../IS601-Final-Project/design/version1.png)
 
 **Feedback and Changes:**
-- [Provide a summary of the feedback received and changes made.]
+ - Background Image: Replaced with an image featuring pizza and happy human faces.
+ - Hero Text Color: Lightened to white for improved visibility and contrast.
+ - Button Color: "Order Now" button color changed to brown for a warmer and more appetizing feel.
 
-**Version 2:**
-- [Describe the updated design elements.]
-  
 **Screenshot:**
-![Version 2](insert_screenshot_url_here)
+![Version 2](../IS601-Final-Project/design/updateversion_1.png)
 
 **Testing Observations:**
-- [Include insights gained during testing.]
+- Testing Protocol
+# A/B Testing:
+
+Users interacted with both versions, recording metrics such as task completion time, errors, and satisfaction. A/B testing helped quantify the impact of design changes on user interaction and satisfaction.
+
+# Think Out Loud:
+
+Participants verbalized thoughts and feelings while navigating both versions. Valuable qualitative data was collected regarding user preferences and perceptions of the design changes.
+
+# 5-Second Protocol:
+
+Users were briefly exposed to each version for 5 seconds. Initial impressions and key elements noticed within this short timeframe were recorded.
+
+## Testing Sessions
+
+### Session 1 (Date: 11/27/2023):
+
+Users interacted with Version 1. A/B testing identified areas for improvement, with users expressing a desire for a more visually appealing hero section. Version 2 implemented changes based on feedback, introducing a more vibrant and user-friendly hero section. Users interacted with the updated Version 2. A/B testing results showed improvements in user satisfaction and task completion. Think Out Loud sessions indicated positive feedback on the visual enhancements.
+
+## Conclusion
+
+The iterative design process significantly improved user satisfaction and engagement. Transitioning from Version 1 to Version 2 addressed user preferences, demonstrating the effectiveness of iterative testing.
