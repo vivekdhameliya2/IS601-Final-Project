@@ -1,16 +1,14 @@
+"use client";
 import layout from "../layout.module.scss";
 import logo from "../../../assets/images/logo.svg";
-import menuIcon from "../../../assets/images/menu.svg";
 import Link from "next/link";
 import Image from "next/image";
 import { Header } from "antd/es/layout/layout";
-
-import { useState } from "react";
 import CustomMenu from "./CustomMenu";
+import { usePathname } from "next/navigation";
 
 const Navbar = ({ isSticky }) => {
-
-
+  const pathName = usePathname();
 
   return (
     <Header
@@ -22,15 +20,23 @@ const Navbar = ({ isSticky }) => {
         <Image alt="Logo" src={logo} />
       </div>
       <nav className={layout.navigation}>
-        <Link className={layout.active} href="/home">
+        <Link className={pathName === "/" && layout.active} href="/">
           Home
         </Link>
-        <Link href="/about">About</Link>
-        <Link href="/pizza">Pizza</Link>
-        <Link href="/contact-us">Contact Us</Link>
+        <Link className={pathName === "/about" && layout.active} href="/about">
+          About
+        </Link>
+        <Link className={pathName === "/menu" && layout.active} href="/menu">
+          Pizza
+        </Link>
+        <Link
+          className={pathName === "/contact" && layout.active}
+          href="/contact"
+        >
+          Contact Us
+        </Link>
       </nav>
       <CustomMenu />
-
     </Header>
   );
 };

@@ -103,9 +103,6 @@
   flex-direction: column;
 }
 
-.menu_item {
-}
-
 .footer {
   height: auto;
   width: 100%;
@@ -260,7 +257,7 @@
 .nav_container {
   display: flex;
   gap: 30px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   max-width: 660px;
   @media (max-width: 575px) {
