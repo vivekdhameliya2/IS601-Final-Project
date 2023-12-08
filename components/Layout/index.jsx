@@ -1,22 +1,23 @@
-import { Header } from "antd/es/layout/layout";
+import { useState } from "react";
+import Navbar from "./Navbar";
 import layout from "./layout.module.scss";
-import Link from "next/link";
-import Image from "next/image";
-import logo from "../../assets/images/logo.png";
 
 const Layout = ({ children }) => {
+  const [isSticky, setIsSticky] = useState(false);
+
+  const handleScroll = (e) => {
+    const offset = e.target.scrollTop;
+    
+    if (offset > 2) {
+      setIsSticky(true);
+    } else {
+      setIsSticky(false);
+    }
+  };
 
   return (
-    <div className={layout.root_layout}>
-      <Header className={`${layout.header} custom-container`}>
-        <div className={layout.logo} ><Image src={logo} /></div>
-        <nav className={layout.navigation} >
-          <Link className={layout.active} href="/home">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/pizza">Pizza</Link>
-          <Link href="/contact-us">Contact Us</Link>
-        </nav>
-      </Header>
+    <div onScroll={handleScroll} className={layout.root_layout}>
+      <Navbar isSticky={isSticky} />
       <main className={layout.content}>{children}</main>
       <footer>footer</footer>
     </div>
