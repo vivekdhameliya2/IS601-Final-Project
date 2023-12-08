@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     transpilePackages: [
-      "antd",
+      "@mui/material",
       "rc-util",
       "@babel/runtime",
       "@ant-design/icons",
