@@ -1,0 +1,58 @@
+.root_layout {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    -webkit-font-feature-settings: "ss01";
+    font-feature-settings: "ss01";
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100dvh;
+    overflow-x: hidden;
+    background: #fff;
+    color: #0d0c22;
+  }
+  
+  .content {
+    flex: 1 0 auto;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+  }
+  
+  .logo {
+    height: 100%;
+    width: 100%;
+    max-width: 120px;
+    max-height: 112px;
+  }
+  
+  .navigation {
+    display: flex;
+    gap: 40px;
+    a {
+      // font-family: Public Sans;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 28px;
+      color: #fff;
+      &:hover {
+        color: #f8833d;
+      }
+    }
+  }
+  
+  .active {
+    color: #f8833d !important;
+  }
