@@ -1,3 +1,5 @@
+@import 'fonts.scss';
+
 html {
   margin: 0;
   padding: 0;
@@ -45,7 +47,7 @@ body {
   max-height: 48px;
   width: 100%;
   max-width: 97px;
-  font-family: Public Sans;
+  font-family: publicsans_bold;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
@@ -58,4 +60,13 @@ body {
 
 .w-100 {
   width: 100%;
+}
+
+
+.my-pagination .MuiPaginationItem-root {
+  color: blue;
+}
+
+.my-pagination .Mui-selected {
+  background-color: lightblue;
 }
