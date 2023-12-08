@@ -9,12 +9,12 @@ export default function Home() {
       <Head>
         <title>Homepage</title>
       </Head>     
-      <div>
-        Homepage
-      </div>
       <section className={homeStyle.hero_section} >
         <div className={homeStyle.overlay_image} >
         </div>
+      </section>
+      <section>
+        Homepage
       </section>
     </Layout>
   );
