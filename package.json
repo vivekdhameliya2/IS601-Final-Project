@@ -22,7 +22,8 @@
     "remark-html": "^16.0.1",
     "sass": "^1.69.5",
     "date-fns": "^2.30.0",
-    "gray-matter": "^4.0.3"
+    "gray-matter": "^4.0.3",
+    "antd": "^5.12.1"
   },
   "engines": {
     "node": ">=18"
