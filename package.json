@@ -17,7 +17,12 @@
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "styled-components": "^6.1.1"
+    "styled-components": "^6.1.1",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
+    "sass": "^1.69.5",
+    "date-fns": "^2.30.0",
+    "gray-matter": "^4.0.3"
   },
   "engines": {
     "node": ">=18"
