@@ -5,9 +5,11 @@ import Image from "next/image";
 import couponOne from "../assets/images/coupon_one.png";
 import couponTwo from "../assets/images/coupon_Two.png";
 import { Button } from "@mui/material";
+import DeliverySection from "../components/HomeComponents/DeliverySection";
 
 export default function Home() {
   return (
+    <>
     <Layout>
       <Head>
         <title>Homepage</title>
@@ -73,5 +75,8 @@ export default function Home() {
         </div>
       </section>
     </Layout>
+
+    </>
+    
   );
 }
