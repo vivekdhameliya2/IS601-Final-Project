@@ -11,18 +11,22 @@ body {
   margin: 0;
 }
 
+.disabled {
+  cursor: not-allowed;
+  background: #d6d6d6 !important;
+}
+
+.swiper {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+}
+
 .custom-container {
   padding-left: calc((100% - 1310px) / 2);
   padding-right: calc((100% - 1310px) / 2);
   @media (max-width: 1368px) {
     padding-left: 34px;
     padding-right: 34px;
-  }
-}
-
-.ant-popover {
-  .ant-popover-arrow {
-    display: none;
   }
 }
 
@@ -48,6 +52,10 @@ body {
   line-height: 26px;
 
   &:hover {
-    color: #d6d6d6 !important;
+    background: #2f8836;
   }
+}
+
+.w-100 {
+  width: 100%;
 }
