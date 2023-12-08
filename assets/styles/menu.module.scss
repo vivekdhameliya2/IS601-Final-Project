@@ -147,8 +147,21 @@
   }
   
   .responsive_filter {
-      display: none;
-      @media (max-width: 568px) {
-          display: block;
-        }
+    display: none;
+    @media (max-width: 568px) {
+      display: block;
+    }
+  }
+  
+  .list_wrapper {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .pagination_wrapper {
+    display: flex;
+    justify-content: flex-end;
   }

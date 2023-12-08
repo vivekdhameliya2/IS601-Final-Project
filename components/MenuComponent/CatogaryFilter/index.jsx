@@ -8,9 +8,10 @@ import fries from "../../../assets/images/fries.svg";
 import cartIcon from "../../../assets/images/cartIcon.svg";
 import filterIcon from "../../../assets/images/filter.svg";
 import Button from "@mui/material/Button";
-
 import { useState } from "react";
 import ResponsiveFilter from "./ResponsiveFilter";
+import CustomCard from "../../CustomCard";
+import { Pagination } from "@mui/material";
 
 const CategoryFilter = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -66,6 +67,16 @@ const CategoryFilter = () => {
           <Image src={cartIcon} alt="cart_icon" />
           <div className={menuStyles.badge}>5</div>
         </div>
+      </div>
+      <div className={menuStyles.list_wrapper}>
+        {Array(9)
+          .fill(1)
+          .map((_) => {
+            return <CustomCard />;
+          })}
+      </div>
+      <div className={menuStyles.pagination_wrapper}>
+        <Pagination count={10} />
       </div>
     </section>
   );
