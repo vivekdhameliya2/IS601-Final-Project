@@ -3,6 +3,7 @@ import Layout from '../../components/Layout';
 import menuStyles from '../../assets/styles/menu.module.scss';
 import CommonBanner from '../../components/CommonBanner';
 import Link from 'next/link';
+import CategoryFilter from '../../components/MenuComponents/CategoryFilter';
 
 const breadcrumbs = [
   <Link className={menuStyles.breadcrumb_link} href="/">
@@ -20,9 +21,7 @@ export default function Menu() {
         <title>Menu</title>
       </Head>     
       <CommonBanner title={"Menu"} breadcrumbs={breadcrumbs} />
-      <section>
-        Menu Page
-      </section>
+      <CategoryFilter />
       
     </Layout>
   );
