@@ -7,7 +7,7 @@
   h2 {
     color: var(--common-white, #fff);
     text-align: center;
-    font-family: Playfair Display;
+    font-family: playfairdisplay_bold;;
     font-size: 64px;
     font-style: normal;
     font-weight: 800;
@@ -95,7 +95,7 @@
   padding: 96px 0;
   h3 {
     color: #016608;
-    font-family: Oxanium;
+    font-family: publicsans_regular;
     font-size: 29px;
     font-style: normal;
     font-weight: 600;
@@ -122,7 +122,7 @@
     padding: 30px 100px;
   }
   @media (max-width: 768px) {
-    padding: 30px 24px;
+    padding: 30px 0px;
   }
   @media (max-width: 468px) {
     h3 {
@@ -138,7 +138,7 @@
 .journey {
   h5 {
     color: var(--grey-900, #161c24);
-    font-family: Public Sans;
+    font-family: oxanium_medium;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
