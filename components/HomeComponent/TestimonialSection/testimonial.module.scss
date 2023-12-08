@@ -1,0 +1,74 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 36px 24px;
+    border-radius: 16px;
+    background: var(--grey-200, #f4f6f8);
+    backdrop-filter: blur(6px);
+    @media (max-width: 568px) {
+      padding: 24px 24px;
+    }
+  }
+  
+  .cardHeader_wrapper {
+    width: 100%;
+  }
+  
+  .cardHeader {
+    padding: 0;
+    align-items: flex-start;
+    margin-bottom: 19px;
+    @media (max-width: 568px) {
+     flex-direction: column;
+     margin-bottom: 10px;
+    }
+  }
+  
+  .cardTitle {
+    color: #222;
+    font-family: Playfair Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 155.556% */
+    margin-bottom: 8px;
+    @media (max-width: 568px) {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 2px;
+    }
+  }
+  
+  .cardDate {
+    color: var(--grey-500, #919eab);
+    /* Body2 */
+    font-family: Public Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+    @media (max-width: 568px) {
+      margin-bottom: 10px;
+      line-height: 16px;
+    }
+  }
+  
+  .card_avatar {
+    width: 64px;
+    height: 64px;
+    @media (max-width: 568px) {
+      width: 54px;
+      height: 54px;
+    }
+  }
+  
+  .desc {
+    color: #222 !important;
+    font-family: Oxanium;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 24px !important; /* 150% */
+  }
