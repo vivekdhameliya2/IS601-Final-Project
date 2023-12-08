@@ -7,6 +7,7 @@ import aboutStyles from "../../assets/styles/about.module.scss";
 import CommonBanner from "../../components/CommonBanner";
 import Link from "next/link";
 import OurTeam from "../../components/AboutComponents/OurTeam";
+import OurService from "../../components/AboutComponents/OurService";
 
 const breadcrumbs = [
   <Link className={aboutStyles.breadcrumb_link} href="/">
@@ -32,6 +33,7 @@ export default function About() {
         About Page
       </section>
       <OurTeam />
+      <OurService />
       
     </Layout>
   );

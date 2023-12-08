@@ -1,40 +1,45 @@
 import Image from "next/image";
 import aboutStyles from "../../../assets/styles/about.module.scss";
-import our_story from "../../../assets/images/our-story.png";
+import medal from "../../../assets/images/medal-line.svg";
+import gps from "../../../assets/images/gps-line.svg";
+import bike from "../../../assets/images/e-bike-2-line.svg";
 
-const OurStory = () => {
+const OurService = () => {
   return (
-    <section className={`${aboutStyles.our_story} custom-container`}>
-      <div className={aboutStyles.story_image}>
-        <Image src={our_story} alt="story_image" />
+    <section className={`${aboutStyles.our_service} custom-container`}>
+      <div className={aboutStyles.service_wrapper}>
+        <div className={aboutStyles.service_image}>
+          <Image src={medal} alt="service_icon " />
+        </div>
+        <div className={aboutStyles.service_content}>
+          <h5>Premium Quality</h5>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
       </div>
-      <div className={aboutStyles.our_story_content}>
-        <h3>Our Story</h3>
-        <h2>The Story About Italian Pizza</h2>
-        <div className={aboutStyles.journey}>
-          <h5>Our Journey</h5>
+      <div className={aboutStyles.service_wrapper}>
+        <div className={aboutStyles.service_image}>
+          <Image src={gps} alt="service_icon " />
+        </div>
+        <div className={aboutStyles.service_content}>
+          <h5>Variety of Dishes</h5>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
           </p>
         </div>
-        <hr />
-        <div className={aboutStyles.journey}>
-          <h5>Experience and food</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris.
-          </p>
+      </div>
+      <div className={aboutStyles.service_wrapper}>
+        <div className={aboutStyles.service_image}>
+          <Image src={bike} alt="service_icon " />
         </div>
-        <hr />
-        <div className={aboutStyles.journey}>
-          <h5>Our Journey</h5>
+        <div className={aboutStyles.service_content}>
+          <h5>Fastest Delivery</h5>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
           </p>
         </div>
       </div>
@@ -42,4 +47,4 @@ const OurStory = () => {
   );
 };
 
-export default OurStory;
+export default OurService;
