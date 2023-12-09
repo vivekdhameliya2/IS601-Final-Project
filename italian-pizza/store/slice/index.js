@@ -1,8 +1,8 @@
 import { combineReducers } from "@reduxjs/toolkit";
-import homeSlice from "./home.slice";
+import pizzaSlice from "./pizza.slice";
 
 const rootReducer = combineReducers({
-  home: homeSlice,
+  pizza: pizzaSlice,
 });
 
 export default rootReducer;
