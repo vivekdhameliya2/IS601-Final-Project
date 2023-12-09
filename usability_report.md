@@ -243,3 +243,51 @@ To address this recommendation, we are initiating a design enhancement to amplif
 ![Version 6.1 Screenshot after](design/usability_report/version-6.1.jpeg) 
 
 
+# UX Research Documentation: Iterative Design Testing
+
+## Iteration 6: Version 7.0 to Version 7.1
+
+### Introduction
+The sixth iteration focuses on enhancing the sign-up process based on user feedback. The goal is to increase the prominence of the sign-up button, making the registration process more intuitive and accessible for users.
+
+### Design Overview
+
+#### Version 7.0:
+- Footer includes four columns with links: "Overview," "About Us," "Social Media," and "Terms."
+- Brand logo and social media links are present.
+- MailChimp sign-up form in the footer with the text "Want More? Sign Up For Pizza Offer."
+
+![Version 7.0 Screenshot Before](design/usability_report/version_7.png)
+
+#### Version 7.1:
+- MailChimp sign-up form moved to the top section below the hero text.
+- Background becomes blurred when the MailChimp form is active.
+- Added a summer offer text on the left side of the form: "Summer Offer - Up to 30% Off."
+- Main text on the right side: "Subscribe to our newsletter & receive a coupon."
+- White email input field and a large orange subscribe button.
+- A bold "No Thanks" link below the subscribe button.
+
+![Version 7.1 Screenshot After](design/usability_report/version_7.1.png)
+
+### Testing Protocol
+
+#### A/B Testing:
+- Users will interact with both versions (Version 5.0 and Version 6.1).
+- Metrics such as click-through rates, user engagement, and overall satisfaction will be measured for the sign-up process.
+
+#### Think Out Loud:
+- Participants will provide feedback on the revised sign-up form, focusing on usability, visibility, and overall appeal.
+- Insights will be gathered into user preferences and satisfaction with the new placement and design.
+
+#### 5-Second Protocol:
+- Users will be exposed to both versions (Version 5.0 and Version 6.1) for 5 seconds.
+- Observations on the initial impressions and key elements noticed in the sign-up process will be recorded.
+
+### Testing Session
+
+#### Session 10 (Date: 12/15/2023):
+- Users will interact with both versions to compare the existing design (Version 5.0) with the revised Version 6.1.
+- A/B testing results will be analyzed to identify improvements in click-through rates and user engagement related to the sign-up process.
+
+### Conclusion
+The iterative testing process continues to adapt to user feedback, addressing the need for a more prominent sign-up button. Version 6.1 introduces changes to the placement and design of the MailChimp form, with considerations for user visibility and appeal. The testing sessions in Session 10 will provide valuable insights into the effectiveness of these changes, contributing to the ongoing refinement of the home landing page for enhanced user experience.
