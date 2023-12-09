@@ -79,7 +79,7 @@ This iteration aimed to address user feedback regarding the absence of a testimo
 - Observations on the perceived trustworthiness and appeal of the design were recorded.
 
 ## Testing Sessions
-### Session 3 (Date: 12/04/2023):
+### Session 3 (Date: 12/01/2023):
 - Users interacted with Version 2.1, featuring the added testimonial section.
 - A/B testing revealed increased user engagement and positive responses to the testimonials.
 - Think Out Loud sessions indicated that users appreciated the testimonials for building trust and likability.
@@ -134,7 +134,7 @@ The third iteration focused on refining the color scheme in specific elements of
 
 ## Testing Sessions
 
-### Session 5 (Date: 12/06/2023):
+### Session 5 (Date: 12/01/2023):
 - Users interacted with Version 3, featuring the original color scheme.
 - A/B testing results identified areas of concern regarding color harmony and user preferences.
 - Version 3.1 was introduced with color adjustments in the hero section based on Session 5 feedback.
@@ -185,7 +185,7 @@ The fourth iteration centered on refining elements in both the top section and t
 
 ## Testing Sessions
 
-### Session 7 (Date: 12/08/2023):
+### Session 7 (Date: 12/03/2023):
 - Users interacted with Version 4, featuring the initial design.
 - A/B testing results identified areas for improvement in user engagement and visual appeal.
 - Version 4.1 was introduced with modifications based on Session 7 feedback.
@@ -226,7 +226,7 @@ The fifth iteration aims to streamline the footer section of the home landing pa
 
 ## Testing Session
 
-### Session 9 (Date: 12/12/2023):
+### Session 9 (Date: 12/04/2023):
 - Users will interact with both versions to compare the existing design (Version 4.1) with the revised Version 5.0.
 - A/B testing results will be analyzed to identify improvements in click-through rates and user engagement related to the footer section.
 
@@ -285,9 +285,63 @@ The sixth iteration focuses on enhancing the sign-up process based on user feedb
 
 ### Testing Session
 
-#### Session 10 (Date: 12/15/2023):
+#### Session 10 (Date: 12/05/2023):
 - Users will interact with both versions to compare the existing design (Version 5.0) with the revised Version 6.1.
 - A/B testing results will be analyzed to identify improvements in click-through rates and user engagement related to the sign-up process.
 
 ### Conclusion
 The iterative testing process continues to adapt to user feedback, addressing the need for a more prominent sign-up button. Version 6.1 introduces changes to the placement and design of the MailChimp form, with considerations for user visibility and appeal. The testing sessions in Session 10 will provide valuable insights into the effectiveness of these changes, contributing to the ongoing refinement of the home landing page for enhanced user experience.
+
+
+# UX Research Documentation: Iterative Design Testing
+
+## Iteration 7: Version A to Version B
+
+### Introduction
+The Xth iteration aims to refine the cookie consent design based on user feedback. The focus is on improving the visual appeal and clarity of cookie consent options.
+
+### Design Overview
+
+#### Version A:
+- Cookie design includes one cookie PNG image.
+- Text provides cookie consent information.
+- Three buttons: 
+  1. "Cookie Settings" (blue link button)
+  2. "Decline All" (light blue background)
+  3. "Accept Cookies" (blue background, white text)
+
+![Version A Screenshot Before](design/usability_report/design_A.png)
+
+#### Version B:
+- Simplified cookie design with one cookie image.
+- "Have a Cookie :" title below the image.
+- Two horizontally aligned buttons:
+  1. "Accept All Cookies" (orange background, white text)
+  2. "Reject Non-Essential" (transparent background, orange text, orange button border)
+
+![Version B Screenshot After](design/usability_report/design_B.png)
+
+### Testing Protocol
+
+#### A/B Testing:
+- Users will interact with both versions (Version A and Version B).
+- Metrics such as user engagement, clarity of options, and overall satisfaction will be measured.
+
+#### Think Out Loud:
+- Participants will provide feedback on the revised cookie consent design, focusing on visual appeal and clarity.
+- Insights will be gathered into user preferences and satisfaction with the new layout and buttons.
+
+#### 5-Second Protocol:
+- Users will be exposed to both versions (Version A and Version B) for 5 seconds.
+- Observations on the initial impressions and key elements noticed in the cookie consent section will be recorded.
+
+### Testing Session
+
+#### Session 7 (Date: 12/10/2023):
+- Users will interact with both versions to compare the existing design (Version A) with the revised Version B.
+- A/B testing results will be analyzed to identify improvements in user engagement and satisfaction related to the cookie consent section.
+
+### Conclusion
+The iterative testing process continues to refine the cookie consent design for improved user experience. Version B introduces changes to enhance visual appeal and simplify options, addressing user feedback. The testing sessions in Session X will provide valuable insights into the effectiveness of these changes, contributing to the ongoing optimization of the website.
+
+![final B Screenshot After of cookie on page](design/usability_report/final_Design_cookie.png)
