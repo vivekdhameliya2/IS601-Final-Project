@@ -165,3 +165,71 @@
     display: flex;
     justify-content: flex-end;
   }
+
+.deals_container {
+  background: #fff;
+}
+
+.deal_card {
+  display: flex;
+  justify-content: space-between;
+  background: var(--primary-lighter, #f1ced1);
+}
+
+.offer_content {
+  padding: 30px 0 30px 28px;
+  h5 {
+    color: #222;
+    font-family: publicsans_bold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 100% */
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  h2 {
+    color: #016608;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: oswald_bold;
+    font-size: 58px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    position: relative;
+    margin: 20px 0;
+    margin-bottom: 30px;
+    &::after {
+      content: "off";
+      color: #222;
+      font-family: publicsans_bold;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 18px; /* 90% */
+      text-transform: uppercase;
+      position: absolute; /* Positioned absolutely relative to the parent h2 */
+      top: 35px;
+      right: 10;
+      transform: rotate(-90deg);
+      transform-origin: left top; /* Set the rotation origin */
+    }
+  }
+}
+
+.offer_label {
+  display: inline-flex;
+  padding: 6px 13px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px dashed #222;
+  background: #f8833d;
+  color: #222;
+  font-family: publicsans_bold;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; 
+}
