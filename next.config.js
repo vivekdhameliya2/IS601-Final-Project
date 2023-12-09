@@ -10,7 +10,9 @@ const nextConfig = {
       "rc-picker",
       "rc-tree",
       "rc-table",
+      "swiper/react",
+      "react-leaflet"
     ],
   };
-
+  
   module.exports = nextConfig;
