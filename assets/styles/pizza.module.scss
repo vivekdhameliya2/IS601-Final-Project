@@ -31,21 +31,22 @@
 
 .detail_container {
   display: flex;
-  justify-content: space-between;
   padding-top: 80px;
-  padding-bottom: 80px;
-  gap: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+  gap: 40px;
   @media (max-width: 968px) {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 }
 
 .image_container {
   width: 100%;
-  max-width: 620px;
+  max-width: 420px;
   height: 100%;
-  max-height: 620px;
+  max-height: 420px;
   img {
     height: 100%;
     width: 100%;
@@ -210,7 +211,7 @@
 }
 
 .checkout_container {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 80px;
   @media (max-width: 868px) {
     padding-top: 0;

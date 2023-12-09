@@ -109,3 +109,9 @@ body {
     display: none;
   }
 }
+
+a {
+  &:hover {
+    color: #d6d6d6 !important;
+  }
+}
