@@ -32,9 +32,10 @@ const breakpoints = {
     },
   };
 
-const DealsAndOffers = () => {
+const DealsAndOffers = ({ background }) => {
   return (
     <section
+    style={{background: background}}
       className={`${homeStyle.special_menu} ${menuStyle.deals_container} custom-container `}
     >
       <p>Special Menu</p>
