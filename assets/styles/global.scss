@@ -1,4 +1,4 @@
-@import 'fonts.scss';
+@import "fonts.scss";
 
 html {
   margin: 0;
@@ -62,11 +62,50 @@ body {
   width: 100%;
 }
 
-
 .my-pagination .MuiPaginationItem-root {
   color: blue;
 }
 
 .my-pagination .Mui-selected {
   background-color: lightblue;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+.custom_input {
+  display: flex;
+  padding: 10px 14px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid var(--components-input-outlined, rgba(145, 158, 171, 0.32));
+  overflow: hidden;
+  color: var(--text-light-disabled, #919eab);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: publicsans_regular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+
+  button {
+    color: #016608;
+    text-align: center;
+    font-family: publicsans_bold;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+  }
+}
+
+.custom-table {
+  @media (max-width: 868px) {
+    display: none;
+  }
 }

@@ -1,32 +1,28 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@fontsource/roboto": "^5.0.8",
-    "@mui/icons-material": "^5.14.18",
-    "@mui/joy": "^5.0.0-beta.15",
-    "@mui/material": "^5.14.18",
-    "@mui/styled-engine-sc": "^6.0.0-alpha.6",
-    "@mui/system": "^5.14.18",
-    "@reduxjs/toolkit": "^2.0.1",
-    "next": "latest",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "styled-components": "^6.1.1",
-    "remark": "^15.0.1",
-    "remark-html": "^16.0.1",
-    "sass": "^1.69.5",
-    "date-fns": "^2.30.0",
-    "gray-matter": "^4.0.3",
-    "antd": "^5.12.1"
-  },
-  "engines": {
-    "node": ">=18"
-  }
+    "private": true,
+    "scripts": {
+        "build": "next build",
+        "dev": "next dev",
+        "start": "next start"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.11.1",
+        "@emotion/styled": "^11.11.0",
+        "@mui/material": "^5.14.20",
+        "@reduxjs/toolkit": "^2.0.1",
+        "date-fns": "^2.30.0",
+        "gray-matter": "^4.0.3",
+        "next": "latest",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-leaflet": "^4.2.1",
+        "react-redux": "^9.0.2",
+        "remark": "^15.0.1",
+        "remark-html": "^16.0.1",
+        "sass": "^1.69.5",
+        "swiper": "^11.0.5"
+    },
+    "engines": {
+        "node": ">=18"
+    }
 }

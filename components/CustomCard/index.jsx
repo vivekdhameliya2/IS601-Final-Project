@@ -9,18 +9,18 @@ import veg from '../../assets/images/veg.svg';
 import cart from '../../assets/images/cart.svg';
 import nonVeg from '../../assets/images/non-veg.svg';
 
-export default function CustomCard() {
+export default function CustomCard({ data }) {
   return (
     <Card className={cardStyles.card} sx={{ maxWidth: 255 }}>
         <div className={cardStyles.foodType} >
             <Image src={veg} alt="veg" />
         </div>
-      <Image src={pizzaOne} alt="pizzaOne" />
+      <Image src={data.image} width={255} height={223} alt="pizzaOne" />
       <div className={cardStyles.content} >
-        <h5>Spring Filling Pizza</h5>
+        <h5>{data.title}</h5>
         <div className={cardStyles.price_section} >
-            <p>$10.00</p>
-            <Rating value={4} sx={{color: "#faaf00"}} />
+            <p>${(+data.price).toFixed(2)}</p>
+            <Rating value={data.rating} sx={{color: "#faaf00"}} />
         </div>
       </div>
       <CardActions sx={{width: "100%"}} className={cardStyles.actions} disableSpacing>
