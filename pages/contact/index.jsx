@@ -1,21 +1,29 @@
-import Head from 'next/head';
-import Layout from '../../components/Layout';
-import contactStyles from '../../assets/styles/contact.module.scss';
+import Head from "next/head";
+import Layout from "../../components/Layout";
+import contactStyles from "../../assets/styles/contact.module.scss";
+import CommonBanner from "../../components/CommonBanner";
+import Link from "next/link";
+import ContactUsForm from "../../components/ContactUsComponents";
+import ContactInfo from "../../components/ContactUsComponents/ContactInfo";
+
+const breadcrumbs = [
+  <Link className={contactStyles.breadcrumb_link} href="/">
+    Home
+  </Link>,
+  <Link className={contactStyles.breadcrumb_link} href="/about">
+    Contact Us
+  </Link>,
+];
 
 export default function ContactUs() {
   return (
     <Layout>
       <Head>
-        <title>contact</title>
-      </Head>     
-      <section className={contactStyles.hero_section} >
-        <div className={contactStyles.overlay_image} >
-        </div>
-      </section>
-      <section>
-      contact Page
-      </section>
-      
+        <title>Contact Us</title>
+      </Head>
+      <CommonBanner title={"Contact Us"} breadcrumbs={breadcrumbs} />
+      <ContactUsForm />
+      <ContactInfo />
     </Layout>
   );
 }
