@@ -10,7 +10,7 @@ Scarcity is often created by emphasizing limited availability, time constraints,
 
 **Screenshot of coupon:**
 
- [Screenshot of the coupon](design/Six_method_image/Scaricity.png)
+ ![Screenshot of the coupon](design/Six_method_image/Scaricity.png)
 
 # Social Proof:
 
