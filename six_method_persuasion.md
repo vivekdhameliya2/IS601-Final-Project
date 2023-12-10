@@ -38,6 +38,8 @@ To convey a sense of positive liking or approval in the testimonials, I incorpor
 
 3. **Explicit Recommendations:** Customers explicitly recommending your pizza and the promotional deal further solidify the sense of liking. When someone suggests that others "trust me; you won't be disappointed," it adds a personal touch and strengthens the message of approval.
 
+**Screenshot of Social Liking:**
+
 ![Screenshot of the Liking](design/Six_method_image/Liking.png)
 
 # Commitment:
@@ -80,6 +82,8 @@ The guidance on achieving consistency in a pizza branding website is derived fro
 
 6. **Best Practices in Web Design:**
    - The recommendations align with general best practices in web design, considering factors like navigation, imagery, and content layout.
+
+   **Screenshot of consistency:**
 
 ![Screenshot of the consistency](design/Six_method_image/Consistency.png)
 
