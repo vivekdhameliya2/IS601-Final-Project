@@ -26,7 +26,7 @@ Each student should put an 'X' under their name on the days they have meetings.
 |-------------|-----------|-----------|
 | Dec 5 |   X        |    X       |
 | Dec 7 |      X    |    X       |
-| Dec 12 |           |           |
+| Dec 12 |           |    X       |
 
 
 *Instructions: Please place an 'X' in the cell under your name corresponding to the dates you attend class.*
