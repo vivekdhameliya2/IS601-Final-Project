@@ -10,8 +10,8 @@ const Layout = ({ children, title }) => {
   useEffect(() => {
     ReactGA.initialize(process.env.ANALITICS_ID);
     ReactGA.send({
-      hitType: "pageview",
-      page: window.location.pathname,
+      hitType: "page_view",
+      page_location: window.location.pathname,
       title: title,
     });
   }, []);
