@@ -41,7 +41,7 @@ const catData = [
   },
 ];
 
-const CategoryFilter = ({ allProducts }) => {
+const CategoryFilter = ({ allProducts, addProductToCart, cartData }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const itemsPerPage = 5;
@@ -133,12 +133,20 @@ const CategoryFilter = ({ allProducts }) => {
         />
         <div className={menuStyles.cart_icon}>
           <Image src={cartIcon} alt="cart_icon" />
-          <div className={menuStyles.badge}>0</div>
+          {!!cartData.length && <div className={menuStyles.badge}>{cartData.length}</div>}
         </div>
       </div>
       <div className={menuStyles.list_wrapper}>
         {getPaginatedData().map((data) => {
-          return <CustomCard data={data} />;
+          return (
+            <CustomCard
+              isInCart={
+                cartData.filter((item) => item.uniqueId === data.fileName)[0]
+              }
+              addProductToCart={addProductToCart}
+              data={data}
+            />
+          );
         })}
       </div>
       <div className={menuStyles.pagination_wrapper}>

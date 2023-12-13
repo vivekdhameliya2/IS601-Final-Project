@@ -3,11 +3,22 @@ import largePizza from "../../../assets/images/large-pizza.png";
 import veg from "../../../assets/images/veg.svg";
 import nonVeg from "../../../assets/images/non-veg.svg";
 import Image from "next/image";
-import { Button, FormControl, InputLabel, MenuItem, Rating, Select } from "@mui/material";
+import {
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Rating,
+  Select,
+} from "@mui/material";
 import cartIcon from "../../../assets/images/cartIconV2.svg";
 import NumberInput from "../../NumberInput";
 
-const PizzaDetail = ({ product }) => {
+const PizzaDetail = ({ product, cartData, addProductToCart }) => {
+  const isInCart = cartData.filter(
+    (item) => item.uniqueId === product.fileName
+  )[0];
+
   return (
     <section className={`${pizzaStyles.detail_container} custom-container`}>
       <div className={pizzaStyles.image_container}>
@@ -67,10 +78,17 @@ const PizzaDetail = ({ product }) => {
           </div>
         </div>
         <hr />
-        <Button className={pizzaStyles.cart_button}>
-          <Image src={cartIcon} alt="cartIcon" />
-          <span>Add to Cart</span>
-        </Button>
+        {isInCart ? (
+          <Button className={pizzaStyles.cart_button}>
+            <Image src={cartIcon} alt="cartIcon" />
+            <span>View in cart</span>
+          </Button>
+        ) : (
+          <Button onClick={() => addProductToCart()} className={pizzaStyles.cart_button}>
+            <Image src={cartIcon} alt="cartIcon" />
+            <span>Add to Cart</span>
+          </Button>
+        )}
       </div>
     </section>
   );

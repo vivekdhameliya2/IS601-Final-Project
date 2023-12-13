@@ -1,19 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  allPizza: [],
+  cart: [],
 };
 
 const pizzaSlice = createSlice({
   name: "home",
   initialState,
   reducers: {
-    setAllPizza: (state, action) => {
-      state.allPizza = action.payload;
+    addToCart: (state, action) => {
+      const product = action.payload;
+      state.cart.push({
+        uniqueId: product.fileName,
+        product,
+        price: product.price,
+        qty: 1,
+        size: 0.5,
+      });
     },
   },
 });
 
-export const { setAllPizza } = pizzaSlice.actions;
+export const { addToCart } = pizzaSlice.actions;
 
 export default pizzaSlice.reducer;
