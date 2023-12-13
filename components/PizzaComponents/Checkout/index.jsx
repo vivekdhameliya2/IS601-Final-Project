@@ -1,6 +1,5 @@
 import { Button, Card } from "@mui/material";
 import checkoutStyles from "../../../assets/styles/pizza.module.scss";
-import arrow from "../../../assets/images/arrow.svg";
 import CustomTable from "./CustomTable";
 import Image from "next/image";
 import CheckoutTotal from "./CheckoutTotal";
@@ -38,7 +37,7 @@ const Checkout = ({ cartData, removeFromCart, setCoupon, coupon, applyCoupon, su
             cartData={cartData}
           />
           <Link href="/menu" className={checkoutStyles.continue_shoping}>
-            <Image src={arrow} alt="arrow" /> Continue Shopping
+            <Image width={20} height={20} src={"/images/arrow.svg"} alt="arrow" /> Continue Shopping
           </Link>
         </div>
         <div className={checkoutStyles.right_wrap}>

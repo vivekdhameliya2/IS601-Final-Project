@@ -1,7 +1,6 @@
 import { Button } from "@mui/material";
 import Image from "next/image";
 import { useSwiper } from "swiper/react";
-import arrow from "../../../assets/images/arrow.svg";
 
 const SwiperButtonNext = () => {
   const swiper = useSwiper();
@@ -10,7 +9,7 @@ const SwiperButtonNext = () => {
       className={!swiper.allowSlideNext ? "disabled" : ""}
       onClick={() => swiper.slideNext()}
     >
-      <Image src={arrow} alt="arrow" />
+      <Image width={20} height={20} src={"/images/arrow.svg"} alt="arrow" />
     </Button>
   );
 };

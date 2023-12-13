@@ -1,12 +1,5 @@
 import Image from "next/image";
 import menuStyles from "../../../assets/styles/menu.module.scss";
-import burger from "../../../assets/images/burger-white.svg";
-import slice from "../../../assets/images/slice.svg";
-import beverages from "../../../assets/images/beverages.svg";
-import salads from "../../../assets/images/salads.svg";
-import fries from "../../../assets/images/fries.svg";
-import cartIcon from "../../../assets/images/cartIcon.svg";
-import filterIcon from "../../../assets/images/filter.svg";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import ResponsiveFilter from "./ResponsiveFilter";
@@ -18,27 +11,27 @@ const catData = [
   {
     type: "pizza",
     title: "Pizza",
-    icon: slice,
+    icon: "/images/slice.svg",
   },
   {
     type: "burger",
     title: "Burger",
-    icon: burger,
+    icon: "/images/burger-white.svg",
   },
   {
     type: "fries",
     title: "Fries",
-    icon: fries,
+    icon: "/images/fries.svg",
   },
   {
     type: "dessert",
     title: "Dessert",
-    icon: salads,
+    icon: "/images/salads.svg",
   },
   {
     type: "beverages",
     title: "Beverages",
-    icon: beverages,
+    icon: "/images/beverages.svg",
   },
 ];
 
@@ -108,7 +101,7 @@ const CategoryFilter = ({ allProducts, addProductToCart, cartData }) => {
                     : ""
                 } `}
               >
-                <Image src={category.icon} alt="filter-icon" />
+                <Image width={24} height={24} src={category.icon} alt="filter-icon" />
                 <span>{category.title}</span>
               </div>
             );
@@ -122,7 +115,7 @@ const CategoryFilter = ({ allProducts, addProductToCart, cartData }) => {
             aria-expanded={open ? "true" : undefined}
             onClick={handleClick}
           >
-            <Image src={filterIcon} alt="filter_icon" />
+            <Image width={40} height={40} src={"/images/filter.svg"} alt="filter_icon" />
           </Button>
         </div>
         <ResponsiveFilter
@@ -133,7 +126,7 @@ const CategoryFilter = ({ allProducts, addProductToCart, cartData }) => {
           selectedCategory={selectedCategory}
         />
         <Link href="/cart" className={menuStyles.cart_icon}>
-          <Image src={cartIcon} alt="cart_icon" />
+          <Image width={24} height={24} src={"/images/cartIcon.svg"} alt="cart_icon" />
           {!!cartData.length && <div className={menuStyles.badge}>{cartData.length}</div>}
         </Link>
       </div>

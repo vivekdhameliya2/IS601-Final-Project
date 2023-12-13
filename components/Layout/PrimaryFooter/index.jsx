@@ -1,10 +1,4 @@
 import layout from "../layout.module.scss";
-import logo from "../../../assets/images/logo.svg";
-import facebook from "../../../assets/images/facebook.svg";
-import instagram from "../../../assets/images/instagram.svg";
-import linkedin from "../../../assets/images/linkedin.svg";
-import youtube from "../../../assets/images/youtube.svg";
-import twitter from "../../../assets/images/twitter.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,24 +8,24 @@ const PrimaryFooter = () => {
       <div className={layout.nav_section}>
         <div className={layout.social_card}>
           <div className={layout.footer_logo}>
-            <Image src={logo} alt="FooterLogo" />
+            <Image src={"/logo/logo.svg"} width={120} height={112} alt="FooterLogo" />
           </div>
           <p>It is a long established fact that a reader will be.</p>
           <div className={layout.social_icons}>
             <div className={layout.social_icon}>
-              <Image src={facebook} alt="facebook" />
+              <Image width={18} height={18} src={"/images/facebook.svg"} alt="facebook" />
             </div>
             <div className={layout.social_icon}>
-              <Image src={instagram} alt="instagram" />
+              <Image width={18} height={18} src={"/images/instagram.svg"} alt="instagram" />
             </div>
             <div className={layout.social_icon}>
-              <Image src={linkedin} alt="linkedin" />
+              <Image width={18} height={18} src={"/images/linkedin.svg"} alt="linkedin" />
             </div>
             <div className={layout.social_icon}>
-              <Image src={youtube} alt="youtube" />
+              <Image width={18} height={18} src={"/images/youtube.svg"} alt="youtube" />
             </div>
             <div className={layout.social_icon}>
-              <Image src={twitter} alt="twitter" />
+              <Image width={18} height={18} src={"/images/twitter.svg"} alt="twitter" />
             </div>
           </div>
         </div>

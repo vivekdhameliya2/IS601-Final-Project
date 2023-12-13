@@ -1,7 +1,6 @@
 import { useState } from "react";
 import layout from "../../layout.module.scss";
 import Image from "next/image";
-import menuIcon from "../../../../assets/images/menu.svg";
 import Link from "next/link";
 
 const MenuList = () => {
@@ -32,7 +31,7 @@ const CustomMenu = () => {
 
   return (
     <div className={layout.mobile_menu}>
-      <Image src={menuIcon} alt="menuIcon" />
+      <Image width={40} height={40} src={"/images/menu.svg"} alt="menuIcon" />
     </div>
   );
 };

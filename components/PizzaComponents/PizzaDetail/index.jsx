@@ -1,12 +1,9 @@
 import pizzaStyles from "../../../assets/styles/pizza.module.scss";
-import veg from "../../../assets/images/veg.svg";
-import nonVeg from "../../../assets/images/non-veg.svg";
 import Image from "next/image";
 import {
   Button,
   Rating,
 } from "@mui/material";
-import cartIcon from "../../../assets/images/cartIconV2.svg";
 import NumberInput from "../../NumberInput";
 import SizeSelect from "./SizeSelect";
 
@@ -25,7 +22,7 @@ const PizzaDetail = ({ product, cartData, addProductToCart, handleChange, formDa
       <div className={pizzaStyles.detail_content}>
         <div className={pizzaStyles.offer_wrap}>
           <div className={pizzaStyles.offer_chip}>OFFER</div>
-          <Image src={product.veg ? veg : nonVeg} alt="veg" />
+          <Image width={20} height={20} src={product.veg ? "/images/veg.svg" : "/images/non-veg.svg"} alt="veg" />
         </div>
         <h5>{product.newArrival && "New Arrival"}</h5>
         <h2>{product.title}</h2>
@@ -56,7 +53,7 @@ const PizzaDetail = ({ product, cartData, addProductToCart, handleChange, formDa
         )}
         {isInCart ? (
           <Button onClick={() => removeFromCart(product.fileName)}  className={pizzaStyles.cart_button}>
-            <Image src={cartIcon} alt="cartIcon" />
+            <Image  height={24} width={24} src={"/images/cartIconV2.svg"} alt="cartIcon" />
             <span>Remove from cart</span>
           </Button>
         ) : (
@@ -64,7 +61,7 @@ const PizzaDetail = ({ product, cartData, addProductToCart, handleChange, formDa
             onClick={() => addProductToCart()}
             className={pizzaStyles.cart_button}
           >
-            <Image src={cartIcon} alt="cartIcon" />
+            <Image height={24} width={24} src={"/images/cartIconV2.svg"} alt="cartIcon" />
             <span>Add to Cart</span>
           </Button>
         )}

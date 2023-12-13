@@ -1,6 +1,5 @@
 import Image from "next/image";
 import homeStyle from "../../../assets/styles/homepage.module.scss";
-import PizzaSlide from "../../../assets/images/PizzaSlide.svg";
 import CustomSlider from "../../CustomSlider";
 import TestimonialCard from "./TestimonialCard";
 
@@ -40,7 +39,7 @@ const TestimonialSection = ({ data }) => {
       <div className={homeStyle.special_menu_tagline}>
         <div className={homeStyle.special_menu_title}>
           <h2>{data.subTitle}</h2>
-          <Image src={PizzaSlide} alt="PizzaSlide" />
+          <Image width={54} height={54} src={"/images/PizzaSlide.svg"} alt="PizzaSlide" />
         </div>
        
       </div>

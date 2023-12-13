@@ -1,6 +1,5 @@
 "use client";
 import layout from "../layout.module.scss";
-import logo from "../../../assets/images/logo.svg";
 import Link from "next/link";
 import Image from "next/image";
 import CustomMenu from "./CustomMenu";
@@ -16,7 +15,7 @@ const Navbar = ({ isSticky }) => {
       } custom-container`}
     >
       <div className={layout.logo}>
-        <Image alt="Logo" src={logo} />
+        <Image alt="Logo" src={"/logo/logo.svg"} width={120} height={112} />
       </div>
       <nav className={layout.navigation}>
         <Link className={pathName === "/" ? layout.active : ""} href="/">

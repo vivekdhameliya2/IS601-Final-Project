@@ -1,6 +1,5 @@
 import Image from "next/image";
 import homeStyle from "../../../assets/styles/homepage.module.scss";
-import deliBoy from '../../../assets/images/delivery-boy.png';
 
 const DeliverySection = ({ data }) => {
   return (
@@ -11,7 +10,7 @@ const DeliverySection = ({ data }) => {
           <h2>{data.subTitle}</h2>
         </div>
         <div className={homeStyle.delivery_boy}>
-            <Image src={deliBoy} alt="deliBoy" />
+            <Image width={369} height={358} src={'/images/delivery-boy.png'} alt="deliBoy" />
         </div>
       </div>
     </section>
