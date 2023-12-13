@@ -8,7 +8,13 @@ import salads from "../../../../assets/images/salads.svg";
 import fries from "../../../../assets/images/fries.svg";
 import Image from "next/image";
 
-const ResponsiveFilter = ({ anchorEl, open, handleClose }) => {
+const ResponsiveFilter = ({
+  anchorEl,
+  open,
+  handleClose,
+  catData,
+  selectedCategory,
+}) => {
   return (
     <Menu
       id="basic-menu"
@@ -19,36 +25,25 @@ const ResponsiveFilter = ({ anchorEl, open, handleClose }) => {
         "aria-labelledby": "basic-button",
       }}
     >
-      <MenuItem onClick={handleClose}>
-        <div className={menuStyles.filter_box}>
-          <Image src={slice} alt="filter-icon" />
-          <span>Pizza</span>
-        </div>
-      </MenuItem>
-      <MenuItem onClick={handleClose}>
-        <div className={menuStyles.filter_box}>
-          <Image src={burger} alt="filter-icon" />
-          <span>Burgeer</span>
-        </div>
-      </MenuItem>
-      <MenuItem onClick={handleClose}>
-        <div className={menuStyles.filter_box}>
-          <Image src={fries} alt="filter-icon" />
-          <span>Fries</span>
-        </div>
-      </MenuItem>
-      <MenuItem onClick={handleClose}>
-        <div className={menuStyles.filter_box}>
-          <Image src={salads} alt="filter-icon" />
-          <span>Salads</span>
-        </div>
-      </MenuItem>
-      <MenuItem onClick={handleClose}>
-        <div className={menuStyles.filter_box}>
-          <Image src={beverages} alt="filter-icon" />
-          <span>Beverages</span>
-        </div>
-      </MenuItem>
+      {catData.map((category) => {
+        return (
+          <MenuItem
+            key={category.type}
+            onClick={() => handleClose(category.type)}
+          >
+            <div
+              className={`${menuStyles.filter_box} ${
+                selectedCategory === category.type
+                  ? menuStyles.filter_box_active
+                  : ""
+              } `}
+            >
+              <Image src={category.icon} alt="filter-icon" />
+              <span>{category.title}</span>
+            </div>
+          </MenuItem>
+        );
+      })}
     </Menu>
   );
 };

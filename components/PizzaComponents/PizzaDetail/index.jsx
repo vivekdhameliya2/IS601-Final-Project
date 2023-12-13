@@ -1,52 +1,55 @@
 import pizzaStyles from "../../../assets/styles/pizza.module.scss";
 import largePizza from "../../../assets/images/large-pizza.png";
 import veg from "../../../assets/images/veg.svg";
+import nonVeg from "../../../assets/images/non-veg.svg";
 import Image from "next/image";
-import { Button, MenuItem, Rating, Select } from "@mui/material";
+import { Button, FormControl, InputLabel, MenuItem, Rating, Select } from "@mui/material";
 import cartIcon from "../../../assets/images/cartIconV2.svg";
 import NumberInput from "../../NumberInput";
 
-const PizzaDetail = () => {
+const PizzaDetail = ({ product }) => {
   return (
     <section className={`${pizzaStyles.detail_container} custom-container`}>
       <div className={pizzaStyles.image_container}>
-        <Image src={largePizza} alt="pizza-image" />
+        <Image src={product.image} height={420} width={420} alt="pizza-image" />
       </div>
       <div className={pizzaStyles.detail_content}>
         <div className={pizzaStyles.offer_wrap}>
           <div className={pizzaStyles.offer_chip}>OFFER</div>
-          <Image src={veg} alt="veg" />
+          <Image src={product.veg ? veg : nonVeg} alt="veg" />
         </div>
-        <h5>New Arrival</h5>
-        <h2>Paneer Tikka Butter Masala Pizza</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris.
-        </p>
+        <h5>{product.newArrival && "New Arrival"}</h5>
+        <h2>{product.title}</h2>
+        <p>{product.desc}</p>
         <div className={pizzaStyles.rating_wrapper}>
-          <Rating value={4} />
-          <p>{`(11.78kreviews)`}</p>
+          <Rating value={product.rating} />
+          <p>{`(${product.totalReviews} reviews)`}</p>
         </div>
         <div className={pizzaStyles.price_wrapper}>
-          <h6>$7.97</h6>
-          <h5> $6.97</h5>
+          <h6>${+product.beforePrice.toFixed(2)}</h6>
+          <h5> ${+product.price.toFixed(2)}</h5>
         </div>
         <hr />
         <div className={pizzaStyles.cartForm}>
           <div className={pizzaStyles.form_item}>
             <label>Size</label>
-            <Select
-              placeholder="Choose your size"
-              className={pizzaStyles.custom_select}
-              sx={{ maxWidth: 180 }}
-            >
-              <MenuItem value={10}>10</MenuItem>
-              <MenuItem value={20}>20</MenuItem>
-              <MenuItem value={30}>30</MenuItem>
-            </Select>
+            <FormControl sx={{ minWidth: 180, maxWidth: 180 }} size="small">
+              <InputLabel id="demo-select-small-label">
+                Choose your size
+              </InputLabel>
+              <Select
+                labelId="demo-select-small-label"
+                id="demo-select-small"
+                label="Choose your size"
+                className={pizzaStyles.custom_select}
+              >
+                <MenuItem value={1}>Regular</MenuItem>
+                <MenuItem value={1.5}>Medium</MenuItem>
+                <MenuItem value={2}>Large</MenuItem>
+              </Select>
+            </FormControl>
           </div>
-          <div className={pizzaStyles.form_item}>
+          {/* <div className={pizzaStyles.form_item}>
             <label>Crust</label>
             <Select
               className={pizzaStyles.custom_select}
@@ -57,14 +60,14 @@ const PizzaDetail = () => {
               <MenuItem value={20}>20</MenuItem>
               <MenuItem value={30}>30</MenuItem>
             </Select>
-          </div>
+          </div> */}
           <div className={pizzaStyles.form_item}>
             <label>Quantity</label>
             <NumberInput />
           </div>
         </div>
         <hr />
-        <Button className={pizzaStyles.cart_button} >
+        <Button className={pizzaStyles.cart_button}>
           <Image src={cartIcon} alt="cartIcon" />
           <span>Add to Cart</span>
         </Button>

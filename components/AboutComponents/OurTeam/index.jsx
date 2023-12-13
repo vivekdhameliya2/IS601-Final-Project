@@ -31,20 +31,20 @@ const breakpoints = {
   },
 };
 
-const OurTeam = () => {
+const OurTeam = ({ team }) => {
   return (
     <section
       className={`${homeStyle.special_menu} ${homeStyle.testimonail_section} custom-container `}
     >
-      <p>Meet Our Team</p>
+      <p>{team.subTitle}</p>
       <div className={homeStyle.special_menu_tagline}>
         <div className={homeStyle.special_menu_title}>
-          <h2>Chef’s Team</h2>
+          <h2>{team.title}</h2>
           <Image src={PizzaSlide} alt="PizzaSlide" />
         </div>
        
       </div>
-      <CustomSlider breakpoints={breakpoints} data={Array(5).fill(2)} card={TeamCard} />
+      <CustomSlider breakpoints={breakpoints} data={team.Chefs} card={TeamCard} />
     </section>
   );
 };

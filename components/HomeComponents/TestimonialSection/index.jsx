@@ -31,20 +31,20 @@ const breakpoints = {
   },
 };
 
-const TestimonialSection = ({ data, testimonials }) => {
+const TestimonialSection = ({ data }) => {
   return (
     <section
       className={`${homeStyle.special_menu} ${homeStyle.testimonail_section} custom-container `}
     >
-      <p>{data.testimonialTitle}</p>
+      <p>{data.title}</p>
       <div className={homeStyle.special_menu_tagline}>
         <div className={homeStyle.special_menu_title}>
-          <h2>{data.testimonialDesc}</h2>
+          <h2>{data.subTitle}</h2>
           <Image src={PizzaSlide} alt="PizzaSlide" />
         </div>
        
       </div>
-      <CustomSlider breakpoints={breakpoints} data={testimonials} card={TestimonialCard} />
+      <CustomSlider breakpoints={breakpoints} data={data.testimonials} card={TestimonialCard} />
     </section>
   );
 };

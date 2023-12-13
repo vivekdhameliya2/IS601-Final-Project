@@ -15,7 +15,7 @@ const CouponSection = ({ coupons }) => {
         <div className={homeStyle.coupon_content}>
           <h3>GET</h3>
           <div className={homeStyle.discount_wrapper}>
-            <b>{coupons.discount}</b>
+            <b>{coupons.discountOffer.discount}</b>
             <sup>
               <span>%</span>
               <p>off</p>
@@ -24,7 +24,7 @@ const CouponSection = ({ coupons }) => {
           <div className={homeStyle.coupon_label}>
             <p>USE CODE</p>
             <hr />
-            <p>{coupons.code}</p>
+            <p>{coupons.discountOffer.code}</p>
           </div>
         </div>
       </div>
@@ -36,14 +36,14 @@ const CouponSection = ({ coupons }) => {
         />
         <div className={homeStyle.coupon_offer2}>
           <div className={homeStyle.offer2_text}>
-            <b>{coupons.discount_two}</b>
+            <b>{coupons.purchaseOffer.title}</b>
             <p>PIZZA OFFER</p>
           </div>
         </div>
         <div className={`${homeStyle.coupon_label} ${homeStyle.offer_label}`}>
           <p>USE CODE</p>
           <hr />
-          <p>{coupons.code_two}</p>
+          <p>{coupons.purchaseOffer.code}</p>
         </div>
       </div>
     </section>

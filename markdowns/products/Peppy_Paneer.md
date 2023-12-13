@@ -1,0 +1,13 @@
+---
+title: PEPPY PANEER
+image: https://www.dominos.co.in/files/items/Peppy_Paneer.jpg
+price: 15
+beforePrice: 16
+rating: 3.5
+desc: Chunky paneer with crisp capsicum and spicy red pepper - quite a mouthful!
+newArrival: true
+veg: true
+totalReviews: 10 
+type: pizza
+detailPath: /menu/Peppy_Paneer
+---

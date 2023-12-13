@@ -6,7 +6,6 @@ import linkedin from "../../../assets/images/linkedin.svg";
 import youtube from "../../../assets/images/youtube.svg";
 import twitter from "../../../assets/images/twitter.svg";
 import Image from "next/image";
-import { Button, Input } from "@mui/material";
 
 const PrimaryFooter = () => {
   return (

@@ -32,20 +32,21 @@ const breakpoints = {
     },
   };
 
-const DealsAndOffers = ({ background }) => {
+const DealsAndOffers = ({ background, coupons }) => {
+
   return (
     <section
     style={{background: background}}
       className={`${homeStyle.special_menu} ${menuStyle.deals_container} custom-container `}
     >
-      <p>Special Menu</p>
+      <p>{coupons.subTitle}</p>
       <div className={homeStyle.special_menu_tagline}>
         <div className={homeStyle.special_menu_title}>
-          <h2>Deals And Offers</h2>
+          <h2>{coupons.title}</h2>
           <Image src={PizzaSlide} alt="PizzaSlide" />
         </div>
       </div>
-      <CustomSlider breakpoints={breakpoints} data={Array(5).fill(2)} card={DealsCard} />
+      <CustomSlider breakpoints={breakpoints} data={coupons.coupons} card={DealsCard} />
     </section>
   );
 };

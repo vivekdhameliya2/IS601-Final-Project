@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { Button, TextField } from "@mui/material";
 import { Input } from "@mui/base";
 
-const ContactUsForm = () => {
+const ContactUsForm = ({ contact }) => {
   const Map = useMemo(
     () =>
       dynamic(() => import("./CustomMap"), {
@@ -16,7 +16,7 @@ const ContactUsForm = () => {
   return (
     <section className={`${contactStyles.form_container} custom-container`}>
       <div className={contactStyles.form_wrapper}>
-        <h2>Feel free to contact us. We'll be glad to hear from you, buddy.</h2>
+        <h2>{contact.title}</h2>
         <Input placeholder="Name" />
         <Input type="email" placeholder="Email" />
         <Input placeholder="Subject Type" />

@@ -8,16 +8,17 @@ import cardStyles from "./card.module.scss";
 import veg from '../../assets/images/veg.svg';
 import cart from '../../assets/images/cart.svg';
 import nonVeg from '../../assets/images/non-veg.svg';
+import Link from "next/link";
 
 export default function CustomCard({ data }) {
   return (
     <Card className={cardStyles.card} sx={{ maxWidth: 255 }}>
         <div className={cardStyles.foodType} >
-            <Image src={veg} alt="veg" />
+            <Image src={data.veg ? veg : nonVeg} alt="veg" />
         </div>
       <Image src={data.image} width={255} height={223} alt="pizzaOne" />
       <div className={cardStyles.content} >
-        <h5>{data.title}</h5>
+        <Link href={data.detailPath} >{data.title}</Link>
         <div className={cardStyles.price_section} >
             <p>${(+data.price).toFixed(2)}</p>
             <Rating value={data.rating} sx={{color: "#faaf00"}} />

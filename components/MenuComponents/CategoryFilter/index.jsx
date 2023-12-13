@@ -13,39 +13,105 @@ import ResponsiveFilter from "./ResponsiveFilter";
 import CustomCard from "../../CustomCard";
 import { Pagination } from "@mui/material";
 
-const CategoryFilter = () => {
+const catData = [
+  {
+    type: "pizza",
+    title: "Pizza",
+    icon: slice,
+  },
+  {
+    type: "burger",
+    title: "Burger",
+    icon: burger,
+  },
+  {
+    type: "fries",
+    title: "Fries",
+    icon: fries,
+  },
+  {
+    type: "dessert",
+    title: "Dessert",
+    icon: salads,
+  },
+  {
+    type: "beverages",
+    title: "Beverages",
+    icon: beverages,
+  },
+];
+
+const CategoryFilter = ({ allProducts }) => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const itemsPerPage = 5;
+  const getTotalPages = () =>
+    Math.ceil(getFilteredData().length / itemsPerPage);
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
-    setAnchorEl(null);
+
+  const getPaginatedData = () => {
+    const filteredData = getFilteredData();
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    return filteredData.slice(startIndex, endIndex);
   };
+
+  const getFilteredData = () => {
+    if (selectedCategory) {
+      return allProducts.filter((item) => item.type === selectedCategory);
+    }
+    return allProducts;
+  };
+
+  const handlePageChange = (event, page) => {
+    setCurrentPage(page);
+  };
+
+  const handleClose = (category) => {
+    setAnchorEl(null);
+    if (category === selectedCategory) {
+      setSelectedCategory(null);
+      setCurrentPage(1);
+      return;
+    }
+    setSelectedCategory(category);
+    setCurrentPage(1);
+  };
+
+  const handleCategoryFilter = (category) => {
+    if (category === selectedCategory) {
+      setSelectedCategory(null);
+      setCurrentPage(1);
+      return;
+    }
+    setSelectedCategory(category);
+    setCurrentPage(1);
+  };
+
   return (
     <section className={`${menuStyles.menu_container} custom-container`}>
       <div className={menuStyles.filter_container}>
         <div className={menuStyles.filter_wrapper}>
-          <div className={menuStyles.filter_box}>
-            <Image src={slice} alt="filter-icon" />
-            <span>Pizza</span>
-          </div>
-          <div className={menuStyles.filter_box}>
-            <Image src={burger} alt="filter-icon" />
-            <span>Burgeer</span>
-          </div>
-          <div className={menuStyles.filter_box}>
-            <Image src={fries} alt="filter-icon" />
-            <span>Fries</span>
-          </div>
-          <div className={menuStyles.filter_box}>
-            <Image src={salads} alt="filter-icon" />
-            <span>Salads</span>
-          </div>
-          <div className={menuStyles.filter_box}>
-            <Image src={beverages} alt="filter-icon" />
-            <span>Beverages</span>
-          </div>
+          {catData.map((category) => {
+            return (
+              <div
+                key={category.type}
+                onClick={() => handleCategoryFilter(category.type)}
+                className={`${menuStyles.filter_box} ${
+                  selectedCategory === category.type
+                    ? menuStyles.filter_box_active
+                    : ""
+                } `}
+              >
+                <Image src={category.icon} alt="filter-icon" />
+                <span>{category.title}</span>
+              </div>
+            );
+          })}
         </div>
         <div className={menuStyles.responsive_filter}>
           <Button
@@ -62,21 +128,27 @@ const CategoryFilter = () => {
           anchorEl={anchorEl}
           open={open}
           handleClose={handleClose}
+          catData={catData}
+          selectedCategory={selectedCategory}
         />
         <div className={menuStyles.cart_icon}>
           <Image src={cartIcon} alt="cart_icon" />
-          <div className={menuStyles.badge}>5</div>
+          <div className={menuStyles.badge}>0</div>
         </div>
       </div>
       <div className={menuStyles.list_wrapper}>
-        {Array(9)
-          .fill(1)
-          .map((_) => {
-            return <CustomCard />;
-          })}
+        {getPaginatedData().map((data) => {
+          return <CustomCard data={data} />;
+        })}
       </div>
       <div className={menuStyles.pagination_wrapper}>
-        <Pagination count={10} />
+        {!!getPaginatedData().length && (
+          <Pagination
+            count={getTotalPages()}
+            page={currentPage}
+            onChange={handlePageChange}
+          />
+        )}
       </div>
     </section>
   );
