@@ -7,7 +7,7 @@ const HeroSection = ({ data }) => {
         <div className={homeStyle.overlay_image}>
           <div className={`${homeStyle.offer_content} custom-container`}>
             <div className={homeStyle.offer_left}>
-              <h3>{data.subtitle}</h3>
+              <h3>{data.subTitle}</h3>
               <h2>
                 {data.title} <span>{data.discount}</span>% Off
               </h2>

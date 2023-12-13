@@ -5,41 +5,33 @@ import CouponSection from "../components/HomeComponents/CouponSection";
 import SpecialMenu from "../components/HomeComponents/SpecialMenu";
 import TestimonialSection from "../components/HomeComponents/TestimonialSection";
 import DeliverySection from "../components/HomeComponents/DeliverySection";
-import {
-  getAllHomeCoupons,
-  getAllHomeData,
-  getAllPizzaData,
-  getAllTestimonials,
-} from "../lib/mdToJson";
-import { useSelector } from "react-redux";
+import { getDataInArray, getDataInObject } from "../lib/mdToJson";
 
 export async function getStaticProps() {
-  const allPizza = getAllPizzaData();
-  const homeData = getAllHomeData();
-  const testimonials = getAllTestimonials();
-  const coupons = getAllHomeCoupons();
+  const allProducts = getDataInArray("./markdowns/products");
+  const homeData = getDataInObject("./markdowns/home");
+  const coupons = getDataInObject("./markdowns/coupons/home-coupons");
+
   return {
     props: {
-      testimonials,
       homeData,
+      allProducts: allProducts.slice(0, 4),
       coupons,
-      allPizza
     },
   };
 }
 
-export default function Home({ testimonials, homeData, coupons, allPizza }) {
-  
+export default function Home({ homeData, coupons, allProducts }) {
   return (
     <Layout>
       <Head>
         <title>Homepage</title>
       </Head>
-      <HeroSection data={homeData} />
+      <HeroSection data={homeData["hero-section"]} />
       <CouponSection coupons={coupons} />
-      <SpecialMenu allPizza={allPizza} data={homeData} />
-      <TestimonialSection data={homeData} testimonials={testimonials} />
-      <DeliverySection data={homeData} />
+      <SpecialMenu allProducts={allProducts} data={homeData["menu-section"]} />
+      <TestimonialSection data={homeData["testimonial-section"]} />
+      <DeliverySection data={homeData["delivery-section"]} />
     </Layout>
   );
 }

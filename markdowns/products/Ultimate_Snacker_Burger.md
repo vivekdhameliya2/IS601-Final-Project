@@ -1,0 +1,13 @@
+---
+title: Ultimate Snacker Burger
+image: https://wataburger.in/wp-content/uploads/2022/09/Bestseller-Item-3.png
+price: 6
+beforePrice: 5
+rating: 3
+desc: Fancy the smokey flavoured peppery BBQ sauce combined with shredded lettuce, pickles, and in-house sauce over crispy fried chicken between suns.
+newArrival: false
+veg: true
+totalReviews: 107
+type: burger
+detailPath: /menu/Ultimate_Snacker_Burger
+---

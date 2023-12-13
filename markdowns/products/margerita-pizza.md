@@ -1,0 +1,13 @@
+---
+title: MARGHERITA
+image: https://www.dominos.co.in/files/items/Margherit.jpg
+price: 10
+beforePrice: 16
+rating: 4
+desc: A hugely popular margherita, with a deliciously tangy single cheese topping
+newArrival: false
+veg: true
+totalReviews: 100 
+type: pizza
+detailPath: /menu/margerita-pizza
+---

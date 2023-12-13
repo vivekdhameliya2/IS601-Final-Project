@@ -1,19 +1,19 @@
 import { Card } from "@mui/material";
 import menuStyles from "../../../../assets/styles/menu.module.scss";
-import dealimage from "../../../../assets/images/deals-card-image.png";
 import Image from "next/image";
 
-const DealsCard = () => {
+const DealsCard = ({ item }) => {
+  
   return (
     <Card className={menuStyles.deal_card} sx={{ maxWidth: 405 }}>
       <div className={menuStyles.offer_content}>
         <div className={menuStyles.offer_text}>
           <h5>Flat</h5>
-          <h2>$5.00</h2>
+          <h2>${+(item.discount).toFixed(2)}</h2>
         </div>
-        <div className={menuStyles.offer_label}>Code: FASTIV50%</div>
+        <div className={menuStyles.offer_label}>Code: {item.code}</div>
       </div>
-      <Image src={dealimage} alt="Offer-image" />
+      <Image height={259} width={259} src={item.image} alt="Offer-image" />
     </Card>
   );
 };

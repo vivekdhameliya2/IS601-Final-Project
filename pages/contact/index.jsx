@@ -5,6 +5,7 @@ import CommonBanner from "../../components/CommonBanner";
 import Link from "next/link";
 import ContactUsForm from "../../components/ContactUsComponents";
 import ContactInfo from "../../components/ContactUsComponents/ContactInfo";
+import { getDataInObject } from "../../lib/mdToJson";
 
 const breadcrumbs = [
   <Link className={contactStyles.breadcrumb_link} href="/">
@@ -15,14 +16,24 @@ const breadcrumbs = [
   </Link>,
 ];
 
-export default function ContactUs() {
+export async function getStaticProps() {
+  const contact = getDataInObject("./markdowns/contact-us");
+
+  return {
+    props: {
+      contact: contact.contact
+    },
+  };
+}
+
+export default function ContactUs({contact}) {
   return (
     <Layout>
       <Head>
         <title>Contact Us</title>
       </Head>
       <CommonBanner title={"Contact Us"} breadcrumbs={breadcrumbs} />
-      <ContactUsForm />
+      <ContactUsForm contact={contact} />
       <ContactInfo />
     </Layout>
   );

@@ -1,15 +1,14 @@
 import { Card } from "@mui/material";
 import Image from "next/image";
-import chef from "../../../../assets/images/chef1.png";
 import teamStyle from "./teamCard.module.scss";
 
-const TeamCard = () => {
+const TeamCard = ({item }) => {
   return (
     <Card className={teamStyle.team_card} sx={{ maxWidth: 278 }}>
-      <Image src={chef} alt="chef" />
+      <Image src={item.image} width={279} height={312} alt="chef" />
       <div className={teamStyle.name_wrapper}>
-        <h5>Jayvion Simon</h5>
-        <p>Senior Chef</p>
+        <h5>{item.fullname}</h5>
+        <p>{item.position}</p>
       </div>
     </Card>
   );

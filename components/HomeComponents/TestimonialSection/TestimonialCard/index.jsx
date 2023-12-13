@@ -28,14 +28,14 @@ export default function TestimonialCard({ item }) {
             </Avatar>
           }
           action={
-            <Rating value={4} />
+            <Rating value={item.rating} />
           }
           title={item.fullName}
-          subheader="11 Aug 2022"
+          subheader={item.date}
         />
       </div>
       <Typography className={cardStyles.desc}>
-          {item.content}
+          {item.desc}
       </Typography>
     </Card>
   );
