@@ -14,38 +14,19 @@ import {
 import { useState } from "react";
 import CustomAlert from "../../components/CustomAlert";
 
-export async function getStaticPaths() {
-  const allProducts = getDataInObject("./markdowns/products");
-
-  const paths = Object.keys(allProducts).map((fileName) => ({
-    params: { id: fileName.replace(/\.md$/, "") },
-  }));
-
-  return {
-    paths,
-    fallback: false, // or true if you want to handle not-yet-generated paths
-  };
-}
-
 export async function getStaticProps({ params }) {
-  const { id } = params;
-  const allProducts = getDataInObject("./markdowns/products");
   const coupons = getDataInObject("./markdowns/coupons/deals-coupons");
-  const product = allProducts[id];
 
   return {
     props: {
       coupons: coupons.deals,
-      product: { ...product, fileName: `${id}.md` },
     },
   };
 }
 
-export default function Pizza({ coupons, product }) {
+export default function Pizza({ coupons }) {
   const dispatch = useDispatch();
   const cartData = useSelector((state) => state.pizza.cart);
-
-  const [formData, setFormData] = useState({ qty: 0, size: 1 });
   const [coupon, setCoupon] = useState({
     coupon: "",
     applied: false,
@@ -67,18 +48,6 @@ export default function Pizza({ coupons, product }) {
     const price = subTotal - actualDiscount;
 
     return { price, discount: actualDiscount };
-  };
-
-  const addProductToCart = () => {
-    const totalPrice = +product.price * formData.size * (formData.qty || 1);
-    dispatch(addToCart({ product, formData: { ...formData, totalPrice } }));
-  };
-
-  const handleChange = (name, value) => {
-    if ((name == "qty" && value < 0) || value > 10) {
-      return;
-    }
-    setFormData({ ...formData, [name]: value });
   };
 
   const removeFromCart = (id) => {
@@ -121,7 +90,7 @@ export default function Pizza({ coupons, product }) {
           message: "Coupon applied successfully",
           type: "success",
         });
-      })
+      });
 
       setCoupon({ coupon: "", applied: true, discount: isCoupon.discount });
     } else {
@@ -131,7 +100,7 @@ export default function Pizza({ coupons, product }) {
           message: "Please add a valid coupon",
           type: "error",
         });
-      })
+      });
     }
   };
 
@@ -147,25 +116,17 @@ export default function Pizza({ coupons, product }) {
         message: "Your order is placed successfully",
         type: "success",
       });
-    })
+    });
   };
 
   return (
     <Layout>
       <Head>
-        <title>Pizza</title>
+        <title>Cart</title>
       </Head>
       <section className={pizzaStyles.hero_section}>
         <div className={pizzaStyles.overlay_image}></div>
       </section>
-      <PizzaDetail
-        removeFromCart={removeFromCart}
-        handleChange={handleChange}
-        formData={formData}
-        addProductToCart={addProductToCart}
-        cartData={cartData}
-        product={product}
-      />
       <Checkout
         finalTotal={finalTotal}
         applyCoupon={applyCoupon}

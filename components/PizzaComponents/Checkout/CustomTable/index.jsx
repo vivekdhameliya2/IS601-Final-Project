@@ -9,7 +9,6 @@ import Paper from "@mui/material/Paper";
 import NumberInput from "../../../NumberInput";
 import tableStyle from "./table.module.scss";
 import Image from "next/image";
-import largePizza from "../../../../assets/images/large-pizza.png";
 import trash from "../../../../assets/images/ic_trash.svg";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -35,95 +34,77 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
+const sizes = {
+  1: "Regular",
+  1.5: "Medium",
+  2: "Large",
+};
 
-const rows = [
-  createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
-];
-
-export default function CustomTable() {
+export default function CustomTable({
+  cartData,
+  handleChange,
+  removeFromCart,
+}) {
   return (
     <TableContainer className="custom-table" component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
             <StyledTableCell>Product</StyledTableCell>
-            <StyledTableCell align="right">Price</StyledTableCell>
-            <StyledTableCell align="right">Quantity</StyledTableCell>
-            <StyledTableCell align="right">Total Price</StyledTableCell>
-            <StyledTableCell align="right"></StyledTableCell>
+            <StyledTableCell align="center">Price</StyledTableCell>
+            <StyledTableCell align="center">Quantity</StyledTableCell>
+            <StyledTableCell align="center">Total Price</StyledTableCell>
+            <StyledTableCell align="center"></StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          <StyledTableRow key={"row.name"}>
-            <StyledTableCell component="th" scope="row">
-              <div className={tableStyle.product_wrapper}>
-                <Image src={largePizza} alt="pizza" />
-                <div className={tableStyle.product_content}>
-                  <h5>Korma Special Pizza</h5>
-                  <p>
-                    size: <span>Medium</span>
-                  </p>
-                </div>
-              </div>
-            </StyledTableCell>
-            <StyledTableCell align="right">$6.97</StyledTableCell>
-            <StyledTableCell align="right">
-              <NumberInput />
-            </StyledTableCell>
-            <StyledTableCell align="right">$6.97</StyledTableCell>
-            <StyledTableCell align="right">
-              <Image className="cursor_pointer" src={trash} alt="trash" />
-            </StyledTableCell>
-          </StyledTableRow>
-          <StyledTableRow key={"row.name"}>
-            <StyledTableCell component="th" scope="row">
-              <div className={tableStyle.product_wrapper}>
-                <Image src={largePizza} alt="pizza" />
-                <div className={tableStyle.product_content}>
-                  <h5>Korma Special Pizza</h5>
-                  <p>
-                    size: <span>Medium</span>
-                  </p>
-                </div>
-              </div>
-            </StyledTableCell>
-            <StyledTableCell align="right">$6.97</StyledTableCell>
-            <StyledTableCell align="right">
-              <NumberInput />
-            </StyledTableCell>
-            <StyledTableCell align="right">$6.97</StyledTableCell>
-            <StyledTableCell align="right">
-              <Image className="cursor_pointer" src={trash} alt="trash" />
-            </StyledTableCell>
-          </StyledTableRow>
-          <StyledTableRow key={"row.name"}>
-            <StyledTableCell component="th" scope="row">
-              <div className={tableStyle.product_wrapper}>
-                <Image src={largePizza} alt="pizza" />
-                <div className={tableStyle.product_content}>
-                  <h5>Korma Special Pizza</h5>
-                  <p>
-                    size: <span>Medium</span>
-                  </p>
-                </div>
-              </div>
-            </StyledTableCell>
-            <StyledTableCell align="right">$6.97</StyledTableCell>
-            <StyledTableCell align="right">
-              <NumberInput />
-            </StyledTableCell>
-            <StyledTableCell align="right">$6.97</StyledTableCell>
-            <StyledTableCell align="right">
-              <Image className="cursor_pointer" src={trash} alt="trash" />
-            </StyledTableCell>
-          </StyledTableRow>
+          {!cartData.length && (
+            <StyledTableRow>
+              <StyledTableCell colSpan={5} >
+                <div className="no-data-found" >Your cart is empty</div>
+              </StyledTableCell>
+            </StyledTableRow>
+          )}
+          {cartData.map((cart) => {
+            const { product } = cart;
+            return (
+              <StyledTableRow key={product.fileName}>
+                <StyledTableCell component="th" scope="row">
+                  <div className={tableStyle.product_wrapper}>
+                    <Image
+                      src={product.image}
+                      width={64}
+                      height={64}
+                      alt="pizza"
+                    />
+                    <div className={tableStyle.product_content}>
+                      <h5>{product.title}</h5>
+                      <p>
+                        size: <span>{sizes[cart.size]}</span>
+                      </p>
+                    </div>
+                  </div>
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  ${product.price}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <NumberInput handleChange={handleChange} formData={cart} />
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  ${cart.totalPrice}
+                </StyledTableCell>
+                <StyledTableCell align="center">
+                  <Image
+                    onClick={() => removeFromCart(cart.uniqueId)}
+                    className="cursor_pointer"
+                    src={trash}
+                    alt="trash"
+                  />
+                </StyledTableCell>
+              </StyledTableRow>
+            );
+          })}
         </TableBody>
       </Table>
     </TableContainer>

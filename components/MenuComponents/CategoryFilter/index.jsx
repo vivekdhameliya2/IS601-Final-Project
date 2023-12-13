@@ -12,6 +12,7 @@ import { useState } from "react";
 import ResponsiveFilter from "./ResponsiveFilter";
 import CustomCard from "../../CustomCard";
 import { Pagination } from "@mui/material";
+import Link from "next/link";
 
 const catData = [
   {
@@ -131,10 +132,10 @@ const CategoryFilter = ({ allProducts, addProductToCart, cartData }) => {
           catData={catData}
           selectedCategory={selectedCategory}
         />
-        <div className={menuStyles.cart_icon}>
+        <Link href="/cart" className={menuStyles.cart_icon}>
           <Image src={cartIcon} alt="cart_icon" />
           {!!cartData.length && <div className={menuStyles.badge}>{cartData.length}</div>}
-        </div>
+        </Link>
       </div>
       <div className={menuStyles.list_wrapper}>
         {getPaginatedData().map((data) => {

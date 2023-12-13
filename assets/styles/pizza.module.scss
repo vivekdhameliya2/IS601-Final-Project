@@ -55,6 +55,9 @@
 
 .detail_content {
   max-width: 626px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   h5 {
     color: var(--info-main, #00b8d9);
     font-family: publicsans_bold;
@@ -208,6 +211,7 @@
   font-weight: 700;
   line-height: 26px; /* 173.333% */
   flex: 1 0 0;
+  max-height: 48px;
   &:hover {
     background: #f8833d;
   }
@@ -260,6 +264,8 @@
   img {
     rotate: 180deg;
   }
+
+  text-decoration: none;
 }
 
 .bg_light_green {

@@ -6,6 +6,7 @@ import linkedin from "../../../assets/images/linkedin.svg";
 import youtube from "../../../assets/images/youtube.svg";
 import twitter from "../../../assets/images/twitter.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const PrimaryFooter = () => {
   return (
@@ -38,18 +39,18 @@ const PrimaryFooter = () => {
           <div className={layout.nav_wrapper}>
             <h3>Company</h3>
             <div className={layout.nav_links}>
-              <a className={layout.nav_link}>Home</a>
-              <a className={layout.nav_link}>About</a>
-              <a className={layout.nav_link}>Menu</a>
-              <a className={layout.nav_link}>Contact US</a>
+              <Link href="/" className={layout.nav_link}>Home</Link>
+              <Link href="/about" className={layout.nav_link}>About</Link>
+              <Link href="/menu" className={layout.nav_link}>Menu</Link>
+              <Link href="/contact" className={layout.nav_link}>Contact US</Link>
             </div>
           </div>
           <div className={layout.nav_wrapper}>
             <h3>Social Media</h3>
             <div className={layout.nav_links}>
-              <a className={layout.nav_link}>Facebook</a>
-              <a className={layout.nav_link}>Linked In</a>
-              <a className={layout.nav_link}>Github</a>
+              <Link href="" className={layout.nav_link}>Facebook</Link>
+              <Link href="" className={layout.nav_link}>Linked In</Link>
+              <Link href="" className={layout.nav_link}>Github</Link>
               
             </div>
           </div>
