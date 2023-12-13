@@ -28,7 +28,7 @@ export async function getStaticProps() {
 
 export default function ContactUs({contact}) {
   return (
-    <Layout>
+    <Layout title="Contact Us" >
       <Head>
         <title>Contact Us</title>
       </Head>

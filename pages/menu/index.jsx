@@ -39,7 +39,7 @@ export default function Menu({ allProducts, coupons }) {
   }
 
   return (
-    <Layout>
+    <Layout title="Menu" >
       <Head>
         <title>Menu</title>
       </Head>     

@@ -151,7 +151,7 @@ export default function Pizza({ coupons, product }) {
   };
 
   return (
-    <Layout>
+    <Layout title="Pizza" >
       <Head>
         <title>Pizza</title>
       </Head>
