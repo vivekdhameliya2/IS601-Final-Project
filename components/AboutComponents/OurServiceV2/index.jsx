@@ -14,9 +14,9 @@ const OurServiceV2 = ({ data }) => {
         <h2>{data.title}</h2>
         <p>{data.desc}</p>
         <div className={aboutStyles.services}>
-          {data.services.map((item) => {
+          {data.services.map((item, index) => {
             return (
-              <div className={aboutStyles.service}>
+              <div key={index} className={aboutStyles.service}>
                 <Image width={24} height={24} src={item.image} alt="greeen_tick" />
                 <span>{item.title}</span>
               </div>

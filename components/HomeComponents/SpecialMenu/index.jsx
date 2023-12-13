@@ -16,10 +16,11 @@ const SpecialMenu = ({ data, allProducts, addProductToCart, cartData }) => {
         <Link href="/menu">View All</Link>
       </div>
       <div className={homeStyle.cardWrapper}>
-        {allProducts.map((data) => {
+        {allProducts.map((data, index) => {
           
           return (
             <CustomCard
+              key={index}
               isInCart={cartData.filter(
                 (item) => item.uniqueId === data.fileName
               )[0]}

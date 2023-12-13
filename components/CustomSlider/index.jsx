@@ -15,9 +15,9 @@ const CustomSlider = ({ card: Card, data, breakpoints }) => {
           <SwiperButtonPrev />
           <SwiperButtonNext />
         </div>
-        {data.map((item) => {
+        {data.map((item, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={index} >
               <Card item={item} />
             </SwiperSlide>
           );

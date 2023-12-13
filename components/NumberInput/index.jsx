@@ -13,15 +13,15 @@ const NumberInput = ({ handleChange, formData }) => {
         sx={{ maxWidth: 15 }}
         className={inputStyles.minus}
       >
-        <Image src={minus} />
+        <Image alt="minus" src={minus} />
       </Button>
-      <Input type="number" value={formData?.qty} />
+      <Input  type="number" value={formData?.qty} />
       <Button
         onClick={() => handleChange("qty", formData.qty + 1, formData)}
         sx={{ maxWidth: 15 }}
         className={inputStyles.plus}
       >
-        <Image src={plus} />
+        <Image alt="plus" src={plus} />
       </Button>
     </div>
   );

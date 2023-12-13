@@ -138,9 +138,10 @@ const CategoryFilter = ({ allProducts, addProductToCart, cartData }) => {
         </Link>
       </div>
       <div className={menuStyles.list_wrapper}>
-        {getPaginatedData().map((data) => {
+        {getPaginatedData().map((data, index) => {
           return (
             <CustomCard
+            key={index}
               isInCart={
                 cartData.filter((item) => item.uniqueId === data.fileName)[0]
               }

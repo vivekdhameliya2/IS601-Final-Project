@@ -11,10 +11,10 @@ const OurStory = ({ story }) => {
       <div className={aboutStyles.our_story_content}>
         <h3>{story.subTitle}</h3>
         <h2>{story.title}</h2>
-        {story.stories.map((data) => {
+        {story.stories.map((data, index) => {
           return (
             <>
-              <div className={aboutStyles.journey}>
+              <div key={index} className={aboutStyles.journey}>
                 <h5>{data.title}</h5>
                 <p>
                   {data.desc}
