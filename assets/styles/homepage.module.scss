@@ -73,7 +73,7 @@
     align-items: center;
     gap: 8px;
     border-radius: 8px;
-    background: #4D3526;
+    background: #4d3526;
     color: #fff;
     outline: none;
     border: none;
@@ -90,7 +90,7 @@
     width: 100%;
     max-width: 150px;
     &:hover {
-      background: #4D3526;
+      background: #4d3526;
     }
   }
   @media (max-width: 1068px) {
@@ -276,10 +276,9 @@
 }
 
 .coupon_image {
-  height: auto;
-  max-height: 341px;
-  max-width: 364px;
-  object-fit: cover;
+  @media (max-width: 1068px) {
+    height: auto;
+  }
   @media (max-width: 568px) {
     max-height: 170px;
     max-width: 180px;
@@ -287,8 +286,6 @@
 }
 
 .coupon_image_two {
-  max-height: 325px;
-  object-fit: cover;
   @media (max-width: 768px) {
     max-width: 280px;
   }
@@ -540,16 +537,12 @@
     }
   }
   @media (max-width: 768px) {
- 
     max-width: 200px;
     max-height: 200px;
-    
   }
   @media (max-width: 568px) {
- 
     max-width: 100px;
     max-height: 100px;
-    
   }
 }
 
