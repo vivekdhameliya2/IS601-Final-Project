@@ -2,7 +2,7 @@ import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import { Button } from "@mui/material";
 
-export default function CustomInput() {
+export default function CustomInput({ onChange, coupon, applyCoupon }) {
   return (
     <Paper
       className="custom_input"
@@ -15,11 +15,13 @@ export default function CustomInput() {
       }}
     >
       <InputBase
+        onChange={(e) => onChange({ ...coupon, coupon: e.target.value })}
         sx={{ ml: 1, flex: 1, border: "none" }}
         placeholder="Discount codes / Gifts"
+        value={coupon.coupon}
         inputProps={{ "aria-label": "Discount codes / Gifts" }}
       />
-      <Button>Apply</Button>
+      <Button onClick={() => applyCoupon()} >Apply</Button>
     </Paper>
   );
 }

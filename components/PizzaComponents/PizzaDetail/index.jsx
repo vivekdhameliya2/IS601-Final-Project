@@ -1,23 +1,21 @@
 import pizzaStyles from "../../../assets/styles/pizza.module.scss";
-import largePizza from "../../../assets/images/large-pizza.png";
 import veg from "../../../assets/images/veg.svg";
 import nonVeg from "../../../assets/images/non-veg.svg";
 import Image from "next/image";
 import {
   Button,
-  FormControl,
-  InputLabel,
-  MenuItem,
   Rating,
-  Select,
 } from "@mui/material";
 import cartIcon from "../../../assets/images/cartIconV2.svg";
 import NumberInput from "../../NumberInput";
+import SizeSelect from "./SizeSelect";
 
-const PizzaDetail = ({ product, cartData, addProductToCart }) => {
+const PizzaDetail = ({ product, cartData, addProductToCart, handleChange, formData, removeFromCart }) => {
   const isInCart = cartData.filter(
     (item) => item.uniqueId === product.fileName
   )[0];
+
+  const totalPrice = (+product.price * formData.size) * (formData.qty || 1);
 
   return (
     <section className={`${pizzaStyles.detail_container} custom-container`}>
@@ -38,53 +36,34 @@ const PizzaDetail = ({ product, cartData, addProductToCart }) => {
         </div>
         <div className={pizzaStyles.price_wrapper}>
           <h6>${+product.beforePrice.toFixed(2)}</h6>
-          <h5> ${+product.price.toFixed(2)}</h5>
+          <h5> ${+totalPrice.toFixed(2)}</h5>
         </div>
         <hr />
-        <div className={pizzaStyles.cartForm}>
-          <div className={pizzaStyles.form_item}>
-            <label>Size</label>
-            <FormControl sx={{ minWidth: 180, maxWidth: 180 }} size="small">
-              <InputLabel id="demo-select-small-label">
-                Choose your size
-              </InputLabel>
-              <Select
-                labelId="demo-select-small-label"
-                id="demo-select-small"
-                label="Choose your size"
-                className={pizzaStyles.custom_select}
-              >
-                <MenuItem value={1}>Regular</MenuItem>
-                <MenuItem value={1.5}>Medium</MenuItem>
-                <MenuItem value={2}>Large</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          {/* <div className={pizzaStyles.form_item}>
-            <label>Crust</label>
-            <Select
-              className={pizzaStyles.custom_select}
-              sx={{ maxWidth: 180 }}
-              placeholder="New Hand Tossed"
-            >
-              <MenuItem value={10}>10</MenuItem>
-              <MenuItem value={20}>20</MenuItem>
-              <MenuItem value={30}>30</MenuItem>
-            </Select>
-          </div> */}
-          <div className={pizzaStyles.form_item}>
-            <label>Quantity</label>
-            <NumberInput />
-          </div>
-        </div>
-        <hr />
+        {!isInCart && (
+          <>
+            <div className={pizzaStyles.cartForm}>
+              {product.type === "pizza" && (
+                <SizeSelect formData={formData} handleChange={handleChange} />
+              )}
+             
+              <div className={pizzaStyles.form_item}>
+                <label>Quantity</label>
+                <NumberInput formData={formData} handleChange={handleChange} />
+              </div>
+            </div>
+            <hr />
+          </>
+        )}
         {isInCart ? (
-          <Button className={pizzaStyles.cart_button}>
+          <Button onClick={() => removeFromCart(product.fileName)}  className={pizzaStyles.cart_button}>
             <Image src={cartIcon} alt="cartIcon" />
-            <span>View in cart</span>
+            <span>Remove from cart</span>
           </Button>
         ) : (
-          <Button onClick={() => addProductToCart()} className={pizzaStyles.cart_button}>
+          <Button
+            onClick={() => addProductToCart()}
+            className={pizzaStyles.cart_button}
+          >
             <Image src={cartIcon} alt="cartIcon" />
             <span>Add to Cart</span>
           </Button>

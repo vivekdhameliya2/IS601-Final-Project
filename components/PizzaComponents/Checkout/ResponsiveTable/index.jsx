@@ -1,40 +1,36 @@
 import tableStyle from "../CustomTable/table.module.scss";
-import largePizza from "../../../../assets/images/large-pizza.png";
 import trash from "../../../../assets/images/ic_trash.svg";
 import Image from "next/image";
 import NumberInput from "../../../NumberInput";
 
-const ResponsiveTable = () => {
+const sizes = {
+  1: "Regular",
+  1.5: "Medium",
+  2: "Large",
+};
+
+const ResponsiveTable = ({ removeFromCart, handleChange, cartData }) => {
   return (
     <div className={tableStyle.responsiveTable}>
-      <div className={tableStyle.responsiveTable_item}>
-        <div className={tableStyle.product_wrapper}>
-          <Image src={largePizza} alt="pizza" />
-          <div className={tableStyle.product_content}>
-            <h5>Korma Special Pizza</h5>
-            <p>
-              size: <span>Medium</span>
-            </p>
+      {cartData.map((data) => {
+        const { product } = data;
+        return (
+          <div className={tableStyle.responsiveTable_item}>
+            <div className={tableStyle.product_wrapper}>
+              <Image src={product.image} width={64} height={64} alt="pizza" />
+              <div className={tableStyle.product_content}>
+                <h5>{product.title}</h5>
+                <p>
+                  size: <span>{sizes[data.size]}</span>
+                </p>
+              </div>
+            </div>
+            <NumberInput handleChange={handleChange} formData={data} />
+            <h5>${(+data.totalPrice).toFixed(2)}</h5>
+            <Image className="cursor_pointer" onClick={() => removeFromCart(data.uniqueId)} src={trash} alt="delete" />
           </div>
-        </div>
-        <NumberInput />
-        <h5>$6.97</h5>
-        <Image src={trash} alt="delete" />
-      </div>
-      <div className={tableStyle.responsiveTable_item}>
-        <div className={tableStyle.product_wrapper}>
-          <Image src={largePizza} alt="pizza" />
-          <div className={tableStyle.product_content}>
-            <h5>Korma Special Pizza</h5>
-            <p>
-              size: <span>Medium</span>
-            </p>
-          </div>
-        </div>
-        <NumberInput />
-        <h5>$6.97</h5>
-        <Image src={trash} alt="delete" />
-      </div>
+        );
+      })}
     </div>
   );
 };
