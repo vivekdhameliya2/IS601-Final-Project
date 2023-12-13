@@ -2,8 +2,6 @@ import { Button } from "@mui/material";
 import { Input } from "@mui/base";
 import inputStyles from "./numberInput.module.scss";
 import Image from "next/image";
-import plus from "../../assets/images/ic_plus.svg";
-import minus from "../../assets/images/ic_minus.svg";
 
 const NumberInput = ({ handleChange, formData }) => {
   return (
@@ -13,7 +11,7 @@ const NumberInput = ({ handleChange, formData }) => {
         sx={{ maxWidth: 15 }}
         className={inputStyles.minus}
       >
-        <Image alt="minus" src={minus} />
+        <Image width={18} height={18} alt="minus" src={"/images/ic_minus.svg"} />
       </Button>
       <Input  type="number" value={formData?.qty} />
       <Button
@@ -21,7 +19,7 @@ const NumberInput = ({ handleChange, formData }) => {
         sx={{ maxWidth: 15 }}
         className={inputStyles.plus}
       >
-        <Image alt="plus" src={plus} />
+        <Image width={18} height={18} alt="plus" src={"/images/ic_plus.svg"} />
       </Button>
     </div>
   );

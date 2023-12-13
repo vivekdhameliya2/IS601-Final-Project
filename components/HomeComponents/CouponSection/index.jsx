@@ -1,15 +1,15 @@
 import homeStyle from "../../../assets/styles/homepage.module.scss";
 import Image from "next/image";
-import couponOne from "../../../assets/images/coupon_one.png";
-import couponTwo from "../../../assets/images/coupon_Two.png";
 
 const CouponSection = ({ coupons }) => {
   return (
     <section className={`${homeStyle.coupon_section} custom-container`}>
       <div className={homeStyle.coupon}>
         <Image
+          width={341}
+          height={341}
           className={homeStyle.coupon_image}
-          src={couponOne}
+          src={"/images/coupon_one.png"}
           alt="coupon-image"
         />
         <div className={homeStyle.coupon_content}>
@@ -30,8 +30,10 @@ const CouponSection = ({ coupons }) => {
       </div>
       <div className={`${homeStyle.coupon} ${homeStyle.couponTwo}`}>
         <Image
+          width={341}
+          height={341}
           className={homeStyle.coupon_image_two}
-          src={couponTwo}
+          src={"/images/coupon_Two.png"}
           alt="coupon-image"
         />
         <div className={homeStyle.coupon_offer2}>

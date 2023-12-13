@@ -1,7 +1,4 @@
 import contactStyles from "../../../assets/styles/contact.module.scss";
-import phone from "../../../assets/images/phone-fill.svg";
-import map from "../../../assets/images/map-pin-fill.svg";
-import mail from "../../../assets/images/mail-open-fill.svg";
 import Image from "next/image";
 
 const ContactInfo = () => {
@@ -9,7 +6,7 @@ const ContactInfo = () => {
     <section className={`${contactStyles.contact_info} custom-container`}>
       <div className={contactStyles.info_wrapper}>
         <div className={contactStyles.info_icon} >
-        <Image src={phone} alt="phone" />
+        <Image width={32} height={32} src={"/images/phone-fill.svg"} alt="phone" />
         </div>
         <div className={contactStyles.info}>
           <span>Phone Number</span>
@@ -18,7 +15,7 @@ const ContactInfo = () => {
       </div>
       <div className={contactStyles.info_wrapper}>
       <div className={contactStyles.info_icon} >
-        <Image src={map} alt="phone" />
+        <Image width={32} height={32} src={"/images/map-pin-fill.svg"} alt="phone" />
         </div>
         <div className={contactStyles.info}>
           <span>Phone Number</span>
@@ -27,7 +24,7 @@ const ContactInfo = () => {
       </div>
       <div className={contactStyles.info_wrapper}>
       <div className={contactStyles.info_icon} >
-        <Image src={mail} alt="phone" />
+        <Image width={32} height={32} src={"/images/mail-open-fill.svg"} alt="phone" />
         </div>
         <div className={contactStyles.info}>
           <span>Phone Number</span>

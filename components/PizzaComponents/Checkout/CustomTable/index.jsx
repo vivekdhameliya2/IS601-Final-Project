@@ -9,7 +9,6 @@ import Paper from "@mui/material/Paper";
 import NumberInput from "../../../NumberInput";
 import tableStyle from "./table.module.scss";
 import Image from "next/image";
-import trash from "../../../../assets/images/ic_trash.svg";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -60,8 +59,8 @@ export default function CustomTable({
         <TableBody>
           {!cartData.length && (
             <StyledTableRow>
-              <StyledTableCell colSpan={5} >
-                <div className="no-data-found" >Your cart is empty</div>
+              <StyledTableCell colSpan={5}>
+                <div className="no-data-found">Your cart is empty</div>
               </StyledTableCell>
             </StyledTableRow>
           )}
@@ -96,9 +95,11 @@ export default function CustomTable({
                 </StyledTableCell>
                 <StyledTableCell align="center">
                   <Image
+                    width={20}
+                    height={20}
                     onClick={() => removeFromCart(cart.uniqueId)}
                     className="cursor_pointer"
-                    src={trash}
+                    src={"/images/ic_trash.svg"}
                     alt="trash"
                   />
                 </StyledTableCell>

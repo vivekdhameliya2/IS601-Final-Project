@@ -1,11 +1,6 @@
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import menuStyles from "../../../../assets/styles/menu.module.scss";
-import burger from "../../../../assets/images/burger-white.svg";
-import slice from "../../../../assets/images/slice.svg";
-import beverages from "../../../../assets/images/beverages.svg";
-import salads from "../../../../assets/images/salads.svg";
-import fries from "../../../../assets/images/fries.svg";
 import Image from "next/image";
 
 const ResponsiveFilter = ({

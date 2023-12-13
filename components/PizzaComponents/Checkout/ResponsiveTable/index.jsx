@@ -1,5 +1,4 @@
 import tableStyle from "../CustomTable/table.module.scss";
-import trash from "../../../../assets/images/ic_trash.svg";
 import Image from "next/image";
 import NumberInput from "../../../NumberInput";
 
@@ -27,7 +26,14 @@ const ResponsiveTable = ({ removeFromCart, handleChange, cartData }) => {
             </div>
             <NumberInput handleChange={handleChange} formData={data} />
             <h5>${(+data.totalPrice).toFixed(2)}</h5>
-            <Image className="cursor_pointer" onClick={() => removeFromCart(data.uniqueId)} src={trash} alt="delete" />
+            <Image
+              width={20}
+              height={20}
+              className="cursor_pointer"
+              onClick={() => removeFromCart(data.uniqueId)}
+              src={"/images/ic_trash.svg"}
+              alt="delete"
+            />
           </div>
         );
       })}

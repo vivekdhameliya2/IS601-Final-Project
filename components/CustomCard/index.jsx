@@ -1,13 +1,9 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
-import pizzaOne from "../../assets/images/pizza-1.png";
 import Image from "next/image";
 import { Button, Rating } from "@mui/material";
 import cardStyles from "./card.module.scss";
-import veg from "../../assets/images/veg.svg";
-import cart from "../../assets/images/cart.svg";
-import nonVeg from "../../assets/images/non-veg.svg";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -24,7 +20,7 @@ export default function CustomCard({ data, addProductToCart, isInCart }) {
   return (
     <Card className={cardStyles.card} sx={{ maxWidth: 255 }}>
       <div className={cardStyles.foodType}>
-        <Image src={data.veg ? veg : nonVeg} alt="veg" />
+        <Image width={20} height={20} src={data.veg ? "/images/veg.svg" : "/images/non-veg.svg"} alt="veg" />
       </div>
       <Image src={data.image} width={255} height={223} alt="pizzaOne" />
       <div className={cardStyles.content}>
@@ -41,7 +37,7 @@ export default function CustomCard({ data, addProductToCart, isInCart }) {
       >
         <Button onClick={() => cartHandler(data)} sx={{ width: "100%" }}>
           <span>{isInCart ? "GO TO CART" : "ADD TO CART"}</span>
-          <Image src={cart} alt="cart" />
+          <Image width={18} height={18} src={"/images/cart.svg"} alt="cart" />
         </Button>
       </CardActions>
     </Card>
