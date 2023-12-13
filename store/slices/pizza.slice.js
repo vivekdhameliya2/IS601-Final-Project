@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import ReactGA from "react-ga4";
 
 const initialState = {
   cart: [],
@@ -13,6 +14,10 @@ const pizzaSlice = createSlice({
         ? action.payload.product
         : action.payload;
       const formData = action?.payload?.formData || {};
+      ReactGA.send({
+        hitType: "add_to_cart",
+        item_id: product.fileName.replace(".md", ""),
+      });
       state.cart.push({
         uniqueId: product.fileName,
         product,
@@ -37,14 +42,19 @@ const pizzaSlice = createSlice({
       const index = state.cart.findIndex(
         (data) => data.uniqueId === action.payload.id
       );
+      ReactGA.send({
+        hitType: "remove_from_cart",
+        item_id: state.cart[index].product.fileName.replace(".md", ""),
+      });
       state.cart.splice(index, 1);
     },
     clearCart: (state, action) => {
       state.cart = [];
-    }
+    },
   },
 });
 
-export const { addToCart, updateCart, removeCart, clearCart } = pizzaSlice.actions;
+export const { addToCart, updateCart, removeCart, clearCart } =
+  pizzaSlice.actions;
 
 export default pizzaSlice.reducer;
