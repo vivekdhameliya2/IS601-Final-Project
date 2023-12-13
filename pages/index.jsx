@@ -6,6 +6,8 @@ import SpecialMenu from "../components/HomeComponents/SpecialMenu";
 import TestimonialSection from "../components/HomeComponents/TestimonialSection";
 import DeliverySection from "../components/HomeComponents/DeliverySection";
 import { getDataInArray, getDataInObject } from "../lib/mdToJson";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../store/slices/pizza.slice";
 
 export async function getStaticProps() {
   const allProducts = getDataInArray("./markdowns/products");
@@ -22,6 +24,13 @@ export async function getStaticProps() {
 }
 
 export default function Home({ homeData, coupons, allProducts }) {
+  const dispatch = useDispatch();
+  const cartData = useSelector(state => state.pizza.cart);
+
+  const addProductToCart = (product) => {
+    dispatch(addToCart(product));
+  }
+
   return (
     <Layout>
       <Head>
@@ -29,7 +38,7 @@ export default function Home({ homeData, coupons, allProducts }) {
       </Head>
       <HeroSection data={homeData["hero-section"]} />
       <CouponSection coupons={coupons} />
-      <SpecialMenu allProducts={allProducts} data={homeData["menu-section"]} />
+      <SpecialMenu cartData={cartData} addProductToCart={addProductToCart} allProducts={allProducts} data={homeData["menu-section"]} />
       <TestimonialSection data={homeData["testimonial-section"]} />
       <DeliverySection data={homeData["delivery-section"]} />
     </Layout>

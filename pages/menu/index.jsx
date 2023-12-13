@@ -6,6 +6,8 @@ import Link from 'next/link';
 import CategoryFilter from '../../components/MenuComponents/CategoryFilter';
 import DealsAndOffers from '../../components/MenuComponents/DealsAndOffers';
 import { getDataInArray, getDataInObject } from '../../lib/mdToJson';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from '../../store/slices/pizza.slice';
 
 const breadcrumbs = [
   <Link className={menuStyles.breadcrumb_link} href="/">
@@ -29,14 +31,20 @@ export async function getStaticProps() {
 }
 
 export default function Menu({ allProducts, coupons }) {
-  
+  const dispatch = useDispatch();
+  const cartData = useSelector(state => state.pizza.cart);
+
+  const addProductToCart = (product) => {
+    dispatch(addToCart(product));
+  }
+
   return (
     <Layout>
       <Head>
         <title>Menu</title>
       </Head>     
       <CommonBanner title={"Menu"} breadcrumbs={breadcrumbs} />
-      <CategoryFilter allProducts={allProducts} />
+      <CategoryFilter cartData={cartData} addProductToCart={addProductToCart} allProducts={allProducts} />
       <DealsAndOffers coupons={coupons} />
     </Layout>
   );

@@ -208,6 +208,9 @@
   font-weight: 700;
   line-height: 26px; /* 173.333% */
   flex: 1 0 0;
+  &:hover {
+    background: #f8833d;
+  }
 }
 
 .checkout_container {
@@ -285,4 +288,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 26px;
+  &:hover {
+    background: #016608;
+  }
 }
