@@ -16,6 +16,9 @@ const nextConfig = {
   images: {
     domains: ["www.dominos.co.in", "wataburger.in"],
   },
+  env: {
+    ANALITICS_ID: "G-KTDJQQD8CB"
+  }
 };
 
 module.exports = nextConfig;

@@ -30,7 +30,7 @@ export async function getStaticProps() {
 
 export default function About({ aboutData }) {
   return (
-    <Layout>
+    <Layout title="Homepage" >
       <Head>
         <title>about</title>
       </Head>

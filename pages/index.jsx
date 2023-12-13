@@ -32,7 +32,7 @@ export default function Home({ homeData, coupons, allProducts }) {
   }
 
   return (
-    <Layout>
+    <Layout title="Homepage" >
       <Head>
         <title>Homepage</title>
       </Head>

@@ -120,7 +120,7 @@ export default function Pizza({ coupons }) {
   };
 
   return (
-    <Layout>
+    <Layout title="Cart" >
       <Head>
         <title>Cart</title>
       </Head>
