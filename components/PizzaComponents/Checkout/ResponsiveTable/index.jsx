@@ -12,10 +12,10 @@ const sizes = {
 const ResponsiveTable = ({ removeFromCart, handleChange, cartData }) => {
   return (
     <div className={tableStyle.responsiveTable}>
-      {cartData.map((data) => {
+      {cartData.map((data, index) => {
         const { product } = data;
         return (
-          <div className={tableStyle.responsiveTable_item}>
+          <div key={index} className={tableStyle.responsiveTable_item}>
             <div className={tableStyle.product_wrapper}>
               <Image src={product.image} width={64} height={64} alt="pizza" />
               <div className={tableStyle.product_content}>

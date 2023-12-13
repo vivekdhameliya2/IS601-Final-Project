@@ -4,9 +4,9 @@ import aboutStyles from "../../../assets/styles/about.module.scss";
 const OurService = ({ data }) => {
   return (
     <section className={`${aboutStyles.our_service} custom-container`}>
-      {data.map((item) => {
+      {data.map((item, index) => {
         return (
-          <div className={aboutStyles.service_wrapper}>
+          <div key={index} className={aboutStyles.service_wrapper}>
             <div className={aboutStyles.service_image}>
               <Image src={item.image} width={32} height={32} alt="service_icon " />
             </div>
