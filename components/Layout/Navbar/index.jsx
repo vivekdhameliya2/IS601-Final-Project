@@ -6,6 +6,7 @@ import CustomMenu from "./CustomMenu";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/router";
 
 const ResponsiveMenu = dynamic(() => import("./ResponsiveMenu"));
 
@@ -31,6 +32,7 @@ const menuData = [
 ];
 
 const Navbar = ({ isSticky }) => {
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const pathName = usePathname();
@@ -49,7 +51,7 @@ const Navbar = ({ isSticky }) => {
         isSticky ? layout.sticky_header : layout.header
       } custom-container`}
     >
-      <div className={layout.logo}>
+      <div onClick={() => router.push('/')} className={layout.logo}>
         <Image alt="Logo" src={"/logo/logo.svg"} width={120} height={112} />
       </div>
       <nav className={layout.navigation}>
