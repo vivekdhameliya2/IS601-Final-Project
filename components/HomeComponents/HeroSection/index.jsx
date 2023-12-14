@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import homeStyle from "../../../assets/styles/homepage.module.scss";
 
-const HeroSection = ({ data }) => {
+const HeroSection = ({ data, handleOpen }) => {
     return (
         <section className={homeStyle.hero_section}>
         <div className={homeStyle.overlay_image}>
@@ -11,7 +11,7 @@ const HeroSection = ({ data }) => {
               <h2>
                 {data.title} <span>{data.discount}</span>% Off
               </h2>
-              <Button>{data.heroBtn}</Button>
+              <Button onClick={() => handleOpen()} >{data.heroBtn}</Button>
             </div>
           </div>
         </div>
