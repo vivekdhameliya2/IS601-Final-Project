@@ -1,4 +1,4 @@
-import pizzaStyles from "../../../assets/styles/pizza.module.scss";
+import pizzaStyles from "../../../styles/pizza.module.scss";
 import Image from "next/image";
 import {
   Button,

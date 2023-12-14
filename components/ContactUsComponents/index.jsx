@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import contactStyles from "../../assets/styles/contact.module.scss";
+import contactStyles from "../../styles/contact.module.scss";
 import { useMemo } from "react";
 import { Button, TextField } from "@mui/material";
 import { Input } from "@mui/base";

@@ -1,5 +1,5 @@
 import { Button, Card } from "@mui/material";
-import checkoutStyles from "../../../assets/styles/pizza.module.scss";
+import checkoutStyles from "../../../styles/pizza.module.scss";
 import CustomTable from "./CustomTable";
 import Image from "next/image";
 import CheckoutTotal from "./CheckoutTotal";

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout';
-import menuStyles from '../../assets/styles/menu.module.scss';
+import menuStyles from '../../styles/menu.module.scss';
 import CommonBanner from '../../components/CommonBanner';
 import Link from 'next/link';
 import CategoryFilter from '../../components/MenuComponents/CategoryFilter';

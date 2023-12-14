@@ -1,0 +1,127 @@
+@import "fonts.scss";
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+body {
+  margin: 0;
+}
+
+.disabled {
+  cursor: not-allowed;
+  background: #d6d6d6 !important;
+}
+
+.swiper {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+}
+
+.custom-container {
+  padding-left: calc((100% - 1095px) / 2);
+  padding-right: calc((100% - 1095px) / 2);
+  @media (max-width: 1368px) {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+}
+
+.primary-button {
+  display: flex;
+  padding: 11px 22px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  background: #2e9936;
+  border: none;
+  outline: none;
+  color: #fff;
+  height: 100%;
+  max-height: 48px;
+  width: 100%;
+  max-width: 97px;
+  font-family: publicsans_bold;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+
+  &:hover {
+    background: #2f8836;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.my-pagination .MuiPaginationItem-root {
+  color: blue;
+}
+
+.my-pagination .Mui-selected {
+  background-color: lightblue;
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+.custom_input {
+  display: flex;
+  padding: 10px 14px;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid var(--components-input-outlined, rgba(145, 158, 171, 0.32));
+  overflow: hidden;
+  color: var(--text-light-disabled, #919eab);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: publicsans_regular;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+
+  button {
+    color: #016608;
+    text-align: center;
+    font-family: publicsans_bold;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    cursor: pointer;
+  }
+}
+
+.custom-table {
+  @media (max-width: 868px) {
+    display: none;
+  }
+}
+
+a {
+  &:hover {
+    color: #d6d6d6 !important;
+  }
+}
+
+.no-data-found {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: #d6d6d6;
+  font-family: publicsans_bold;
+  text-transform: uppercase;
+  padding: 70px 0;
+}

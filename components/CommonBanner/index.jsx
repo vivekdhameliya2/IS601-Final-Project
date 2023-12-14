@@ -1,4 +1,4 @@
-import aboutStyles from "../../assets/styles/about.module.scss";
+import aboutStyles from "../../styles/about.module.scss";
 import { Breadcrumbs, Typography } from "@mui/material";
 import Link from "next/link";
 

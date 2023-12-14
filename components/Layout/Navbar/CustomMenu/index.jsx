@@ -22,15 +22,9 @@ const MenuList = () => {
   );
 };
 
-const CustomMenu = () => {
-  const [open, setOpen] = useState(false);
-
-  const handleOpenChange = () => {
-    setOpen(!open);
-  };
-
-  return (
-    <div className={layout.mobile_menu}>
+const CustomMenu = ({handleOpenChange}) => {
+   return (
+    <div onClick={(e) => handleOpenChange(e)} className={layout.mobile_menu}>
       <Image width={40} height={40} src={"/images/menu.svg"} alt="menuIcon" />
     </div>
   );
