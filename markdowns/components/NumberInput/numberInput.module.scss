@@ -1,0 +1,32 @@
+.number_wrapper {
+  display: flex;
+  width: 96px;
+  padding: 5px 8px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 96px;
+  border-radius: 8px;
+  border: 1px solid var(--components-input-outlined, rgba(145, 158, 171, 0.32));
+
+  input {
+    border: none;
+    max-width: 40px;
+    text-align: center;
+    outline: none;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    -moz-appearance: textfield;
+  }
+}
+
+.minus {
+  min-width: 10px;
+}
+
+.plus {
+  min-width: 10px;
+}
