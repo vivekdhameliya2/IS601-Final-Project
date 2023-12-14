@@ -9,7 +9,7 @@ const CouponSection = ({ coupons }) => {
           <Image
             width={341}
             height={341}
-            src={"/images/coupon_one.png"}
+            src={"/images/coupon_one.webp"}
             alt="coupon-image"
           />
         </div>
@@ -31,7 +31,7 @@ const CouponSection = ({ coupons }) => {
         <Image
           width={341}
           height={341}
-          src={"/images/coupon_Two.png"}
+          src={"/images/coupon_two.webp"}
           alt="coupon-image"
         />
         </div>

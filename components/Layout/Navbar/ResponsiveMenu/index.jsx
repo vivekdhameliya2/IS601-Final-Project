@@ -25,8 +25,8 @@ const ResponsiveMenu = ({
       {menuData.map((menuItem) => {
         return (
           <MenuItem
+            key={menuItem.path}
             className={pathName === menuItem.path ? responsiveStyles.menu_item_active : responsiveStyles.menu_item}
-            key={menuItem.type}
             onClick={() => handleClose(menuItem.type)}
           >
             <Link href={menuItem.path} >

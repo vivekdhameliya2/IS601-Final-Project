@@ -5,7 +5,9 @@ import Image from "next/image";
 import CustomMenu from "./CustomMenu";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import ResponsiveMenu from "./ResponsiveMenu";
+import dynamic from "next/dynamic";
+
+const ResponsiveMenu = dynamic(() => import("./ResponsiveMenu"));
 
 const menuData = [
   {

@@ -5,7 +5,7 @@ const OurStory = ({ story }) => {
   return (
     <section className={`${aboutStyles.our_story} custom-container`}>
       <div className={aboutStyles.story_image}>
-        <Image width={634} height={640} src={"/images/our-story.png"} alt="story_image" />
+        <Image width={634} height={640} src={"/images/our-story.webp"} alt="story_image" />
       </div>
       <div className={aboutStyles.our_story_content}>
         <h3>{story.subTitle}</h3>
@@ -14,7 +14,7 @@ const OurStory = ({ story }) => {
           return (
             <>
               <div key={index} className={aboutStyles.journey}>
-                <h5>{data.title}</h5>
+                <span>{data.title}</span>
                 <p>
                   {data.desc}
                 </p>

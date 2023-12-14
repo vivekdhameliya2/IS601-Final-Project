@@ -8,7 +8,7 @@ const DealsCard = ({ item }) => {
     <Card className={menuStyles.deal_card} sx={{ maxWidth: 405 }}>
       <div className={menuStyles.offer_content}>
         <div className={menuStyles.offer_text}>
-          <h5>Flat</h5>
+          <span>Flat</span>
           <h2>${+(item.discount).toFixed(2)}</h2>
         </div>
         <div className={menuStyles.offer_label}>Code: {item.code}</div>

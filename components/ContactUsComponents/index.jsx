@@ -17,10 +17,10 @@ const ContactUsForm = ({ contact }) => {
     <section className={`${contactStyles.form_container} custom-container`}>
       <div className={contactStyles.form_wrapper}>
         <h2>{contact.title}</h2>
-        <Input placeholder="Name" />
-        <Input type="email" placeholder="Email" />
-        <Input placeholder="Subject Type" />
-        <TextField sx={{maxWidth: 595}} rows={4} multiline placeholder="Enter your message here..." />
+        <Input aria-labelledby="name" placeholder="Name" />
+        <Input aria-labelledby="email" type="email" placeholder="Email" />
+        <Input aria-labelledby="subject_type" placeholder="Subject Type" />
+        <TextField aria-labelledby="message" sx={{maxWidth: 595}} rows={4} multiline placeholder="Enter your message here..." />
         <Button>Submit Now</Button>
       </div>
       <div className={contactStyles.form_map}>

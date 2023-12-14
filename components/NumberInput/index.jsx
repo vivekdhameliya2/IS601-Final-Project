@@ -13,7 +13,7 @@ const NumberInput = ({ handleChange, formData }) => {
       >
         <Image width={18} height={18} alt="minus" src={"/images/ic_minus.svg"} />
       </Button>
-      <Input  type="number" value={formData?.qty} />
+      <Input aria-labelledby="quantity"  type="number" value={formData?.qty} />
       <Button
         onClick={() => handleChange("qty", formData.qty + 1, formData)}
         sx={{ maxWidth: 15 }}

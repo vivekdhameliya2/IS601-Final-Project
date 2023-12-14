@@ -24,7 +24,7 @@ export default function TestimonialCard({ item }) {
               sx={{ bgcolor: "#000", maxWidth: 64, maxHeight: 64 }}
               aria-label="recipe"
             >
-              <Image src={item.image} width={64} height={64} />
+              <Image alt="testimonial_image" src={item.image} width={64} height={64} />
             </Avatar>
           }
           action={
