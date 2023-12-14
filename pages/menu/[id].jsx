@@ -164,7 +164,7 @@ export default function Pizza({ coupons, allProducts, id }) {
       <Head>
         <title>{allProducts[id].title}</title>
         <meta name="Description" content={allProducts[id].desc}></meta>
-        <link rel="canonical" href={`http://localhost:3000/menu/${id}`}></link>
+        <link rel="canonical" href={`${process.env.NEXT_APP_URL}/menu/${id}`}></link>
         <link
           rel="preload"
           fetchpriority="high"
@@ -176,17 +176,17 @@ export default function Pizza({ coupons, allProducts, id }) {
           content="width=device-width, initial-scale=1.0"
         ></meta>
 
-        <meta property="og:url" content={`http://localhost:3000/menu/${id}`} />
+        <meta property="og:url" content={`${process.env.NEXT_APP_URL}/menu/${id}`} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={allProducts[id].title} />
         <meta property="og:description" content={allProducts[id].desc} />
         <meta property="og:image" content={allProducts[id].image} />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="localhost" />
+        <meta property="twitter:domain" content={process.env.DOMAIN} />
         <meta
           property="twitter:url"
-          content={`http://localhost:3000/menu/${id}`}
+          content={`${process.env.NEXT_APP_URL}/menu/${id}`}
         />
         <meta name="twitter:title" content={allProducts[id].title} />
         <meta name="twitter:description" content={allProducts[id].desc} />

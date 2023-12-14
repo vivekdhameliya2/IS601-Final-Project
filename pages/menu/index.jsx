@@ -46,7 +46,7 @@ export default function Menu({ allProducts, coupons }) {
           name="Description"
           content="Italian Pizza is one of the top food franchises in the world, renowned for offering an impressively huge variety of scrumptious pizzas."
         ></meta>
-        <link rel="canonical" href="http://localhost:3000/menu"></link>
+        <link rel="canonical" href={`${process.env.NEXT_APP_URL}/menu`}></link>
         <link
           rel="preload"
           fetchpriority="high"
@@ -59,7 +59,7 @@ export default function Menu({ allProducts, coupons }) {
           content="width=device-width, initial-scale=1.0"
         ></meta>
 
-        <meta property="og:url" content="http://localhost:3000/menu" />
+        <meta property="og:url" content={`${process.env.NEXT_APP_URL}/menu`} />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -69,11 +69,11 @@ export default function Menu({ allProducts, coupons }) {
           property="og:description"
           content="Italian Pizza is the 3rd largest Pizza chain in India. We offer a proven business model to help our franchisees craft the most delicious pizza at unbelievable prices."
         />
-        <meta property="og:image" content="/logo/logo.svg" />
+        <meta property="og:image" content={process.env.CARD_IMAGE} />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="localhost" />
-        <meta property="twitter:url" content="http://localhost:3000/menu" />
+        <meta property="twitter:domain" content={process.env.DOMAIN} />
+        <meta property="twitter:url" content={`${process.env.NEXT_APP_URL}/menu`} />
         <meta
           name="twitter:title"
           content="Italian Pizza | 3rd Largest Pizza Chain in India"
@@ -82,7 +82,7 @@ export default function Menu({ allProducts, coupons }) {
           name="twitter:description"
           content="Italian Pizza is the 3rd largest Pizza chain  in India. We offer a proven business model to help our franchisees craft the most delicious pizza at unbelievable prices."
         />
-        <meta name="twitter:image" content="/logo/logo.svg"></meta>
+        <meta name="twitter:image" content={process.env.CARD_IMAGE}></meta>
       </Head>
       <CommonBanner title={"Menu"} breadcrumbs={breadcrumbs} />
       <CategoryFilter
