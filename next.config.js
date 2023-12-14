@@ -28,7 +28,7 @@ const nextConfig = {
   env: {
     ANALITICS_ID: "G-KTDJQQD8CB",
     MAIL_CHIMP_URL:
-      "https://app.us13.list-manage.com/subscribe/post?u=4fd4ca3ebcd80644de9e8bcb1&amp;id=813b96f625&amp;f_id=00fdf1e7f0",
+      "https://us14.list-manage.com/contact-form?u=2ed0c1623a0ff25941610de43&form_id=d72586fd02e5b551904db1f1ebe4ca69",
   },
   i18n: {
     locales: ['en'],
