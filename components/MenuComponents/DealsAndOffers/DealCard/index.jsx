@@ -1,5 +1,5 @@
 import { Card } from "@mui/material";
-import menuStyles from "../../../../assets/styles/menu.module.scss";
+import menuStyles from "../../../../styles/menu.module.scss";
 import Image from "next/image";
 
 const DealsCard = ({ item }) => {

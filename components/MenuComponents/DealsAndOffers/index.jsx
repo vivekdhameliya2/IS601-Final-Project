@@ -1,6 +1,6 @@
 import Image from "next/image";
-import homeStyle from "../../../assets/styles/homepage.module.scss";
-import menuStyle from "../../../assets/styles/menu.module.scss";
+import homeStyle from "../../../styles/homepage.module.scss";
+import menuStyle from "../../../styles/menu.module.scss";
 import CustomSlider from "../../CustomSlider";
 import DealsCard from "./DealCard";
 

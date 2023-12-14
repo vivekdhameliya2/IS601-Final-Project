@@ -1,5 +1,5 @@
 import Image from "next/image";
-import homeStyle from "../../../assets/styles/homepage.module.scss";
+import homeStyle from "../../../styles/homepage.module.scss";
 import CustomSlider from "../../CustomSlider";
 import TestimonialCard from "./TestimonialCard";
 

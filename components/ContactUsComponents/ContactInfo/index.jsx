@@ -1,4 +1,4 @@
-import contactStyles from "../../../assets/styles/contact.module.scss";
+import contactStyles from "../../../styles/contact.module.scss";
 import Image from "next/image";
 
 const ContactInfo = () => {

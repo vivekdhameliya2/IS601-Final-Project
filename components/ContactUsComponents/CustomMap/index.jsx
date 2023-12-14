@@ -1,5 +1,5 @@
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
-import contactStyles from "../../../assets/styles/contact.module.scss";
+import contactStyles from "../../../styles/contact.module.scss";
 import 'leaflet/dist/leaflet.css'
 
 const Map = () => {

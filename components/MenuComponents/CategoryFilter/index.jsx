@@ -1,5 +1,5 @@
 import Image from "next/image";
-import menuStyles from "../../../assets/styles/menu.module.scss";
+import menuStyles from "../../../styles/menu.module.scss";
 import Button from "@mui/material/Button";
 import { useState } from "react";
 import ResponsiveFilter from "./ResponsiveFilter";

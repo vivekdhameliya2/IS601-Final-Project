@@ -1,5 +1,5 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
-import pizzaStyles from "../../../../assets/styles/pizza.module.scss";
+import pizzaStyles from "../../../../styles/pizza.module.scss";
 
 const SizeSelect = ({ formData, handleChange }) => {
   return (

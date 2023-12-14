@@ -1,6 +1,6 @@
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import menuStyles from "../../../../assets/styles/menu.module.scss";
+import menuStyles from "../../../../styles/menu.module.scss";
 import Image from "next/image";
 
 const ResponsiveFilter = ({

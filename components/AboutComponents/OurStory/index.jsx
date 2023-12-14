@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aboutStyles from "../../../assets/styles/about.module.scss";
+import aboutStyles from "../../../styles/about.module.scss";
 
 const OurStory = ({ story }) => {
   return (

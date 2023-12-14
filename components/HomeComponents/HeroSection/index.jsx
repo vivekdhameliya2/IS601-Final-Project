@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import homeStyle from "../../../assets/styles/homepage.module.scss";
+import homeStyle from "../../../styles/homepage.module.scss";
 
 const HeroSection = ({ data, handleOpen }) => {
     return (

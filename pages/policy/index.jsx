@@ -1,5 +1,5 @@
-import policyStyles from "../../assets/styles/policy.module.scss";
-import pizzaStyles from "../../assets/styles/pizza.module.scss";
+import policyStyles from "../../styles/policy.module.scss";
+import pizzaStyles from "../../styles/pizza.module.scss";
 import Layout from "../../components/Layout";
 import Head from "next/head";
 

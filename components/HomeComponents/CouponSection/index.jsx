@@ -1,25 +1,23 @@
-import homeStyle from "../../../assets/styles/homepage.module.scss";
+import homeStyle from "../../../styles/homepage.module.scss";
 import Image from "next/image";
 
 const CouponSection = ({ coupons }) => {
   return (
     <section className={`${homeStyle.coupon_section} custom-container`}>
       <div className={homeStyle.coupon}>
-        <Image
-          width={341}
-          height={341}
-          className={homeStyle.coupon_image}
-          src={"/images/coupon_one.png"}
-          alt="coupon-image"
-        />
+        <div className={homeStyle.coupon_image} >
+          <Image
+            width={341}
+            height={341}
+            src={"/images/coupon_one.png"}
+            alt="coupon-image"
+          />
+        </div>
         <div className={homeStyle.coupon_content}>
           <h3>GET</h3>
           <div className={homeStyle.discount_wrapper}>
             <b>{coupons.discountOffer.discount}</b>
-            <sup>
-              <span>%</span>
-              <p>off</p>
-            </sup>{" "}
+            <sup>%</sup>{" "}
           </div>
           <div className={homeStyle.coupon_label}>
             <p>USE CODE</p>
@@ -29,13 +27,14 @@ const CouponSection = ({ coupons }) => {
         </div>
       </div>
       <div className={`${homeStyle.coupon} ${homeStyle.couponTwo}`}>
+        <div className={homeStyle.coupon_image} >
         <Image
           width={341}
           height={341}
-          className={homeStyle.coupon_image_two}
           src={"/images/coupon_Two.png"}
           alt="coupon-image"
         />
+        </div>
         <div className={homeStyle.coupon_offer2}>
           <div className={homeStyle.offer2_text}>
             <b>{coupons.purchaseOffer.title}</b>

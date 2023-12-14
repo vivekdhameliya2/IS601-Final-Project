@@ -1,5 +1,5 @@
 import Image from "next/image";
-import aboutStyles from "../../../assets/styles/about.module.scss";
+import aboutStyles from "../../../styles/about.module.scss";
 import Button from "@mui/material/Button";
 import { useRouter } from "next/router";
 

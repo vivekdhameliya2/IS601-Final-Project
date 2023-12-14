@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout from "../../components/Layout";
-import contactStyles from "../../assets/styles/contact.module.scss";
+import contactStyles from "../../styles/contact.module.scss";
 import CommonBanner from "../../components/CommonBanner";
 import Link from "next/link";
 import ContactUsForm from "../../components/ContactUsComponents";

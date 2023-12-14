@@ -4,9 +4,42 @@ import Link from "next/link";
 import Image from "next/image";
 import CustomMenu from "./CustomMenu";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
+import ResponsiveMenu from "./ResponsiveMenu";
+
+const menuData = [
+  {
+    title: "Home",
+    path: "/"
+  },
+  {
+    title: "About",
+    path: "/about",
+    
+  },
+  {
+    title: "Pizza",
+    path: "/menu",
+ 
+  },
+  {
+    title: "contact us",
+    path: "/contact",
+  },
+];
 
 const Navbar = ({ isSticky }) => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
   const pathName = usePathname();
+
+  const handleOpenChange = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <header
@@ -21,10 +54,16 @@ const Navbar = ({ isSticky }) => {
         <Link className={pathName === "/" ? layout.active : ""} href="/">
           Home
         </Link>
-        <Link className={pathName === "/about" ? layout.active : ""} href="/about">
+        <Link
+          className={pathName === "/about" ? layout.active : ""}
+          href="/about"
+        >
           About
         </Link>
-        <Link className={pathName === "/menu" ? layout.active : ""} href="/menu">
+        <Link
+          className={pathName === "/menu" ? layout.active : ""}
+          href="/menu"
+        >
           Pizza
         </Link>
         <Link
@@ -34,7 +73,14 @@ const Navbar = ({ isSticky }) => {
           Contact Us
         </Link>
       </nav>
-      <CustomMenu />
+      <CustomMenu handleOpenChange={handleOpenChange} />
+      <ResponsiveMenu
+        pathName={pathName}
+        anchorEl={anchorEl}
+        open={open}
+        handleClose={handleClose}
+        menuData={menuData}
+      />
     </header>
   );
 };

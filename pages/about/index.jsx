@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Layout from "../../components/Layout";
-import aboutStyles from "../../assets/styles/about.module.scss";
+import aboutStyles from "../../styles/about.module.scss";
 import CommonBanner from "../../components/CommonBanner";
 import Link from "next/link";
 import OurStory from "../../components/AboutComponents/OurStory";
