@@ -2,8 +2,6 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 import pizzaStyles from "../../styles/pizza.module.scss";
 import PizzaDetail from "../../components/PizzaComponents/PizzaDetail";
-import DealsAndOffers from "../../components/MenuComponents/DealsAndOffers";
-import Checkout from "../../components/PizzaComponents/Checkout";
 import { getDataInObject } from "../../lib/mdToJson";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -12,7 +10,17 @@ import {
   removeCart,
 } from "../../store/slices/pizza.slice";
 import { useState } from "react";
-import CustomAlert from "../../components/CustomAlert";
+import dynamic from "next/dynamic";
+
+const CustomAlert = dynamic(() =>
+  import("../../components/CustomAlert")
+);
+const Checkout = dynamic(() =>
+  import("../../components/PizzaComponents/Checkout")
+);
+const DealsAndOffers = dynamic(() =>
+  import("../../components/MenuComponents/DealsAndOffers")
+);
 
 export async function getStaticPaths() {
   const allProducts = getDataInObject("./markdowns/products");
@@ -31,17 +39,18 @@ export async function getStaticProps({ params }) {
   const { id } = params;
   const allProducts = getDataInObject("./markdowns/products");
   const coupons = getDataInObject("./markdowns/coupons/deals-coupons");
-  const product = allProducts[id];
 
   return {
     props: {
       coupons: coupons.deals,
-      product: { ...product, fileName: `${id}.md` },
+      allProducts,
+      id,
     },
   };
 }
 
-export default function Pizza({ coupons, product }) {
+export default function Pizza({ coupons, allProducts, id }) {
+  const product = { ...allProducts[id], fileName: `${id}.md` };
   const dispatch = useDispatch();
   const cartData = useSelector((state) => state.pizza.cart);
 
@@ -121,7 +130,7 @@ export default function Pizza({ coupons, product }) {
           message: "Coupon applied successfully",
           type: "success",
         });
-      })
+      });
 
       setCoupon({ coupon: "", applied: true, discount: isCoupon.discount });
     } else {
@@ -131,7 +140,7 @@ export default function Pizza({ coupons, product }) {
           message: "Please add a valid coupon",
           type: "error",
         });
-      })
+      });
     }
   };
 
@@ -147,13 +156,41 @@ export default function Pizza({ coupons, product }) {
         message: "Your order is placed successfully",
         type: "success",
       });
-    })
+    });
   };
 
   return (
-    <Layout title="Pizza" >
+    <Layout title="Pizza">
       <Head>
-        <title>Pizza</title>
+        <title>{allProducts[id].title}</title>
+        <meta name="Description" content={allProducts[id].desc}></meta>
+        <link rel="canonical" href={`http://localhost:3000/menu/${id}`}></link>
+        <link
+          rel="preload"
+          fetchpriority="high"
+          href={allProducts[id].image}
+          as="image"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+
+        <meta property="og:url" content={`http://localhost:3000/menu/${id}`} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={allProducts[id].title} />
+        <meta property="og:description" content={allProducts[id].desc} />
+        <meta property="og:image" content={allProducts[id].image} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="localhost" />
+        <meta
+          property="twitter:url"
+          content={`http://localhost:3000/menu/${id}`}
+        />
+        <meta name="twitter:title" content={allProducts[id].title} />
+        <meta name="twitter:description" content={allProducts[id].desc} />
+        <meta name="twitter:image" content={allProducts[id].image}></meta>
       </Head>
       <section className={pizzaStyles.hero_section}>
         <div className={pizzaStyles.overlay_image}></div>

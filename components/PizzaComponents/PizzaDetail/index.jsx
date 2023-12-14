@@ -17,7 +17,7 @@ const PizzaDetail = ({ product, cartData, addProductToCart, handleChange, formDa
   return (
     <section className={`${pizzaStyles.detail_container} custom-container`}>
       <div className={pizzaStyles.image_container}>
-        <Image src={product.image} height={420} width={420} alt="pizza-image" />
+        <Image priority={true} loading="eager" src={product.image} height={420} width={420} alt="pizza-image" />
       </div>
       <div className={pizzaStyles.detail_content}>
         <div className={pizzaStyles.offer_wrap}>
@@ -32,8 +32,8 @@ const PizzaDetail = ({ product, cartData, addProductToCart, handleChange, formDa
           <p>{`(${product.totalReviews} reviews)`}</p>
         </div>
         <div className={pizzaStyles.price_wrapper}>
-          <h6>${+product.beforePrice.toFixed(2)}</h6>
-          <h5> ${+totalPrice.toFixed(2)}</h5>
+          <span>${+product.beforePrice.toFixed(2)}</span>
+          <span> ${+totalPrice.toFixed(2)}</span>
         </div>
         <hr />
         {!isInCart && (

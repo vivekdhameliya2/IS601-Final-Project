@@ -3,14 +3,19 @@ import Layout from "../components/Layout";
 import HeroSection from "../components/HomeComponents/HeroSection";
 import CouponSection from "../components/HomeComponents/CouponSection";
 import SpecialMenu from "../components/HomeComponents/SpecialMenu";
-import TestimonialSection from "../components/HomeComponents/TestimonialSection";
 import DeliverySection from "../components/HomeComponents/DeliverySection";
+import CustomAlert from "../components/CustomAlert";
+import dynamic from "next/dynamic";
+import { useState } from "react";
 import { getDataInArray, getDataInObject } from "../lib/mdToJson";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../store/slices/pizza.slice";
-import MailChimp from "../components/MailChimp";
-import { useState } from "react";
-import CustomAlert from "../components/CustomAlert";
+
+const TestimonialSection = dynamic(() =>
+  import("../components/HomeComponents/TestimonialSection")
+);
+
+const MailChimp = dynamic(() => import("../components/MailChimp"));
 
 export async function getStaticProps() {
   const allProducts = getDataInArray("./markdowns/products");
@@ -65,7 +70,50 @@ export default function Home({ homeData, coupons, allProducts }) {
   return (
     <Layout title="Homepage">
       <Head>
-        <title>Homepage</title>
+        <title>
+          Italian Pizza | Leading Pizza Restaurant Franchise in World
+        </title>
+        <meta
+          name="Description"
+          content="Italian Pizza is one of the top food franchises in the world, renowned for offering an impressively huge variety of scrumptious pizzas."
+        ></meta>
+        <link rel="canonical" href="http://localhost:3000/"></link>
+        <link
+          rel="preload"
+          fetchpriority="high"
+          href="/images/hero-image.webp"
+          as="image"
+          type="image/webp"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+
+        <meta property="og:url" content="http://localhost:3000/" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Italian Pizza | 3rd Largest Pizza Chain in India"
+        />
+        <meta
+          property="og:description"
+          content="Italian Pizza is the 3rd largest Pizza chain in India. We offer a proven business model to help our franchisees craft the most delicious pizza at unbelievable prices."
+        />
+        <meta property="og:image" content="/logo/logo.svg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="localhost" />
+        <meta property="twitter:url" content="http://localhost:3000/" />
+        <meta
+          name="twitter:title"
+          content="Italian Pizza | 3rd Largest Pizza Chain in India"
+        />
+        <meta
+          name="twitter:description"
+          content="Italian Pizza is the 3rd largest Pizza chain  in India. We offer a proven business model to help our franchisees craft the most delicious pizza at unbelievable prices."
+        />
+        <meta name="twitter:image" content="/logo/logo.svg"></meta>
       </Head>
       <HeroSection handleOpen={handleOpen} data={homeData["hero-section"]} />
       <CouponSection coupons={coupons} />

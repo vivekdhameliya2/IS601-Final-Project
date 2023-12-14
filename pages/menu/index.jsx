@@ -1,13 +1,13 @@
-import Head from 'next/head';
-import Layout from '../../components/Layout';
-import menuStyles from '../../styles/menu.module.scss';
-import CommonBanner from '../../components/CommonBanner';
-import Link from 'next/link';
-import CategoryFilter from '../../components/MenuComponents/CategoryFilter';
-import DealsAndOffers from '../../components/MenuComponents/DealsAndOffers';
-import { getDataInArray, getDataInObject } from '../../lib/mdToJson';
-import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../../store/slices/pizza.slice';
+import Head from "next/head";
+import Layout from "../../components/Layout";
+import menuStyles from "../../styles/menu.module.scss";
+import CommonBanner from "../../components/CommonBanner";
+import Link from "next/link";
+import CategoryFilter from "../../components/MenuComponents/CategoryFilter";
+import DealsAndOffers from "../../components/MenuComponents/DealsAndOffers";
+import { getDataInArray, getDataInObject } from "../../lib/mdToJson";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart } from "../../store/slices/pizza.slice";
 
 const breadcrumbs = [
   <Link className={menuStyles.breadcrumb_link} href="/">
@@ -25,26 +25,71 @@ export async function getStaticProps() {
   return {
     props: {
       allProducts,
-      coupons: coupons.deals
+      coupons: coupons.deals,
     },
   };
 }
 
 export default function Menu({ allProducts, coupons }) {
   const dispatch = useDispatch();
-  const cartData = useSelector(state => state.pizza.cart);
+  const cartData = useSelector((state) => state.pizza.cart);
 
   const addProductToCart = (product) => {
     dispatch(addToCart(product));
-  }
+  };
 
   return (
-    <Layout title="Menu" >
+    <Layout title="Menu">
       <Head>
         <title>Menu</title>
-      </Head>     
+        <meta
+          name="Description"
+          content="Italian Pizza is one of the top food franchises in the world, renowned for offering an impressively huge variety of scrumptious pizzas."
+        ></meta>
+        <link rel="canonical" href="http://localhost:3000/menu"></link>
+        <link
+          rel="preload"
+          fetchpriority="high"
+          href="/images/about-hero.webp"
+          as="image"
+          type="image/webp"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
+
+        <meta property="og:url" content="http://localhost:3000/menu" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Italian Pizza | 3rd Largest Pizza Chain in India"
+        />
+        <meta
+          property="og:description"
+          content="Italian Pizza is the 3rd largest Pizza chain in India. We offer a proven business model to help our franchisees craft the most delicious pizza at unbelievable prices."
+        />
+        <meta property="og:image" content="/logo/logo.svg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="localhost" />
+        <meta property="twitter:url" content="http://localhost:3000/menu" />
+        <meta
+          name="twitter:title"
+          content="Italian Pizza | 3rd Largest Pizza Chain in India"
+        />
+        <meta
+          name="twitter:description"
+          content="Italian Pizza is the 3rd largest Pizza chain  in India. We offer a proven business model to help our franchisees craft the most delicious pizza at unbelievable prices."
+        />
+        <meta name="twitter:image" content="/logo/logo.svg"></meta>
+      </Head>
       <CommonBanner title={"Menu"} breadcrumbs={breadcrumbs} />
-      <CategoryFilter cartData={cartData} addProductToCart={addProductToCart} allProducts={allProducts} />
+      <CategoryFilter
+        cartData={cartData}
+        addProductToCart={addProductToCart}
+        allProducts={allProducts}
+      />
       <DealsAndOffers coupons={coupons} />
     </Layout>
   );

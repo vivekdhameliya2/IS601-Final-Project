@@ -6,7 +6,7 @@ const SizeSelect = ({ formData, handleChange }) => {
     <div className={pizzaStyles.form_item}>
       <label>Size</label>
       <FormControl sx={{ minWidth: 180, maxWidth: 180 }} size="small">
-        <InputLabel id="demo-select-small-label">Choose your size</InputLabel>
+        <InputLabel aria-labelledby="size" id="demo-select-small-label">Choose your size</InputLabel>
         <Select
           labelId="demo-select-small-label"
           id="demo-select-small"

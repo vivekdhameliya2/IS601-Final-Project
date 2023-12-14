@@ -15,6 +15,7 @@ export default function CustomInput({ onChange, coupon, applyCoupon }) {
       }}
     >
       <InputBase
+        aria-labelledby="coupon"
         onChange={(e) => onChange({ ...coupon, coupon: e.target.value })}
         sx={{ ml: 1, flex: 1, border: "none" }}
         placeholder="Discount codes / Gifts"

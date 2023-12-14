@@ -8,7 +8,7 @@
 
 .overlay_image {
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%),
-    url("/images/about-hero.png");
+    url("/images/about-hero.webp");
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -141,17 +141,8 @@
   gap: 8px;
   align-items: center;
   margin: 16px 0 0 0;
-  h6 {
-    color: var(--text-light-disabled, #919eab);
-    font-family: publicsans_bold;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 36px;
-    text-decoration: line-through;
-    margin: 0;
-  }
-  h5 {
+
+  span {
     color: var(--text-light-disabled, #222);
     font-family: publicsans_bold;
     font-size: 24px;
@@ -159,6 +150,10 @@
     font-weight: 700;
     line-height: 36px;
     margin: 0;
+    &:nth-child(1) {
+      color: var(--text-light-disabled, #919eab);
+      text-decoration: line-through;
+    }
   }
 }
 

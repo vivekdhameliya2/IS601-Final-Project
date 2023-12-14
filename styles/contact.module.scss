@@ -3,12 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 45dvh;
+  height: 450px;
 }
 
 .overlay_image {
   background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%),
-    url("/images/about-hero.png");
+    url("/images/about-hero.webp");
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;

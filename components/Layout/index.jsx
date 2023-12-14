@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import layout from "./layout.module.scss";
-import PrimaryFooter from "./PrimaryFooter";
 import ReactGA from "react-ga4";
 import { useCookies } from "react-cookie";
 import dynamic from "next/dynamic";
 
+const PrimaryFooter = dynamic(() => import("./PrimaryFooter"))
 const GdprPopup = dynamic(() => import("../CookieConsentModal"), {
   ssr: false,
 });
