@@ -77,7 +77,7 @@ export default function Home({ homeData, coupons, allProducts }) {
           name="Description"
           content="Italian Pizza is one of the top food franchises in the world, renowned for offering an impressively huge variety of scrumptious pizzas."
         ></meta>
-        <link rel="canonical" href="http://localhost:3000/"></link>
+        <link rel="canonical" href={process.env.NEXT_APP_URL}></link>
         <link
           rel="preload"
           fetchpriority="high"
@@ -90,7 +90,7 @@ export default function Home({ homeData, coupons, allProducts }) {
           content="width=device-width, initial-scale=1.0"
         ></meta>
 
-        <meta property="og:url" content="http://localhost:3000/" />
+        <meta property="og:url" content={process.env.NEXT_APP_URL} />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -100,11 +100,11 @@ export default function Home({ homeData, coupons, allProducts }) {
           property="og:description"
           content="Italian Pizza is the 3rd largest Pizza chain in India. We offer a proven business model to help our franchisees craft the most delicious pizza at unbelievable prices."
         />
-        <meta property="og:image" content="/logo/logo.svg" />
+        <meta property="og:image" content={process.env.CARD_IMAGE} />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:domain" content="localhost" />
-        <meta property="twitter:url" content="http://localhost:3000/" />
+        <meta property="twitter:domain" content={process.env.DOMAIN} />
+        <meta property="twitter:url" content={process.env.NEXT_APP_URL} />
         <meta
           name="twitter:title"
           content="Italian Pizza | 3rd Largest Pizza Chain in India"
@@ -113,7 +113,7 @@ export default function Home({ homeData, coupons, allProducts }) {
           name="twitter:description"
           content="Italian Pizza is the 3rd largest Pizza chain  in India. We offer a proven business model to help our franchisees craft the most delicious pizza at unbelievable prices."
         />
-        <meta name="twitter:image" content="/logo/logo.svg"></meta>
+        <meta name="twitter:image" content={process.env.CARD_IMAGE}></meta>
       </Head>
       <HeroSection handleOpen={handleOpen} data={homeData["hero-section"]} />
       <CouponSection coupons={coupons} />
