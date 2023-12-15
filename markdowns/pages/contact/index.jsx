@@ -77,7 +77,7 @@ export default function ContactUs({ contact, layoutData }) {
       </Head>
       <CommonBanner title={"Contact Us"} breadcrumbs={breadcrumbs} />
       <ContactUsForm contact={contact} />
-      <ContactInfo contact={contact} />
+      <ContactInfo />
     </Layout>
   );
 }
