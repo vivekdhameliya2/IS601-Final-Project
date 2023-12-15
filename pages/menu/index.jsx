@@ -21,16 +21,18 @@ const breadcrumbs = [
 export async function getStaticProps() {
   const allProducts = getDataInArray("./markdowns/products");
   const coupons = getDataInObject("./markdowns/coupons/deals-coupons");
+  const layoutData = getDataInObject("./markdowns/layout");
 
   return {
     props: {
       allProducts,
       coupons: coupons.deals,
+      layoutData
     },
   };
 }
 
-export default function Menu({ allProducts, coupons }) {
+export default function Menu({ allProducts, coupons, layoutData }) {
   const dispatch = useDispatch();
   const cartData = useSelector((state) => state.pizza.cart);
 
@@ -39,11 +41,11 @@ export default function Menu({ allProducts, coupons }) {
   };
 
   return (
-    <Layout title="Menu">
+    <Layout layoutData={layoutData} title="Menu">
       <Head>
         <title>Menu</title>
         <meta
-          name="Description"
+          name="description"
           content="Italian Pizza is one of the top food franchises in the world, renowned for offering an impressively huge variety of scrumptious pizzas."
         ></meta>
         <link rel="canonical" href={`${process.env.NEXT_APP_URL}/menu`}></link>

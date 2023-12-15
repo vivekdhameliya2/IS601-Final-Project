@@ -11,10 +11,9 @@ import {
 } from "../../store/slices/pizza.slice";
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import { StyledEngineProvider } from "@mui/material/styles";
 
-const CustomAlert = dynamic(() =>
-  import("../../components/CustomAlert")
-);
+const CustomAlert = dynamic(() => import("../../components/CustomAlert"));
 const Checkout = dynamic(() =>
   import("../../components/PizzaComponents/Checkout")
 );
@@ -39,17 +38,19 @@ export async function getStaticProps({ params }) {
   const { id } = params;
   const allProducts = getDataInObject("./markdowns/products");
   const coupons = getDataInObject("./markdowns/coupons/deals-coupons");
+  const layoutData = getDataInObject("./markdowns/layout");
 
   return {
     props: {
       coupons: coupons.deals,
       allProducts,
       id,
+      layoutData
     },
   };
 }
 
-export default function Pizza({ coupons, allProducts, id }) {
+export default function Pizza({ coupons, allProducts, id, layoutData }) {
   const product = { ...allProducts[id], fileName: `${id}.md` };
   const dispatch = useDispatch();
   const cartData = useSelector((state) => state.pizza.cart);
@@ -160,11 +161,14 @@ export default function Pizza({ coupons, allProducts, id }) {
   };
 
   return (
-    <Layout title="Pizza">
+    <Layout layoutData={layoutData} title="Pizza">
       <Head>
         <title>{allProducts[id].title}</title>
         <meta name="Description" content={allProducts[id].desc}></meta>
-        <link rel="canonical" href={`${process.env.NEXT_APP_URL}/menu/${id}`}></link>
+        <link
+          rel="canonical"
+          href={`${process.env.NEXT_APP_URL}/menu/${id}`}
+        ></link>
         <link
           rel="preload"
           fetchpriority="high"
@@ -176,7 +180,10 @@ export default function Pizza({ coupons, allProducts, id }) {
           content="width=device-width, initial-scale=1.0"
         ></meta>
 
-        <meta property="og:url" content={`${process.env.NEXT_APP_URL}/menu/${id}`} />
+        <meta
+          property="og:url"
+          content={`${process.env.NEXT_APP_URL}/menu/${id}`}
+        />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={allProducts[id].title} />
         <meta property="og:description" content={allProducts[id].desc} />
@@ -195,24 +202,26 @@ export default function Pizza({ coupons, allProducts, id }) {
       <section className={pizzaStyles.hero_section}>
         <div className={pizzaStyles.overlay_image}></div>
       </section>
-      <PizzaDetail
-        removeFromCart={removeFromCart}
-        handleChange={handleChange}
-        formData={formData}
-        addProductToCart={addProductToCart}
-        cartData={cartData}
-        product={product}
-      />
-      <Checkout
-        finalTotal={finalTotal}
-        applyCoupon={applyCoupon}
-        coupon={coupon}
-        setCoupon={setCoupon}
-        removeFromCart={removeFromCart}
-        cartData={cartData}
-        subTotal={subTotal}
-        placeOrder={placeOrder}
-      />
+      <StyledEngineProvider>
+        <PizzaDetail
+          removeFromCart={removeFromCart}
+          handleChange={handleChange}
+          formData={formData}
+          addProductToCart={addProductToCart}
+          cartData={cartData}
+          product={product}
+        />
+        <Checkout
+          finalTotal={finalTotal}
+          applyCoupon={applyCoupon}
+          coupon={coupon}
+          setCoupon={setCoupon}
+          removeFromCart={removeFromCart}
+          cartData={cartData}
+          subTotal={subTotal}
+          placeOrder={placeOrder}
+        />
+      </StyledEngineProvider>
       <DealsAndOffers coupons={coupons} background={"#e6f0e7 !important"} />
       <CustomAlert handleClose={handleClose} data={alert} />
     </Layout>

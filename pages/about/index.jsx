@@ -24,17 +24,19 @@ const breadcrumbs = [
 
 export async function getStaticProps() {
   const aboutData = getDataInObject("./markdowns/about");
+  const layoutData = getDataInObject("./markdowns/layout");
 
   return {
     props: {
       aboutData,
+      layoutData
     },
   };
 }
 
-export default function About({ aboutData }) {
+export default function About({ aboutData, layoutData }) {
   return (
-    <Layout title="Homepage">
+    <Layout layoutData={layoutData} title="Homepage">
       <Head>
         <title>About</title>
         <meta
