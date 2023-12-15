@@ -10,7 +10,7 @@ const HeroSection = ({ data, handleOpen }) => {
             <h3 data-testid="hero-section-subtitle">{data.subTitle}</h3>
             <h2>
               {data.title}{" "}
-              <span data-testid="hero-section-discount">{data.discount}</span>%
+              <span data-testid="hero-section-discount">{data.discount}</span>
               Off
             </h2>
             <Button
