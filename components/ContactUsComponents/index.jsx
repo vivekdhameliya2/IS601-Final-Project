@@ -53,7 +53,7 @@ const ContactUsForm = ({ contact }) => {
           sx={{ maxWidth: 595 }}
           rows={4}
           multiline
-          placeholder="Enter your message here..."
+          placeholder="Enter your message full message here..."
         />
         <Button type="submit">Submit Now</Button>
       </form>
