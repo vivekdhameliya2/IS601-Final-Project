@@ -35,10 +35,10 @@ const TestimonialSection = ({ data }) => {
     <section
       className={`${homeStyle.special_menu} ${homeStyle.testimonail_section} custom-container `}
     >
-      <p>{data.title}</p>
+      <p data-testid="testimonial-section-subtitle" >{data.title}</p>
       <div className={homeStyle.special_menu_tagline}>
         <div className={homeStyle.special_menu_title}>
-          <h2>{data.subTitle}</h2>
+          <h2 data-testid="testimonial-section-title" >{data.subTitle}</h2>
           <Image width={54} height={54} src={"/images/PizzaSlide.svg"} alt="PizzaSlide" />
         </div>
        

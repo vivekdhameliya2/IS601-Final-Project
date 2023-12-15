@@ -49,10 +49,10 @@ export default function CustomTable({
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Product</StyledTableCell>
-            <StyledTableCell align="center">Price</StyledTableCell>
-            <StyledTableCell align="center">Quantity</StyledTableCell>
-            <StyledTableCell align="center">Total Price</StyledTableCell>
+            <StyledTableCell data-testid="pizza-section-tableItem" >Product</StyledTableCell>
+            <StyledTableCell data-testid="pizza-section-tableItem" align="center">Price</StyledTableCell>
+            <StyledTableCell data-testid="pizza-section-tableItem" align="center">Quantity</StyledTableCell>
+            <StyledTableCell data-testid="pizza-section-tableItem" align="center">Total Price</StyledTableCell>
             <StyledTableCell align="center"></StyledTableCell>
           </TableRow>
         </TableHead>

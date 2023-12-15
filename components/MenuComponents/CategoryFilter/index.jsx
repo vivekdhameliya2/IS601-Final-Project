@@ -102,7 +102,7 @@ const CategoryFilter = ({ allProducts, addProductToCart, cartData }) => {
                 } `}
               >
                 <Image width={24} height={24} src={category.icon} alt="filter-icon" />
-                <span>{category.title}</span>
+                <span data-testid="menu-filter-types" >{category.title}</span>
               </div>
             );
           })}

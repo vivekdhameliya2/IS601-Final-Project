@@ -5,12 +5,12 @@ import ReactGA from "react-ga4";
 import { useCookies } from "react-cookie";
 import dynamic from "next/dynamic";
 
-const PrimaryFooter = dynamic(() => import("./PrimaryFooter"))
+const PrimaryFooter = dynamic(() => import("./PrimaryFooter"));
 const GdprPopup = dynamic(() => import("../CookieConsentModal"), {
   ssr: false,
 });
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children, title, layoutData }) => {
   const [cookies] = useCookies(["cookieConsent"]);
   const [isSticky, setIsSticky] = useState(false);
 
@@ -43,7 +43,7 @@ const Layout = ({ children, title }) => {
     <div onScroll={handleScroll} className={layout.root_layout}>
       <Navbar isSticky={isSticky} />
       <main className={layout.content}>{children}</main>
-      <PrimaryFooter />
+      <PrimaryFooter layoutData={layoutData} />
       <div>{typeof cookies.cookieConsent !== "boolean" && <GdprPopup initializeGA={initializeGA} />}</div>
     </div>
   );

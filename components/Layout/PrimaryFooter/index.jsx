@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const PrimaryFooter = () => {
+const PrimaryFooter = ({ layoutData }) => {
   const router = useRouter();
 
   return (
@@ -20,46 +20,21 @@ const PrimaryFooter = () => {
           </div>
           <p>It is a long established fact that a reader will be.</p>
           <div className={layout.social_icons}>
-            <div className={layout.social_icon}>
-              <Image
-                width={18}
-                height={18}
-                src={"/images/facebook.svg"}
-                alt="facebook"
-              />
-            </div>
-            <div className={layout.social_icon}>
-              <Image
-                width={18}
-                height={18}
-                src={"/images/instagram.svg"}
-                alt="instagram"
-              />
-            </div>
-            <div className={layout.social_icon}>
-              <Image
-                width={18}
-                height={18}
-                src={"/images/linkedin.svg"}
-                alt="linkedin"
-              />
-            </div>
-            <div className={layout.social_icon}>
-              <Image
-                width={18}
-                height={18}
-                src={"/images/youtube.svg"}
-                alt="youtube"
-              />
-            </div>
-            <div className={layout.social_icon}>
-              <Image
-                width={18}
-                height={18}
-                src={"/images/twitter.svg"}
-                alt="twitter"
-              />
-            </div>
+            {layoutData.footer.social.map((data) => {
+              return (
+                <div
+                  onClick={() => window.open(data.path)}
+                  className={layout.social_icon}
+                >
+                  <Image
+                    width={18}
+                    height={18}
+                    src={data.icon}
+                    alt="facebook"
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
         <div className={layout.nav_container}>
@@ -83,15 +58,13 @@ const PrimaryFooter = () => {
           <div className={layout.nav_wrapper}>
             <h3>Social Media</h3>
             <div className={layout.nav_links}>
-              <Link href="/" className={layout.nav_link}>
-                Facebook
-              </Link>
-              <Link href="/" className={layout.nav_link}>
-                Linked In
-              </Link>
-              <Link href="/" className={layout.nav_link}>
-                Github
-              </Link>
+              {layoutData.footer.social.map((data) => {
+                return (
+                  <a target="_blank" href={data.path} className={layout.nav_link}>
+                    {data.title}
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

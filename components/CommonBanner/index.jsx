@@ -20,7 +20,7 @@ const CommonBanner = ({ title, breadcrumbs }) => {
   return (
     <section className={aboutStyles.hero_section}>
       <div className={aboutStyles.overlay_image}>
-        <h2>{title}</h2>
+        <h2 data-testid="common-banner-title" >{title}</h2>
         <Breadcrumbs
           className={aboutStyles.breadCrumbClass}
           separator={<Seprator />}
