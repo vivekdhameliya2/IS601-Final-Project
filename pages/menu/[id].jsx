@@ -12,6 +12,7 @@ import {
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import { StyledEngineProvider } from "@mui/material/styles";
+import ReactGA from "react-ga4";
 
 const CustomAlert = dynamic(() => import("../../components/CustomAlert"));
 const Checkout = dynamic(() =>
@@ -45,7 +46,7 @@ export async function getStaticProps({ params }) {
       coupons: coupons.deals,
       allProducts,
       id,
-      layoutData
+      layoutData,
     },
   };
 }
@@ -149,6 +150,17 @@ export default function Pizza({ coupons, allProducts, id, layoutData }) {
     if (subTotal <= 0) {
       return;
     }
+
+    ReactGA.event({
+      category: "Ecommerce",
+      action: "checkout_done",
+      label: cartData.reduce(
+        (acc, cur) => acc + "," + String(cur.uniqueId),
+        ""
+      ),
+      value: finalTotal,
+    });
+
     dispatch(clearCart());
     handleClose();
     setTimeout(() => {

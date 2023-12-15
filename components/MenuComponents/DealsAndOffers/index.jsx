@@ -39,9 +39,9 @@ const DealsAndOffers = ({ background, coupons }) => {
       className={`${homeStyle.special_menu} ${menuStyle.deals_container} custom-container `}
     >
       <p>{coupons.subTitle}</p>
-      <div className={homeStyle.special_menu_tagline}>
+      <div data-testid="pizza-section-dealsSubTitle" className={homeStyle.special_menu_tagline}>
         <div className={homeStyle.special_menu_title}>
-          <h2>{coupons.title}</h2>
+          <h2 data-testid="pizza-section-dealsTitle" >{coupons.title}</h2>
           <Image width={54} height={54} src={"/images/PizzaSlide.svg"} alt="PizzaSlide" />
         </div>
       </div>

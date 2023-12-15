@@ -1,26 +1,18 @@
 ---
-logo: /logo/logo.svg
-desc: It is a long established fact that a reader will be.
-links:
-  - title: home
-    path: /
-  - title: about
-    path: /about
-  - title: pizza
-    path: /menu
-  - title: contact us
-    path: /contact
 social:
   - title: facebook
-    path: /
+    icon: /images/facebook.svg
+    path: https://www.facebook.com/
   - title: linked in
-    path: /
+    icon: /images/linkedin.svg
+    path: https://www.linkedin.com/feed/
   - title: youtube
-    path: /
+    icon: /images/youtube.svg
+    path: https://www.youtube.com/
   - title: instagram
-    path: /
-  - title: github
-    path: /
+    icon: /images/instagram.svg
+    path: https://www.instagram.com/
   - title: twitter
-    path: /
+    icon: /images/twitter.svg
+    path: https://twitter.com/i/flow/login
 ---

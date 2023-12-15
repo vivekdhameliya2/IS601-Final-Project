@@ -8,8 +8,8 @@ const OurStory = ({ story }) => {
         <Image width={634} height={640} src={"/images/our-story.webp"} alt="story_image" />
       </div>
       <div className={aboutStyles.our_story_content}>
-        <h3>{story.subTitle}</h3>
-        <h2>{story.title}</h2>
+        <h3 data-testid="our-story-subtitle" >{story.subTitle}</h3>
+        <h2 data-testid="our-story-title" >{story.title}</h2>
         {story.stories.map((data, index) => {
           return (
             <>

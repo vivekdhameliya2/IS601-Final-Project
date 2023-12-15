@@ -4,16 +4,21 @@
   right: 0;
   margin: 50px;
   display: inline-flex;
-  padding: 40px;
+  padding: 24px;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
   border-radius: 10px;
   background: #fff;
   box-shadow: -40px 40px 80px -8px rgba(145, 158, 171, 0.24);
   width: 100%;
-  max-width: 525px;
+  max-width: 375px;
   z-index: 99999;
+
+  img {
+    height: auto;
+    max-width: 130px;
+  }
   @media (max-width: 768px) {
     max-width: 300px;
   }
@@ -30,11 +35,11 @@
     font-size: 32px;
     font-style: normal;
     font-weight: 700;
-    line-height: 48px;
-    margin: 15px 0;
+    line-height: normal;
+    margin: 8px 0;
     @media (max-width: 768px) {
       font-size: 18px;
-      line-height: 38px;
+     
     }
     @media (max-width: 568px) {
       line-height: normal;
@@ -62,9 +67,7 @@
   justify-content: space-between;
   gap: 10px;
   width: 100%;
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+  flex-direction: column;
 
   button {
     &:nth-child(1) {

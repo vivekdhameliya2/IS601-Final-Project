@@ -6,7 +6,7 @@ const CheckoutTotal = ({ subTotal, setCoupon, coupon, applyCoupon, finalTotal })
   return (
     <Card className={checkStyles.wrapper} sx={{ maxWidth: 297 }}>
       <div className={checkStyles.total_wrapper}>
-        <h5>Order Summary</h5>
+        <b>Order Summary</b>
         <div className={checkStyles.list_wrapper}>
           <div className={checkStyles.list_item}>
             <span>Sub Total</span>

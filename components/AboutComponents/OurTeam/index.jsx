@@ -35,10 +35,10 @@ const OurTeam = ({ team }) => {
     <section
       className={`${homeStyle.special_menu} ${homeStyle.testimonail_section} custom-container `}
     >
-      <p>{team.subTitle}</p>
+      <p data-testid="our-team-subtitle" >{team.subTitle}</p>
       <div className={homeStyle.special_menu_tagline}>
         <div className={homeStyle.special_menu_title}>
-          <h2>{team.title}</h2>
+          <h2 data-testid="our-team-title" >{team.title}</h2>
           <Image width={54} height={54} src={"/images/PizzaSlide.svg"} alt="PizzaSlide" />
         </div>
        
