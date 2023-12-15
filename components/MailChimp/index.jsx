@@ -44,6 +44,7 @@ const MailChimp = ({ open, handleClose, handleSubmit }) => {
           <Modal
             open={open}
             onClose={handleClose}
+            data-testid="mailchimp-popup"
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"
           >
@@ -76,9 +77,11 @@ const MailChimp = ({ open, handleClose, handleSubmit }) => {
                   onChange={handleEmailChange}
                   error={!isEmailValid}
                   helperText={!isEmailValid ? "Invalid email address" : ""}
+                  name="mailchimp-email-input"
                 />
                 <Button
                   disabled={!isEmailValid || status === "sending"}
+                  data-testid="mailchimp-submit-button"
                   onClick={() => onSubmit(subscribe, status)}
                 >
                   {status === "sending" ? "...sending" : "Subscribe"}
