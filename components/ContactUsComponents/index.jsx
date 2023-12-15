@@ -3,6 +3,7 @@ import contactStyles from "../../styles/contact.module.scss";
 import { useMemo, useState } from "react";
 import { Button, TextField } from "@mui/material";
 import { Input } from "@mui/base";
+import ReactGA from "react-ga4";
 
 const CustomAlert = dynamic(() => import("../CustomAlert"));
 
@@ -19,6 +20,15 @@ const ContactUsForm = ({ contact }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const email = formData.get("email");
+
+    ReactGA.event({
+      category: "Contact Form",
+      action: "contacts_form_submit",
+      label: "Email",
+      value: email,
+    });
     setAlert({
       open: true,
       message: "Your query has been submitted successfully.",
@@ -34,28 +44,42 @@ const ContactUsForm = ({ contact }) => {
   return (
     <section className={`${contactStyles.form_container} custom-container`}>
       <form onSubmit={onSubmit} className={contactStyles.form_wrapper}>
-        <h2>{contact.title}</h2>
-        <Input required aria-labelledby="name" placeholder="Name" />
+        <h2 data-testid="contact-form-title">{contact.title}</h2>
         <Input
+          data-testid="contact-form-item"
+          required
+          aria-labelledby="name"
+          name="name"
+          placeholder="Name"
+        />
+        <Input
+          data-testid="contact-form-item"
           required
           aria-labelledby="email"
           type="email"
+          name="email"
           placeholder="Email"
         />
         <Input
+          name="subjectType"
+          data-testid="contact-form-item"
           required
           aria-labelledby="subject_type"
           placeholder="Subject Type"
         />
         <TextField
+          data-testid="contact-form-item"
           required
           aria-labelledby="message"
           sx={{ maxWidth: 595 }}
           rows={4}
           multiline
-          placeholder="Enter your message full message here..."
+          name="query"
+          placeholder="Enter your message here..."
         />
-        <Button type="submit">Submit Now</Button>
+        <Button data-testid="contact-form-button" type="submit">
+          Submit Now
+        </Button>
       </form>
       <div className={contactStyles.form_map}>
         <Map />
