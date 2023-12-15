@@ -2,10 +2,21 @@ import policyStyles from "../../styles/policy.module.scss";
 import pizzaStyles from "../../styles/pizza.module.scss";
 import Layout from "../../components/Layout";
 import Head from "next/head";
+import { getDataInObject } from "../../lib/mdToJson";
 
-const PrivacyPolicy = () => {
+export async function getStaticProps() {
+  const layoutData = getDataInObject("./markdowns/layout");
+
+  return {
+    props: {
+      layoutData,
+    },
+  };
+}
+
+const PrivacyPolicy = ({ layoutData }) => {
   return (
-    <Layout title="PrivacyPolicy">
+    <Layout layoutData={layoutData} title="PrivacyPolicy">
       <Head>
         <title>Prvacy Policy</title>
         <meta

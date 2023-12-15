@@ -16,15 +16,17 @@ import CustomAlert from "../../components/CustomAlert";
 
 export async function getStaticProps({ params }) {
   const coupons = getDataInObject("./markdowns/coupons/deals-coupons");
+  const layoutData = getDataInObject("./markdowns/layout");
 
   return {
     props: {
       coupons: coupons.deals,
+      layoutData
     },
   };
 }
 
-export default function Pizza({ coupons }) {
+export default function Pizza({ coupons, layoutData }) {
   const dispatch = useDispatch();
   const cartData = useSelector((state) => state.pizza.cart);
   const [coupon, setCoupon] = useState({
@@ -120,7 +122,7 @@ export default function Pizza({ coupons }) {
   };
 
   return (
-    <Layout title="Cart">
+    <Layout layoutData={layoutData} title="Cart">
       <Head>
         <title>Cart</title>
         <meta

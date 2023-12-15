@@ -21,17 +21,19 @@ export async function getStaticProps() {
   const allProducts = getDataInArray("./markdowns/products");
   const homeData = getDataInObject("./markdowns/home");
   const coupons = getDataInObject("./markdowns/coupons/home-coupons");
+  const layoutData = getDataInObject("./markdowns/layout");
 
   return {
     props: {
       homeData,
       allProducts: allProducts.slice(0, 4),
       coupons,
+      layoutData
     },
   };
 }
 
-export default function Home({ homeData, coupons, allProducts }) {
+export default function Home({ homeData, coupons, allProducts, layoutData }) {
   const [open, setOpen] = useState(false);
   const dispatch = useDispatch();
   const [alert, setAlert] = useState({ open: false, message: "", type: "" });
@@ -68,7 +70,7 @@ export default function Home({ homeData, coupons, allProducts }) {
   };
 
   return (
-    <Layout title="Homepage">
+    <Layout layoutData={layoutData} title="Homepage">
       <Head>
         <title>
           Italian Pizza | Leading Pizza Restaurant Franchise in World
@@ -96,6 +98,7 @@ export default function Home({ homeData, coupons, allProducts }) {
           property="og:title"
           content="Italian Pizza | 3rd Largest Pizza Chain in India"
         />
+        <meta property="og:site_name" content="Italian Pizza" />
         <meta
           property="og:description"
           content="Italian Pizza is the 3rd largest Pizza chain in India. We offer a proven business model to help our franchisees craft the most delicious pizza at unbelievable prices."
@@ -111,7 +114,7 @@ export default function Home({ homeData, coupons, allProducts }) {
         />
         <meta
           name="twitter:description"
-          content="Italian Pizza is the 3rd largest Pizza chain  in India. We offer a proven business model to help our franchisees craft the most delicious pizza at unbelievable prices."
+          content="Italian Pizza is the 3rd largest Pizza chain in India. We offer a proven business model to help our franchisees craft the most delicious pizza at unbelievable prices."
         />
         <meta name="twitter:image" content={process.env.CARD_IMAGE}></meta>
       </Head>

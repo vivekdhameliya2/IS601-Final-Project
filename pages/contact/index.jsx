@@ -18,17 +18,19 @@ const breadcrumbs = [
 
 export async function getStaticProps() {
   const contact = getDataInObject("./markdowns/contact-us");
+  const layoutData = getDataInObject("./markdowns/layout");
 
   return {
     props: {
       contact: contact.contact,
+      layoutData
     },
   };
 }
 
-export default function ContactUs({ contact }) {
+export default function ContactUs({ contact, layoutData }) {
   return (
-    <Layout title="Contact Us">
+    <Layout layoutData={layoutData} title="Contact Us">
       <Head>
         <title>Contact Us</title>
         <meta
