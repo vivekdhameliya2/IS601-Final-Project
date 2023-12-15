@@ -30,6 +30,18 @@
 }
 
 @font-face {
+    font-family: playfairdisplay_medium;
+    src: url('/fonts/PlayfairDisplay-Medium.ttf');
+    font-display: swap
+}
+
+@font-face {
+    font-family: poetsenone;
+    src: url('/fonts/PoetsenOne-Regular.ttf');
+    font-display: swap
+}
+
+@font-face {
     font-family: publicsans_bold;
     src: url('/fonts/PublicSans-Bold.ttf');
     font-display: swap
