@@ -5,6 +5,7 @@ const websiteURL = "http://localhost:3000/menu";
 // Expected constants
 const expectedTitle = "Menu";
 const expectedFilters = ["pizza", "burger", "fries", "dessert", "beverages"];
+const excepectedCartUpdateButtton = "GO TO CART";
 
 test("Check menu section title", async ({ page }) => {
   const title = await page.$('[data-testid="common-banner-title"]');
@@ -25,6 +26,17 @@ test("Check filter section", async ({ page }) => {
     const text = await filterItem.textContent();
     expect(text.trim().toLowerCase()).toBe(expectedFilters[i].toLowerCase());
   }
+});
+
+test("Check add to cart usabilty testing", async ({ page }) => {
+  // Click the button to open the Mailchimp popup
+  await page.click('[data-testid="add-to-cart"]');
+
+  // // Wait for the popup to appear
+  await page.waitForSelector('[data-testid="go-to-cart"]');
+
+  const btnText = await page.textContent('[data-testid="go-to-cart"]');
+  expect(btnText).toBe(excepectedCartUpdateButtton);
 });
 
 test.beforeEach(async ({ page }) => {

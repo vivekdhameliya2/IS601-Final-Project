@@ -35,7 +35,7 @@ export default function CustomCard({ data, addProductToCart, isInCart }) {
         className={cardStyles.actions}
         disableSpacing
       >
-        <Button onClick={() => cartHandler(data)} sx={{ width: "100%" }}>
+        <Button data-testid={isInCart ? "go-to-cart" : "add-to-cart"} onClick={() => cartHandler(data)} sx={{ width: "100%" }}>
           <span>{isInCart ? "GO TO CART" : "ADD TO CART"}</span>
           <Image width={18} height={18} src={"/images/cart.svg"} alt="cart" />
         </Button>

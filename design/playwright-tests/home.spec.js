@@ -77,6 +77,26 @@ test("Check view all redirect", async ({ page }) => {
   expect(finalUrl).toBe(viewAllUrl);
 });
 
+test("Check mailchimp usabilty", async ({ page }) => {
+  // Click the button to open the Mailchimp popup
+  await page.click('[data-testid="hero-section-button"]');
+
+  // Wait for the popup to appear
+  await page.waitForSelector('[data-testid="mailchimp-popup"]');
+
+  // Fill the email input field
+  const input = await page.$('input[name="mailchimp-email-input"]');
+  input.fill("brijesh12@gmail.com");
+
+  // Click on the submit button
+  await page.click('[data-testid="mailchimp-submit-button"]');
+
+  // Wait for the popup to close
+  await page.waitForSelector('[data-testid="mailchimp-popup"]', {
+    state: "hidden",
+  });
+});
+
 test.beforeEach(async ({ page }) => {
   await page.goto(websiteURL);
 });
