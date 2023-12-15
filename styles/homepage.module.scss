@@ -18,48 +18,54 @@
 
 .offer_content {
   width: 100%;
-  padding-top: 172px;
-  padding-bottom: 80px;
+  padding-top: 252px;
+  padding-bottom: 194px;
   display: flex;
   justify-content: space-between;
-  @media (max-width: 1068px) {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
+
+  @media (max-width: 1468px) {
+    padding-top: 194px;
+    padding-bottom: 104px;
   }
 
   @media (max-width: 1068px) {
-    padding-top: 152px;
+    flex-direction: column-reverse;
+    padding-top: 194px;
     padding-bottom: 90px;
   }
 }
 
 .offer_left {
   h3 {
-    color: #f8833d;
+    color: #8F8F8F;
     font-family: oxanium_regular;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: 0;
+    margin-bottom: 28px;
+    @media (max-width: 1068px) {
+      margin: 0;
+    }
   }
   h2 {
     color: #fff;
     leading-trim: both;
     text-edge: cap;
-    font-family: playfairdisplay_bold;
+    font-family: playfairdisplay_medium;
     font-size: 120px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: 129px; /* 107.5% */
-    margin-top: 28px;
-    margin-bottom: 56px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 129px;
+    margin: 0;
+    margin-bottom: 48px;
     max-width: 605px;
     span {
       color: #fff;
       leading-trim: both;
       text-edge: cap;
-      font-family: oxanium_regular;
+      font-family: poetsenone;
       font-size: 120px;
       font-style: normal;
       font-weight: 400;
