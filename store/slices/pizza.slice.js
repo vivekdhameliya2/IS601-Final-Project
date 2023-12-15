@@ -14,9 +14,11 @@ const pizzaSlice = createSlice({
         ? action.payload.product
         : action.payload;
       const formData = action?.payload?.formData || {};
-      ReactGA.send({
-        hitType: "add_to_cart",
-        item_id: product.fileName.replace(".md", ""),
+      ReactGA.event({
+        category: "Ecommerce",
+        action: "add_to_cart",
+        label: product.title,
+        value: product.fileName.replace(".md", ""),
       });
       state.cart.push({
         uniqueId: product.fileName,
@@ -42,9 +44,11 @@ const pizzaSlice = createSlice({
       const index = state.cart.findIndex(
         (data) => data.uniqueId === action.payload.id
       );
-      ReactGA.send({
-        hitType: "remove_from_cart",
-        item_id: state.cart[index].product.fileName.replace(".md", ""),
+      ReactGA.event({
+        category: "Ecommerce",
+        action: "remove_from_cart",
+        label: state.cart[index].product.title,
+        value: state.cart[index].product.fileName.replace(".md", ""),
       });
       state.cart.splice(index, 1);
     },

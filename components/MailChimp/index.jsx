@@ -1,8 +1,8 @@
 import { Box, Modal, Button, TextField } from "@mui/material";
-import { Input } from "@mui/base";
 import mailStyles from "./mail.module.scss";
 import Image from "next/image";
 import { useState } from "react";
+import ReactGA from "react-ga4";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 const MailChimp = ({ open, handleClose, handleSubmit }) => {
@@ -21,6 +21,12 @@ const MailChimp = ({ open, handleClose, handleSubmit }) => {
   };
 
   const onSubmit = (subscribe) => {
+    ReactGA.event({
+      category: "Mailchimp",
+      action: "mailchimp_submit",
+      label: "Email",
+      value: email,
+    });
     if (isEmailValid && email) {
       setEmail("");
       setIsEmailValid(true);
