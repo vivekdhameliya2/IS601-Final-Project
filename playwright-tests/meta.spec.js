@@ -7,7 +7,7 @@ const websiteURL = "http://localhost:3000";
 const expectedOGTitle = "Italian Pizza | 3rd Largest Pizza Chain in India";
 const expectedOGDescription =
   "Italian Pizza is the 3rd largest Pizza chain in India. We offer a proven business model to help our franchisees craft the most delicious pizza at unbelievable prices.";
-const expectedOGURL = "https://italian-pizza-sigma.vercel.app/";
+const expectedOGURL = "https://is-601-final-project-drab.vercel.app/";
 const expectedOGType = "website";
 const expectedOGSiteName = "Italian Pizza";
 const expectedTwitterTitle = "Italian Pizza | 3rd Largest Pizza Chain in India";
