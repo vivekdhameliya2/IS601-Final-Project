@@ -5,15 +5,15 @@ const websiteURL = "http://localhost:3000";
 // Expected constants
 const expectedMenuItemCount = 9;
 const expectedNavs = [
-  "home",
-  "about",
-  "menu",
-  "contact us",
-  "facebook",
-  "linked in",
-  "youtube",
-  "instagram",
-  "twitter",
+  "Home",
+  "About",
+  "Menu",
+  "Contact us",
+  "Facebook",
+  "Linked in",
+  "Youtube",
+  "Instagram",
+  "Twitter",
 ];
 
 test("Check Navigation Menu in footer", async ({ page }) => {

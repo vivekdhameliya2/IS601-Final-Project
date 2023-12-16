@@ -1,18 +1,18 @@
 ---
 social:
-  - title: facebook
+  - title: Facebook
     icon: /images/facebook.svg
     path: https://www.facebook.com/
-  - title: linked in
+  - title: Linked in
     icon: /images/linkedin.svg
     path: https://www.linkedin.com/feed/
-  - title: youtube
+  - title: Youtube
     icon: /images/youtube.svg
     path: https://www.youtube.com/
-  - title: instagram
+  - title: Instagram
     icon: /images/instagram.svg
     path: https://www.instagram.com/
-  - title: twitter
+  - title: Twitter
     icon: /images/twitter.svg
     path: https://twitter.com/i/flow/login
 ---
