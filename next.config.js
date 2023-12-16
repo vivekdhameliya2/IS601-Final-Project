@@ -9,7 +9,7 @@ const nextConfig = {
     remotePatterns: [],
   },
   env: {
-    NEXT_APP_URL: "https://italian-pizza-sigma.vercel.app/",
+    NEXT_APP_URL: "https://is-601-final-project-drab.vercel.app/",
     CARD_IMAGE: "/images/hero-image.webp",
     DOMAIN: "is-601-final-project-drab.vercel.app",
     ANALITICS_ID: "G-KTDJQQD8CB",
