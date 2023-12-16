@@ -21,7 +21,7 @@ const menuData = [
     
   },
   {
-    title: "Pizza",
+    title: "Menu",
     path: "/menu",
  
   },
@@ -68,7 +68,7 @@ const Navbar = ({ isSticky }) => {
           className={pathName === "/menu" ? layout.active : ""}
           href="/menu"
         >
-          Pizza
+          Menu
         </Link>
         <Link
           className={pathName === "/contact" ? layout.active : ""}
