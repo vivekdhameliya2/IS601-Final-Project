@@ -27,7 +27,7 @@
   background: transparent;
   position: absolute;
   width: 100%;
-  height: 5%;
+  height: 50%;
   max-height: 115px;
   width: -webkit-fill-available;
   z-index: 999;
@@ -45,8 +45,9 @@
 .logo {
   height: 100%;
   width: 100%;
-  max-width: 120px;
-  max-height: 112px;
+  max-width: 200px;
+  background-color: #0f680b;
+  max-height: 242px;
   cursor: pointer;
   img {
     height: 100%;
