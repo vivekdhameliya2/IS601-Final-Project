@@ -37,7 +37,7 @@ const Checkout = ({ cartData, removeFromCart, setCoupon, coupon, applyCoupon, su
             cartData={cartData}
           />
           <Link href="/menu" className={checkoutStyles.continue_shoping}>
-            <Image data-testid="pizza-section-back" width={20} height={20} src={"/images/arrow.svg"} alt="arrow" /> Continue Shopping
+            <Image data-testid="pizza-section-back" width={20} height={20} src={"/images/arrow.svg"} alt="arrow" /> Continue Ordering
           </Link>
         </div>
         <div className={checkoutStyles.right_wrap}>
