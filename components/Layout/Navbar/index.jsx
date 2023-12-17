@@ -52,7 +52,7 @@ const Navbar = ({ isSticky }) => {
       } custom-container`}
     >
       <div onClick={() => router.push('/')} className={layout.logo}>
-        <Image alt="Logo" src={"/logo/logo.svg"} width={120} height={112} />
+        <Image alt="Logo" src={"/logo/logo.svg"} width={380} height={240} />
       </div>
       <nav className={layout.navigation}>
         <Link className={pathName === "/" ? layout.active : ""} href="/">
