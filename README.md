@@ -58,12 +58,12 @@ Each student should put an 'X' under their name on the days they have meetings.
 
 ## Lighthouse Report 
 
-## Lighthouse Report Homepage [Click Here](screenshot/light_house_home.png)
+## Lighthouse Report Homepage [Click Here](Screenshot/light_house_home.png)
 
-## Lighthouse Report Aboutpage [Click Here](screenshot/light_house_about.png)
+## Lighthouse Report Aboutpage [Click Here](Screenshot/light_house_about.png)
 
-## Lighthouse Report Menu [Click Here](screenshot/light_house_menu.png)
+## Lighthouse Report Menu [Click Here](Screenshot/light_house_menu.png)
 
-## Lighthouse Report ContactUs [Click Here](screenshot/light_house_contactus.png)
+## Lighthouse Report ContactUs [Click Here](Screenshot/light_house_contactus.png)
 
-## Lighthouse Report Add to cart [Click Here](screenshot/light_house_addTocart.png)
+## Lighthouse Report Add to cart [Click Here](Screenshot/light_house_addTocart.png)
