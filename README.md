@@ -54,4 +54,4 @@ Each student should put an 'X' under their name on the days they have meetings.
 
 ## figma Link of design [Cick Here](https://www.figma.com/file/PelfFrW0mXiYWW3h8mNXt1/Untitled?type=design&node-id=0-1&mode=design&t=ELmnlT5o3tlnIM4s-0)
 
-## Power Point Presentation [Click Here](https://docs.google.com/presentation/d/1JXTEJ2ZTpan4iARrpV7Tx0ejUlizk29Yys9TJ4HcIWM/edit#slide=id.p1)
+## Power Point Presentation [Click Here](https://docs.google.com/presentation/d/1JXTEJ2ZTpan4iARrpV7Tx0ejUlizk29Yys9TJ4HcIWM/edit?usp=sharing)
