@@ -30,3 +30,26 @@ Each student should put an 'X' under their name on the days they have meetings.
 
 
 *Instructions: Please place an 'X' in the cell under your name corresponding to the dates you attend class.*
+
+# IS601-Final Project
+
+
+## Business Analysis Sheet [Click Here](business_analysis.md)
+
+
+## Compitative analysis [Click Here](Compatative_analysis.png)
+
+
+## Sales Funnel Diagram [Click Here](sales_funnel_diagram.png)
+
+
+## Six Method of Persuasion [Click Here](six_method_persuasion.md)
+
+
+## Usability Report [Click Here](usability_report.md)
+
+
+## Desing [Click Here](design.md)
+
+
+## figma Link of design [Cick Here](https://www.figma.com/file/PelfFrW0mXiYWW3h8mNXt1/Untitled?type=design&node-id=0-1&mode=design&t=ELmnlT5o3tlnIM4s-0)
