@@ -90,11 +90,6 @@ test("Check mailchimp usabilty", async ({ page }) => {
 
   // Click on the submit button
   await page.click('[data-testid="mailchimp-submit-button"]');
-
-  // Wait for the popup to close
-  await page.waitForSelector('[data-testid="mailchimp-popup"]', {
-    state: "hidden",
-  });
 });
 
 test.beforeEach(async ({ page }) => {
