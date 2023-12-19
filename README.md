@@ -56,14 +56,4 @@ Each student should put an 'X' under their name on the days they have meetings.
 
 ## Power Point Presentation [Click Here](https://docs.google.com/presentation/d/1JXTEJ2ZTpan4iARrpV7Tx0ejUlizk29Yys9TJ4HcIWM/edit?usp=sharing)
 
-## Lighthouse Report 
-
-## Lighthouse Report Homepage [Click Here](Screenshot/light_house_home.png)
-
-## Lighthouse Report Aboutpage [Click Here](Screenshot/light_house_about.png)
-
-## Lighthouse Report Menu [Click Here](Screenshot/light_house_menu.png)
-
-## Lighthouse Report ContactUs [Click Here](Screenshot/light_house_contactus.png)
-
-## Lighthouse Report Add to cart [Click Here](Screenshot/light_house_addTocart.png)
+## Lighthouse and Playwright test Report[Click Here](light_house.md)
