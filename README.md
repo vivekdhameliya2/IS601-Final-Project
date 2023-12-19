@@ -49,7 +49,7 @@ Each student should put an 'X' under their name on the days they have meetings.
 ## Usability Report [Click Here](usability_report.md)
 
 
-## Desing [Click Here](design.md)
+## Design [Click Here](design.md)
 
 
 ## figma Link of design [Cick Here](https://www.figma.com/file/PelfFrW0mXiYWW3h8mNXt1/Untitled?type=design&node-id=0-1&mode=design&t=ELmnlT5o3tlnIM4s-0)
